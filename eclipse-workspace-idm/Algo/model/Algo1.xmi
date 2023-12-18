@@ -11,7 +11,7 @@
       sortie="sortieAdd">
     <entrees
         xsi:type="schemaDeTableTest:Colonne"
-        href="../../schemaDeTableTest/model/Tableau1.xmi#//@colonnes.1"/>
+        href="../../schemaDeTableTest/model/Tableau1.xmi#test2"/>
     <entrees
         xsi:type="schemaDeTableTest:Colonne"
         href="../../schemaDeTableTest/model/Tableau1.xmi#test1"/>
@@ -21,12 +21,11 @@
       ID="sortieAdd"/>
   <elements
       xsi:type="algo:Division"
-      entrees="sortieAdd //@elements.3"
-      sortie="resultat"/>
+      entrees="sortieAdd //@elements.3">
+    <sortie
+        href="../../schemaDeTableTest/model/Tableau1.xmi#res"/>
+  </elements>
   <elements
       xsi:type="algo:Constante"
       constante="2.0"/>
-  <elements
-      xsi:type="schemaDeTableTest:Colonne"
-      ID="resultat"/>
 </algo:Algo>
