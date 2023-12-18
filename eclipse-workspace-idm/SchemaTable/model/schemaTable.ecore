@@ -12,18 +12,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" lowerBound="1"
-        eType="#//DataType"/>
+        eType="ecore:EEnum ../../Algo/model/algo.ecore#//DataType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contraintes" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="appel" eType="#//AppelAlgo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contenu" eType="#//ContenuColonne"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="DataType">
-    <eLiterals name="string"/>
-    <eLiterals name="int" value="1"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AppelAlgo">
+  <eClassifiers xsi:type="ecore:EClass" name="ContenuColonne" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AppelAlgo" eSuperTypes="#//ContenuColonne">
     <eStructuralFeatures xsi:type="ecore:EReference" name="algo" lowerBound="1" eType="ecore:EClass ../../Algo/model/algo.ecore#//Algo"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="input" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImportTable" eSuperTypes="#//ContenuColonne">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="table" lowerBound="1" eType="#//Tableau"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

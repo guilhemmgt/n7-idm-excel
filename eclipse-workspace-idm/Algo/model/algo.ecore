@@ -1,40 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="algo" nsURI="http://www.example.org/algo" nsPrefix="algo">
-  <eClassifiers xsi:type="ecore:EClass" name="Algo">
+  <eClassifiers xsi:type="ecore:EClass" name="Algo" eSuperTypes="#//Documentable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
-        eType="#//AlgoElements" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ressource" lowerBound="1"
+        eType="#//Ressource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
+        eType="#//Flux"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
+        eType="#//Flux"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AlgoElements" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true" eSuperTypes="#//AlgoElements"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Constante" eSuperTypes="#//Expression">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constante" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Ressource" eSuperTypes="#//Documentable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Operation" abstract="true" eSuperTypes="#//AlgoElements"/>
-  <eClassifiers xsi:type="ecore:EClass" name="OperationBinaire" abstract="true" eSuperTypes="#//Operation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entrees" lowerBound="2"
-        upperBound="2" eType="#//Expression"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sortie" lowerBound="1"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Flux" eSuperTypes="#//Documentable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//DataType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Soustraction" eSuperTypes="#//OperationBinaire"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Addition" eSuperTypes="#//OperationBinaire"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Division" eSuperTypes="#//OperationBinaire"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Multiplication" eSuperTypes="#//OperationBinaire"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Minimum" eSuperTypes="#//OperationBinaire"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Maximum" eSuperTypes="#//OperationBinaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Documentable" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Documentation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Commentaire" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="commentaire" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="linkToElement" lowerBound="1"
-        eType="#//AlgoElements"/>
+        eType="#//Documentable"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OperationUnaire" abstract="true" eSuperTypes="#//Operation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entree" lowerBound="1"
-        eType="#//Expression"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sortie" lowerBound="1"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="DataType">
+    <eLiterals name="string"/>
+    <eLiterals name="int" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Opposé" eSuperTypes="#//OperationUnaire"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Inverse" eSuperTypes="#//OperationUnaire"/>
 </ecore:EPackage>
