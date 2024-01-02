@@ -4,6 +4,7 @@
     <semanticResources>expression.ecore</semanticResources>
     <semanticResources>expression.genmodel</semanticResources>
     <semanticResources>platform:/resource/Algo/model/algo.ecore</semanticResources>
+    <semanticResources>Moyenne_binaire.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_kB4ksJ3aEe6eUqbWVJE0oA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_kEPVIJ3aEe6eUqbWVJE0oA" name="expression" repPath="#_kDXLYJ3aEe6eUqbWVJE0oA" changeId="1702927254679">

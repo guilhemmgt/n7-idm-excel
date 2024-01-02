@@ -4,11 +4,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="Algo" eSuperTypes="#//Documentable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ressource" lowerBound="1"
-        eType="#//Ressource"/>
+        eType="#//Ressource" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
-        eType="#//Flux"/>
+        eType="#//Flux" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
-        eType="#//Flux"/>
+        eType="#//Flux" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentations" upperBound="-1"
+        eType="#//Documentation" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ressource" eSuperTypes="#//Documentable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

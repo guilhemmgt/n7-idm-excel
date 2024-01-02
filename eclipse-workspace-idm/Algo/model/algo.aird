@@ -6,6 +6,7 @@
     <semanticResources>platform:/resource/schemaDeTableTest/model/schemaDeTableTest.ecore</semanticResources>
     <semanticResources>AlgoElements.xmi</semanticResources>
     <semanticResources>Algo6.xmi</semanticResources>
+    <semanticResources>Algo_moyenne_binaire.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_ESnNYJRUEe6acvsV22lSFQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_EcxO8JRUEe6acvsV22lSFQ" name="algo" repPath="#_EYkrcJRUEe6acvsV22lSFQ" changeId="1702927390383">
