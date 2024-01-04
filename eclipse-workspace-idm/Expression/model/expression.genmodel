@@ -1,11 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Expression/src-gen" creationIcons="false" editDirectory="/Expression.edit/src-gen"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/Expression/src-gen" creationIcons="false" editDirectory="/Expression.edit/src-gen"
     editorDirectory="/Expression.editor/src-gen" modelPluginID="Expression" modelName="Expression"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="19.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>expression.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="Expression" disposableProviderFactory="true" ecorePackage="expression.ecore#/"/>
+  <genPackages prefix="Expression" disposableProviderFactory="true" ecorePackage="expression.ecore#/">
+    <genClasses ecoreClass="expression.ecore#//Expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute expression.ecore#//Expression/nom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference expression.ecore#//Expression/entree"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference expression.ecore#//Expression/sortie"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference expression.ecore#//Expression/elements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="expression.ecore#//ExpressionElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference expression.ecore#//ExpressionElement/entree"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference expression.ecore#//ExpressionElement/sortie"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="expression.ecore#//Flux">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute expression.ecore#//Flux/nom"/>
+    </genClasses>
+    <genClasses ecoreClass="expression.ecore#//Entree"/>
+    <genClasses ecoreClass="expression.ecore#//Sortie"/>
+    <genClasses image="false" ecoreClass="expression.ecore#//OperationNullaire"/>
+    <genClasses ecoreClass="expression.ecore#//Constante">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute expression.ecore#//Constante/valeur"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="expression.ecore#//OperationUnaire"/>
+    <genClasses ecoreClass="expression.ecore#//Oppose"/>
+    <genClasses ecoreClass="expression.ecore#//Inverse"/>
+    <genClasses image="false" ecoreClass="expression.ecore#//OperationBinaire"/>
+    <genClasses ecoreClass="expression.ecore#//Soustraction"/>
+    <genClasses ecoreClass="expression.ecore#//Addition"/>
+    <genClasses ecoreClass="expression.ecore#//Division"/>
+    <genClasses ecoreClass="expression.ecore#//Multiplication"/>
+    <genClasses ecoreClass="expression.ecore#//Minimum"/>
+    <genClasses ecoreClass="expression.ecore#//Maximum"/>
+  </genPackages>
 </genmodel:GenModel>

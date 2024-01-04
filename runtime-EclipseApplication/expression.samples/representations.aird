@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:expression="http://www.example.org/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description">
+  <viewpoint:DAnalysis uid="_7Dcc8KrtEe6wNrdVCmhtLA" selectedViews="_k7ggAKruEe6wNrdVCmhtLA" version="15.0.0.202209061200">
+    <semanticResources>moyenne_binaire.expression</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_k7ggAKruEe6wNrdVCmhtLA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_wDs8cKruEe6wNrdVCmhtLA" name="new ExpressionDiagram" repPath="#_wC0LoKruEe6wNrdVCmhtLA" changeId="0d0ba1e2-80f7-44a5-b735-5dd365b9a6b8">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']"/>
+        <target xmi:type="expression:Expression" href="moyenne_binaire.expression#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_wC0LoKruEe6wNrdVCmhtLA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_wFJG4KruEe6wNrdVCmhtLA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_wFJG4aruEe6wNrdVCmhtLA" type="Sirius" element="_wC0LoKruEe6wNrdVCmhtLA" measurementUnit="Pixel">
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_wFJG4qruEe6wNrdVCmhtLA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_wFkksKruEe6wNrdVCmhtLA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_wFly0KruEe6wNrdVCmhtLA"/>
+    </ownedAnnotationEntries>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_wDObUKruEe6wNrdVCmhtLA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer"/>
+    <target xmi:type="expression:Expression" href="moyenne_binaire.expression#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

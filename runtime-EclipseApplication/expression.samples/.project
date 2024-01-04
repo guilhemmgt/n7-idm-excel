@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>expression.samples</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.sirius.nature.modelingproject</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>moyenne_binaire.expression</name>
+			<type>1</type>
+			<location>D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/Expression/model/Moyenne_binaire.xmi</location>
+		</link>
+	</linkedResources>
+</projectDescription>
