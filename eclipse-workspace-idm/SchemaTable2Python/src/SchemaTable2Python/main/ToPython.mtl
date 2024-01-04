@@ -1,0 +1,29 @@
+[comment encoding = UTF-8 /]
+[module ToPython('http://www.example.org/schemaTable')]
+
+
+[template public TableauToPython(aTableau : Tableau)]
+[comment @main/]
+[file (aTableau.name + '.py', false, 'UTF-8')]
+class [aTableau.name /]:
+
+	def __init__(self):
+		self.table = [ '[[]]' /]  # Initialisation du tableau
+		# Initialisation de la première ligne avec le nom des colonnes
+		self.table['[0]'/]=[aTableau.ListeColonnes() /]
+
+	def load(self, csv_file):
+		
+
+[/file]
+[/template]
+
+[query public getColonnes(t : Tableau) : OrderedSet(Colonne) = 
+    t.colonnes->asOrderedSet()
+/]
+
+[template public ListeColonnes (t : Tableau) post(trim())]
+[let cs : Sequence(Colonne) = t.getColonnes() -> asSequence()]
+['[' /][for (c : Colonne | cs)][c.name/][if c <> cs->last()], [/if][/for][']'/][/let]
+[/template]
+
