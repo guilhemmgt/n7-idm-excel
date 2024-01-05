@@ -50,8 +50,6 @@ class Coeff:
 		
 		# Charger dynamiquement les fonctions à partir des chemins
 		conditions = self.load_functions_from_paths(chemins_conditions)
-		print(conditions)
-		print(self.table.columns)
 
      	# Itérer sur les colonnes et vérifier les conditions
 		for i,colonne in enumerate(self.table.columns):
