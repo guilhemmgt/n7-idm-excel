@@ -7,7 +7,4 @@
     name="positif">
   <ressource
       path="/home/claire/Documents/Cours/IDM_propre/IDM/eclipse-workspace-idm/Algo/positif.py"/>
-  <output value="sortie"/>
-  <input value="entrée"
-      type="int"/>
 </algo:Algo>
