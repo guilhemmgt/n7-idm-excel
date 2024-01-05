@@ -1,6 +1,6 @@
 def positif(a): 
     if a>=0 :
-        return "true" 
+        return True
     else :
-        return "false"
+        return False
     

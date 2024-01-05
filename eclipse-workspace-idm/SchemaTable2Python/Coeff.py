@@ -19,7 +19,8 @@ class Coeff:
 
 		# Copier les colonnes du csv dans la table
 		for colonne in df.columns:
-			self.table[colonne] = df[colonne]
+			if colonne in self.table.columns:
+				self.table[colonne] = df[colonne]
 		return df #A enlever plus tard, c'est juste pour visualiser
 
 	def afficher_html(self):
@@ -44,17 +45,22 @@ class Coeff:
         # Matrice des chemins vers les fichiers contenant les fonctions
 		chemins_conditions = [[], [], ["/home/claire/Documents/Cours/IDM_propre/IDM/eclipse-workspace-idm/Algo/positif.py"]]
 
-        # Charger dynamiquement les fonctions à partir des chemins
+        # Initialiser la liste des colonnes non satisfaites
+		erreurs = []
+		
+		# Charger dynamiquement les fonctions à partir des chemins
 		conditions = self.load_functions_from_paths(chemins_conditions)
 		print(conditions)
+		print(self.table.columns)
 
-        # Utiliser Pandas pour appliquer les conditions aux colonnes
-		condition_satisfied = self.table.apply(lambda colonne: all(condition(element) for condition, element in zip(conditions[0], colonne)), axis=0)
-        
-        # Trouver la première colonne qui ne satisfait pas la condition
-		colonne_non_satisfaite = condition_satisfied[condition_satisfied == False].index[0] if not condition_satisfied.all() else None
-
-		return colonne_non_satisfaite if colonne_non_satisfaite is not None else True
+     	# Itérer sur les colonnes et vérifier les conditions
+		for i,colonne in enumerate(self.table.columns):
+        # Vérifier les conditions pour chaque élément de la colonne
+			for element in self.table[colonne]:
+				for condition in conditions[i]:
+					if not condition(element):
+						erreurs.append([colonne, element])
+		return erreurs if erreurs else True
 
 
 #test
