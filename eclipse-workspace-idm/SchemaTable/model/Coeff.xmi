@@ -10,4 +10,13 @@
   <colonnes
       name="Examen"
       id="Coeff.Examen"/>
+  <colonnes
+      name="Matiere"
+      id="Coeff.Matiere"/>
+  <colonnes
+      name="CoeffDansMat"
+      id="Coeff.CoeffDansMat">
+    <contraintes
+        href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
 </schemaTable:Tableau>
