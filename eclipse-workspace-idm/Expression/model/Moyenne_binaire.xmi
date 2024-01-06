@@ -4,7 +4,6 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:expression="http://www.example.org/expression"
-    xsi:schemaLocation="http://www.example.org/expression expression.ecore"
     nom="Moyenne binaire"
     entree="//@elements.0 //@elements.1"
     sortie="//@elements.5">
