@@ -16,13 +16,33 @@ class [aTableau.name /]:
 		# Initialisation de la première ligne avec le nom des colonnes
 		self.table['[0]'/]=[aTableau.ListeNomsColonnes() /][/comment]
 
-	#Initialisation avec panda
+	_instance = None
+
+	# Assure qu'il y a une seule instance par classe
+	def __new__(cls):
+		if not cls._instance:
+			cls._instance = super([aTableau.name /], cls).__new__(cls)
+
+			# Récupére la liste de noms des colonnes
+			noms_colonnes = [aTableau.ListeNomsColonnes() /]
+
+	        # Initialisation du DataFrame avec les noms de colonnes
+			cls._instance.table = pd.DataFrame(columns=noms_colonnes)
+		return cls._instance
+
+	@classmethod
+	def get_instance(cls):
+		if not cls._instance:
+			cls._instance = cls()
+		return cls._instance
+
+[comment]	#Initialisation avec panda
 	def __init__(self):
-        # Simuler une liste de noms de colonnes
+        # Récupérer la liste de noms des colonnes
 		noms_colonnes = [aTableau.ListeNomsColonnes() /]
 
         # Initialisation du DataFrame avec les noms de colonnes
-		self.table = pd.DataFrame(columns=noms_colonnes)
+		self.table = pd.DataFrame(columns=noms_colonnes)[/comment]
 
 	def load(self, csv_file):
 		# Charger le CSV en utilisant pandas
@@ -71,28 +91,27 @@ class [aTableau.name /]:
 						erreurs.append(['[colonne, element])'/]
 		return erreurs if erreurs else True
 
-[comment]	def checkAll(self):
-        # Matrice des chemins vers les fichiers contenant les fonctions
-		chemins_conditions = [aTableau.MatriceContraintes() /]
+	def fusionner_colonnes(self, DfSource, colonneLigne1, colonneLigne2, ColSource, ColDestination):
+		# Fusionner les deux DataFrames sur les colonnesLigne
+		result = pd.merge(self.table, DfSource['[[colonneLigne1, ColSource]]'/], on=colonneLigne1, how='left', suffixes = ('_x', None))
 
-        # Charger dynamiquement les fonctions à partir des chemins
-        conditions = self.load_functions_from_paths(chemins_conditions)
+		self.table['[ColDestination]'/] = result['[ColSource]'/]
 
-		for j, colonne in enumerate(zip(*self.table)):
-	        if not all(condition(element) for condition, element in zip(conditions, colonne['[1:]' /])):
-	            return j  # Renvoyer le numéro de la colonne qui ne satisfait pas les conditions
-	
-	    return True  # Toutes les colonnes satisfont les conditions
+
+	def insertFromTable(self):
+		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
+			# Récupérer l'instance python correspondante
+			# Récupérer la colonne d'ID souhaitée
+
+		pass
+		
 
 	def calcAll(self):
-		pass[/comment]
+		pass
 
-#test
-instance = [aTableau.name /]()
-df = instance.load("/home/claire/Documents/Cours/IDM_propre/IDM/eclipse-workspace-idm/CSV_exemples/Coeff.csv")
-print(instance.table)
-print(df)
-print(instance.checkAll())
+	def export(self, csv_file):
+        # Exporter le DataFrame en tant que fichier CSV
+		self.table.to_csv(csv_file, index=False)
 		
 
 [/file]
@@ -106,9 +125,14 @@ print(instance.checkAll())
     c.contraintes->asOrderedSet()
 /]
 
-[template public ListeContraintes (c : Colonne) post(trim())]
-[let as : Sequence(Algo) = c.getContraintes() -> asSequence()]
-['[' /][for (a : Algo | as)]"[a.name/]"[if a <> as->last()], [/if][/for][']'/][/let]
+[query public getColonnesImportTable(t : Tableau) : OrderedSet(Colonne) = 
+    t.colonnes->select(c | c.contenu.oclIsTypeOf(ImportTable))
+        ->asOrderedSet()
+/]
+
+[template public ListeNomsColonnesImportTable (t : Tableau) post(trim())]
+[let cs : Sequence(Colonne) = t.getColonnesImportTable() -> asSequence()]
+['[' /][for (c : Colonne | cs)]"[c.name/]"[if c <> cs->last()], [/if][/for][']'/][/let]
 [/template]
 
 [template public ListeNomsColonnes (t : Tableau) post(trim())]

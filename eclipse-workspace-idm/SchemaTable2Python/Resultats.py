@@ -2,7 +2,7 @@
 import pandas as pd
 import importlib
 
-class Coeff:
+class Resultats:
 
 
 	_instance = None
@@ -10,10 +10,10 @@ class Coeff:
 	# Assure qu'il y a une seule instance par classe
 	def __new__(cls):
 		if not cls._instance:
-			cls._instance = super(Coeff, cls).__new__(cls)
+			cls._instance = super(Resultats, cls).__new__(cls)
 
 			# Récupére la liste de noms des colonnes
-			noms_colonnes = ["Examen", "Matiere", "CoeffDansMat"]
+			noms_colonnes = ["Examen", "Matiere"]
 
 	        # Initialisation du DataFrame avec les noms de colonnes
 			cls._instance.table = pd.DataFrame(columns=noms_colonnes)
@@ -56,7 +56,7 @@ class Coeff:
 
 	def checkAll(self):
         # Matrice des chemins vers les fichiers contenant les fonctions
-		chemins_conditions = [[], [], ["/home/claire/Documents/Cours/IDM_propre/IDM/eclipse-workspace-idm/Algo/positif.py"]]
+		chemins_conditions = [[], []]
 
         # Initialiser la liste des colonnes non satisfaites
 		erreurs = []
@@ -75,14 +75,9 @@ class Coeff:
 
 	def fusionner_colonnes(self, DfSource, colonneLigne1, colonneLigne2, ColSource, ColDestination):
 		# Fusionner les deux DataFrames sur les colonnesLigne
-		merged_df = pd.merge(df1, df2, left_on=colonneLigne1, right_on=colonneLigne2, suffixes=('_1', '_2'))
+		result = pd.merge(self.table, DfSource[[colonneLigne1, ColSource]], on=colonneLigne1, how='left', suffixes = ('_x', None))
 
-		# Ajouter les données de la colonne au DataFrame de destination
-		merged_df[ColDestination] = merged_df[ColSource + '_1']
-
-		# Supprimer les colonnes temporaires utilisées pour la fusion
-		merged_df.drop(columns=[colonneLigne1, colonneLigne2, colonne + '_1'], inplace=True)
-		
+		self.table[ColDestination] = result[ColSource]
 
 
 	def insertFromTable(self):
