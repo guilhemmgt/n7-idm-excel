@@ -1,0 +1,47 @@
+import 'expression.ecore'
+
+package expression
+
+context Expression
+inv formatNom('Le nom de l\'expression "' + self.toString() + '" n\'est pas de la bonne forme'):
+	self.nom.size() > 1 and self.nom.matches('[A-Za-z_][A-Za-z0-9_]*')
+inv sortiePasUneEntree('Une sortie ne peut pas être une entrée'):
+	self.entree
+	-> select (e | e.oclIsKindOf(ExpressionElement))
+	-> collect (e | e.oclAsType(ExpressionElement))
+	-> forAll (entree <> self.sortie)
+	
+context ExpressionElement
+inv sortiePasUneEntree('Une sortie ne peut pas être une entrée'):
+	self.entree
+	-> select (e | e.oclIsKindOf(ExpressionElement))
+	-> collect (e | e.oclAsType(ExpressionElement))
+	-> forAll (entree <> self.sortie)
+
+context Flux
+inv formatNom('Le nom de "' + self.toString() + '" n\'est pas de la bonne forme'):
+	self.nom.size() >= 1 and self.nom.matches('[A-Za-z_][A-Za-z0-9_]*')
+
+-- Contraintes sur les types d'opérations
+context OperationNullaire
+inv nullaire('Une constante ne peut pas avoir d\'entré'):
+	self.entree->size() = 0
+	
+context OperationUnaire
+inv unaire('Nécessite exactement une entré'):
+	self.entree->size() = 1
+	
+context OperationBinaire
+inv binaire('Nécessite exactement deux entrés'):
+	self.entree->size() = 2
+
+-- Contraintes sur les opérations
+context Division
+inv diviseurNonNul('Division par 0 impossible'):
+	self.entree
+		->last()
+		->select(elem| oclAsType(Constante))
+		->select(cons| cons.valeur=0)
+		->isEmpty()	
+
+endpackage
