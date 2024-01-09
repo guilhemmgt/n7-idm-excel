@@ -4,7 +4,6 @@ import importlib
 
 class Resultats:
 
-
 	_instance = None
 
 	# Assure qu'il y a une seule instance par classe
@@ -24,7 +23,6 @@ class Resultats:
 		if not cls._instance:
 			cls._instance = cls()
 		return cls._instance
-
 
 	def load(self, csv_file):
 		# Charger le CSV en utilisant pandas
@@ -82,9 +80,7 @@ class Resultats:
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-			t1
-			self.table.fusionner_colonnes(Coeff.get_instance().table, "Examen", "Examen", "", "Matiere")
-		t2
+			self.table.fusionner_colonnes(Coeff.get_instance().table, "Examen", "Examen", "Matiere", "Matiere")
 		
 
 	def calcAll(self):

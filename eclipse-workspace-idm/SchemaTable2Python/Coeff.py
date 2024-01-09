@@ -4,7 +4,6 @@ import importlib
 
 class Coeff:
 
-
 	_instance = None
 
 	# Assure qu'il y a une seule instance par classe
@@ -24,7 +23,6 @@ class Coeff:
 		if not cls._instance:
 			cls._instance = cls()
 		return cls._instance
-
 
 	def load(self, csv_file):
 		# Charger le CSV en utilisant pandas
@@ -82,7 +80,7 @@ class Coeff:
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-		t2
+			pass
 		
 
 	def calcAll(self):

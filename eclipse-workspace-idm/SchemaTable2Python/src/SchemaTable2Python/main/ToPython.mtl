@@ -11,11 +11,6 @@ import importlib
 
 class [aTableau.name /]:
 
-[comment]	def __init__(self):
-		self.table = [ '[[]]' /]  # Initialisation du tableau
-		# Initialisation de la première ligne avec le nom des colonnes
-		self.table['[0]'/]=[aTableau.ListeNomsColonnes() /][/comment]
-
 	_instance = None
 
 	# Assure qu'il y a une seule instance par classe
@@ -35,14 +30,6 @@ class [aTableau.name /]:
 		if not cls._instance:
 			cls._instance = cls()
 		return cls._instance
-
-[comment]	#Initialisation avec panda
-	def __init__(self):
-        # Récupérer la liste de noms des colonnes
-		noms_colonnes = [aTableau.ListeNomsColonnes() /]
-
-        # Initialisation du DataFrame avec les noms de colonnes
-		self.table = pd.DataFrame(columns=noms_colonnes)[/comment]
 
 	def load(self, csv_file):
 		# Charger le CSV en utilisant pandas
@@ -100,15 +87,26 @@ class [aTableau.name /]:
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-		[let cols : OrderedSet(Colonne) = aTableau.getColonnesImportTable()]
+		[let cols : Sequence(Colonne) = aTableau.getColonnesImportTable()]
+			[if (cols->size()) = 0 ]
+			pass
+			[/if]
 			[for (c : Colonne | cols)]
 			self.table.fusionner_colonnes([c.getTable().name /].get_instance().table, "[aTableau.colonneLignes.name /]", "[c.getColonneLigne() /]", "[c.getColSource() /]", "[c.name /]")
 			[/for]
 		[/let]
+
 		
 
 	def calcAll(self):
-		pass
+		[let cols : Sequence(Colonne) = aTableau.getColonnesAppelAlgo()]
+			[if (cols->size()) = 0 ]
+			pass
+			[/if]
+			[for (c : Colonne | cols)]
+			
+			[/for]
+		[/let]
 
 	def export(self, csv_file):
         # Exporter le DataFrame en tant que fichier CSV
@@ -126,9 +124,14 @@ class [aTableau.name /]:
     c.contraintes->asOrderedSet()
 /]
 
-[query public getColonnesImportTable(t : Tableau) : OrderedSet(Colonne) = 
+[query public getColonnesImportTable(t : Tableau) : Sequence(Colonne) = 
     t.colonnes->select(c | c.contenu <> null and c.contenu.oclIsTypeOf(ImportTable))
-        ->asOrderedSet()
+        ->asSequence()
+/]
+
+[query public getColonnesAppelAlgo(t : Tableau) : Sequence(Colonne) = 
+    t.colonnes->select(c | c.contenu <> null and c.contenu.oclIsTypeOf(AppelAlgo))
+        ->asSequence()
 /]
 
 [query public getTable(c : Colonne) : Tableau =
@@ -144,7 +147,7 @@ class [aTableau.name /]:
 /]
 
 [query public getColSource(c : Colonne) : String = 
-	c.getTable().colonnes -> select(source | source.id = c.id)->first().name
+	c.getTable().colonnes -> select(source | source.id = c.getID())->first().name
 /]
 
 [template public ListeNomsColonnesImportTable (t : Tableau) post(trim())]
