@@ -100,10 +100,11 @@ class [aTableau.name /]:
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-			# Récupérer l'instance python correspondante
-			# Récupérer la colonne d'ID souhaitée
-
-		pass
+		[let cols : OrderedSet(Colonne) = aTableau.getColonnesImportTable()]
+			[for (c : Colonne | cols)]
+			self.table.fusionner_colonnes([c.getTable().name /].get_instance().table, "[aTableau.colonneLignes.name /]", "[c.getColonneLigne() /]", "[c.getColSource() /]", "[c.name /]")
+			[/for]
+		[/let]
 		
 
 	def calcAll(self):
@@ -126,8 +127,24 @@ class [aTableau.name /]:
 /]
 
 [query public getColonnesImportTable(t : Tableau) : OrderedSet(Colonne) = 
-    t.colonnes->select(c | c.contenu.oclIsTypeOf(ImportTable))
+    t.colonnes->select(c | c.contenu <> null and c.contenu.oclIsTypeOf(ImportTable))
         ->asOrderedSet()
+/]
+
+[query public getTable(c : Colonne) : Tableau =
+	c.contenu.oclAsType(ImportTable).table
+/]
+
+[query public getColonneLigne(c : Colonne) : String =
+	c.contenu.oclAsType(ImportTable).table.colonneLignes.name
+/]
+
+[query public getID(c : Colonne) : String =
+	c.contenu.oclAsType(ImportTable).id
+/]
+
+[query public getColSource(c : Colonne) : String = 
+	c.getTable().colonnes -> select(source | source.id = c.id)->first().name
 /]
 
 [template public ListeNomsColonnesImportTable (t : Tableau) post(trim())]

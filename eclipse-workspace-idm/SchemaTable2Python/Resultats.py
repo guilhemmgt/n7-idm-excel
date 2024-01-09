@@ -82,10 +82,9 @@ class Resultats:
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-			# Récupérer l'instance python correspondante
-			# Récupérer la colonne d'ID souhaitée
-
-		pass
+			t1
+			self.table.fusionner_colonnes(Coeff.get_instance().table, "Examen", "Examen", "", "Matiere")
+		t2
 		
 
 	def calcAll(self):

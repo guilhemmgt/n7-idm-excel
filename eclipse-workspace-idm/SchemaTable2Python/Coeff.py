@@ -75,22 +75,14 @@ class Coeff:
 
 	def fusionner_colonnes(self, DfSource, colonneLigne1, colonneLigne2, ColSource, ColDestination):
 		# Fusionner les deux DataFrames sur les colonnesLigne
-		merged_df = pd.merge(df1, df2, left_on=colonneLigne1, right_on=colonneLigne2, suffixes=('_1', '_2'))
+		result = pd.merge(self.table, DfSource[[colonneLigne1, ColSource]], on=colonneLigne1, how='left', suffixes = ('_x', None))
 
-		# Ajouter les données de la colonne au DataFrame de destination
-		merged_df[ColDestination] = merged_df[ColSource + '_1']
-
-		# Supprimer les colonnes temporaires utilisées pour la fusion
-		merged_df.drop(columns=[colonneLigne1, colonneLigne2, colonne + '_1'], inplace=True)
-		
+		self.table[ColDestination] = result[ColSource]
 
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-			# Récupérer l'instance python correspondante
-			# Récupérer la colonne d'ID souhaitée
-
-		pass
+		t2
 		
 
 	def calcAll(self):
