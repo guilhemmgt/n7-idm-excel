@@ -3,7 +3,7 @@ import 'algo.ecore'
 package algo
 
 context Algo
-inv formatNom('Le nom de l\'algorithme "' + self.toString() + '" n\'est pas de la bonne forme'):
+inv formatNom('Le nom de l\'algorithme "' + self.name + '" n\'est pas de la bonne forme'):
 	self.name.size() > 1 and self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
 	
 context Documentation
@@ -12,10 +12,10 @@ inv formatCommentaire('Il manque un commentaire'):
 	
 context Ressource
 inv formatChemin('Le chemin d\'accés à la ressource n\'est pas conforme'):
-	self.path.matches('^(./|/)(([A-Za-z0-9_])+/)*[A-Za-z0-9_]+.(xmi|py|jl)$')
+	self.path.matches('^(./|/)(([A-Za-z0-9_]|-)+/)*([A-Za-z0-9_]|-)+.(xmi|py|jl)$')
 	
 context Flux
-inv formatValue('Le format de la value "' + self.toString() + '" n\'est pas correct'):
+inv formatValue('Le format de la value "' + self.value + '" n\'est pas correct'):
 	self.value.matches('[A-Za-z_][A-Za-z0-9_]*')
 
 endpackage
