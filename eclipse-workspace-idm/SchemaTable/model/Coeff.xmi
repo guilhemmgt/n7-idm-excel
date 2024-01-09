@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemaTable:Tableau xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaTable="http://www.example.org/schemaTable" xsi:schemaLocation="http://www.example.org/schemaTable schemaTable.ecore" name="Coeff" colonneLignes="//@colonnes.0">
+  <colonnes name="Examen" id="Coeff.Examen"/>
+  <colonnes name="Matiere" id="Coeff.Matiere"/>
+  <colonnes name="CoeffDansMat" id="Coeff.CoeffDansMat">
+    <contraintes href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
+</schemaTable:Tableau>

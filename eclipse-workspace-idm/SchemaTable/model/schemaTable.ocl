@@ -1,0 +1,15 @@
+import 'schemaTable.ecore'
+
+package schemaTable
+
+context Tableau
+inv formatNom('Le nom du tableau "' + self.name + '" n\'est pa conforme'):
+	self.name.size() > 1 and self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
+	
+context Colonne
+inv formatNom('Le nom de la colonne "' + self.name + '" n\'est pa conforme'):
+	self.name.size() > 1 and self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
+inv formatId('L\'id de la colonne "' + self.id + '" n\'est pa conforme'):
+	self.id.size() > 0 and self.id.matches('[A-Za-z_][A-Za-z0-9_.]*')
+
+endpackage

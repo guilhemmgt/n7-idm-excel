@@ -6,14 +6,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="colonneLignes" lowerBound="1"
         eType="#//Colonne"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="colonnes" upperBound="-1"
-        eType="#//Colonne"/>
+        eType="#//Colonne" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Colonne">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" lowerBound="1"
         eType="ecore:EEnum ../../Algo/model/algo.ecore#//DataType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contenu" eType="#//ContenuColonne"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contenu" eType="#//ContenuColonne"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contraintes" upperBound="-1"
         eType="ecore:EClass ../../Algo/model/algo.ecore#//Algo"/>
   </eClassifiers>
