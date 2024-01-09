@@ -3,7 +3,7 @@ import 'expression.ecore'
 package expression
 
 context Expression
-inv formatNom('Le nom de l\'expression "' + self.toString() + '" n\'est pas de la bonne forme'):
+inv formatNom('Le nom de l\'expression "' + self.nom + '" n\'est pas de la bonne forme'):
 	self.nom.size() > 1 and self.nom.matches('[A-Za-z_][A-Za-z0-9_]*')
 inv sortiePasUneEntree('Une sortie ne peut pas être une entrée'):
 	self.entree
@@ -19,7 +19,7 @@ inv sortiePasUneEntree('Une sortie ne peut pas être une entrée'):
 	-> forAll (entree <> self.sortie)
 
 context Flux
-inv formatNom('Le nom de "' + self.toString() + '" n\'est pas de la bonne forme'):
+inv formatNom('Le nom de "' + self.nom + '" n\'est pas de la bonne forme'):
 	self.nom.size() >= 1 and self.nom.matches('[A-Za-z_][A-Za-z0-9_]*')
 
 -- Contraintes sur les types d'opérations
@@ -34,14 +34,5 @@ inv unaire('Nécessite exactement une entré'):
 context OperationBinaire
 inv binaire('Nécessite exactement deux entrés'):
 	self.entree->size() = 2
-
--- Contraintes sur les opérations
-context Division
-inv diviseurNonNul('Division par 0 impossible'):
-	self.entree
-		->last()
-		->select(elem| oclAsType(Constante))
-		->select(cons| cons.valeur=0)
-		->isEmpty()	
 
 endpackage

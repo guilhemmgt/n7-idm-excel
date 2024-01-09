@@ -11,5 +11,16 @@ inv formatNom('Le nom de la colonne "' + self.name + '" n\'est pa conforme'):
 	self.name.size() > 1 and self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
 inv formatId('L\'id de la colonne "' + self.id + '" n\'est pa conforme'):
 	self.id.size() > 0 and self.id.matches('[A-Za-z_][A-Za-z0-9_.]*')
+inv coherenceDataTypeOutput('Le type de donnée de la colonne doit être identique à celui du flux output de l\'algo'):
+	self.contraintes
+	->collect(output)
+	->collect(type)
+	->forAll(t|t = self.dataType)
+inv coherenceDataTypeInput('Le type de donnée de la colonne doit être identique à celui des flux input de l\'algo'):
+	self.contraintes
+	->collect(input)
+	->collect(type)
+	->forAll(t|t = self.dataType)
+	
 
 endpackage
