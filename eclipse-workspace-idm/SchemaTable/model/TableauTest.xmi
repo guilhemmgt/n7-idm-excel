@@ -4,20 +4,32 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:schemaTable="http://www.example.org/schemaTable"
-    xsi:schemaLocation="http://www.example.org/schemaTable schemaTable.ecore"
-    name="Resultats"
+    name="Test"
     colonneLignes="//@colonnes.0">
   <colonnes
-      name="Examen"
-      id="Resultats.Examen"/>
-  <colonnes
-      name="Matiere"
-      id="Resultats.Matiere">
+      name="NomMatiere"
+      id="test.matieres">
     <contenu
         xsi:type="schemaTable:ImportTable"
         idColumn="Coeff.Matiere">
       <table
           href="Coeff.xmi#/"/>
     </contenu>
+  </colonnes>
+  <colonnes
+      name="colonne_a"
+      id="test.a"
+      dataType="int"/>
+  <colonnes
+      name="colonne_b"
+      id="test.b"
+      dataType="int"/>
+  <colonnes
+      name="MoyenneBinaire"
+      id="colonne.moy"
+      dataType="int">
+    <contenu
+        xsi:type="schemaTable:AppelAlgo"
+        input="//@colonnes.1 //@colonnes.2"/>
   </colonnes>
 </schemaTable:Tableau>
