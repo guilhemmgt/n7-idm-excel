@@ -6,7 +6,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="colonneLignes" lowerBound="1"
         eType="#//Colonne"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="colonnes" upperBound="-1"
-        eType="#//Colonne" containment="true"/>
+        eType="#//Colonne" containment="true" eOpposite="#//Colonne/tableau"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Colonne">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -17,6 +17,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contraintes" upperBound="-1"
         eType="ecore:EClass ../../Algo/model/algo.ecore#//Algo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tableau" lowerBound="1"
+        eType="#//Tableau" changeable="false" eOpposite="#//Tableau/colonnes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContenuColonne" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="AppelAlgo" eSuperTypes="#//ContenuColonne">
