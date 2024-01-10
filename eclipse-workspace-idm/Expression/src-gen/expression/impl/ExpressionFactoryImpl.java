@@ -68,6 +68,14 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 			return createOppose();
 		case ExpressionPackage.INVERSE:
 			return createInverse();
+		case ExpressionPackage.SINUS:
+			return createSinus();
+		case ExpressionPackage.COSINUS:
+			return createCosinus();
+		case ExpressionPackage.RACINE_CARREE:
+			return createRacine_carree();
+		case ExpressionPackage.EXPONENTIELLE:
+			return createExponentielle();
 		case ExpressionPackage.SOUSTRACTION:
 			return createSoustraction();
 		case ExpressionPackage.ADDITION:
@@ -149,6 +157,50 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	public Inverse createInverse() {
 		InverseImpl inverse = new InverseImpl();
 		return inverse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Sinus createSinus() {
+		SinusImpl sinus = new SinusImpl();
+		return sinus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Cosinus createCosinus() {
+		CosinusImpl cosinus = new CosinusImpl();
+		return cosinus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Racine_carree createRacine_carree() {
+		Racine_carreeImpl racine_carree = new Racine_carreeImpl();
+		return racine_carree;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Exponentielle createExponentielle() {
+		ExponentielleImpl exponentielle = new ExponentielleImpl();
+		return exponentielle;
 	}
 
 	/**

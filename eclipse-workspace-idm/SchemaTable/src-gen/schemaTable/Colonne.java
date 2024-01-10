@@ -142,11 +142,22 @@ public interface Colonne extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tableau</em>' container reference.
+	 * @see #setTableau(Tableau)
 	 * @see schemaTable.SchemaTablePackage#getColonne_Tableau()
 	 * @see schemaTable.Tableau#getColonnes
-	 * @model opposite="colonnes" required="true" transient="false" changeable="false"
+	 * @model opposite="colonnes" required="true" transient="false"
 	 * @generated
 	 */
 	Tableau getTableau();
+
+	/**
+	 * Sets the value of the '{@link schemaTable.Colonne#getTableau <em>Tableau</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tableau</em>' container reference.
+	 * @see #getTableau()
+	 * @generated
+	 */
+	void setTableau(Tableau value);
 
 } // Colonne
