@@ -11,16 +11,39 @@ inv formatNom('Le nom de la colonne "' + self.name + '" n\'est pa conforme'):
 	self.name.size() > 1 and self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
 inv formatId('L\'id de la colonne "' + self.id + '" n\'est pa conforme'):
 	self.id.size() > 0 and self.id.matches('[A-Za-z_][A-Za-z0-9_.]*')
-inv coherenceDataTypeOutput('Le type de donnée de la colonne doit être identique à celui du flux output de l\'algo'):
-	self.contraintes
-	->collect(output)
-	->collect(type)
-	->forAll(t|t = self.dataType)
-inv coherenceDataTypeInput('Le type de donnée de la colonne doit être identique à celui des flux input de l\'algo'):
+inv nombreContraintesInput('Un algo en contrainte ne doit avoir qu\'une unique entrée'):
 	self.contraintes
 	->collect(input)
-	->collect(type)
-	->forAll(t|t = self.dataType)
+	->size() = 1
+inv typeAlgoOutput('Un algo en contrainte ne peut pas renvoyer autre chose qu\'un booléen'):
+	self.contraintes
+	->collect(output)
+	->select(f|f.type=bool)
+	->notEmpty()
+inv typeAlgoInput('Un algo en contrainte ne peut pas renvoyer autre chose qu\'un booléen'):
+	self.contraintes
+	->collect(input)
+	->select(f|f.type=self.dataType)
+	->notEmpty()
 	
+context AppelAlgo
+inv coherenceDataTypeAlgoInput('Le type de donnée de la colonne doit être identique à celui du flux input de l\'algo dans AppelAlgo'):
+	self.algo
+	->collect(input)
+	->collect(type)
+	->forAll(t|t=self.input -> collect(dataType) -> first())
+inv coherenceDataTypeColonneInput('Les colonnes en input doivent être toutes du même type dans AppelAlgo'):
+	self.input
+	->collect(dataType)
+	->forAll(t|t=self.input -> collect(dataType) ->first())
+inv nombreAlgoInput('L\'algorithme d\'AppelAlgo doit avoir le même nombre d\'entrée que le nombre de colonne dans input'):
+	self.input ->size() = self.algo ->collect(input) ->size()
+	
+context ImportTable
+inv isIdColumnInTableau('L\'idColumn spécifié dans ImportTable est introuvable dans table'):
+	self.table
+	->collect(colonnes)
+	->exists(c|c.id = self.idColumn)
+
 
 endpackage
