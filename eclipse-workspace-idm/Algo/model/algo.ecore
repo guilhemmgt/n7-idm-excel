@@ -29,5 +29,6 @@
   <eClassifiers xsi:type="ecore:EEnum" name="DataType">
     <eLiterals name="string"/>
     <eLiterals name="int" value="1"/>
+    <eLiterals name="bool" value="2"/>
   </eClassifiers>
 </ecore:EPackage>
