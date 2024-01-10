@@ -14,13 +14,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" lowerBound="1"
         eType="ecore:EEnum ../../Algo/model/algo.ecore#//DataType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contenu" eType="#//ContenuColonne"
-        containment="true"/>
+        containment="true" eOpposite="#//ContenuColonne/colonne"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contraintes" upperBound="-1"
         eType="ecore:EClass ../../Algo/model/algo.ecore#//Algo"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tableau" lowerBound="1"
         eType="#//Tableau" changeable="false" eOpposite="#//Tableau/colonnes"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ContenuColonne" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContenuColonne" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="colonne" lowerBound="1"
+        eType="#//Colonne" changeable="false" eOpposite="#//Colonne/contenu"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AppelAlgo" eSuperTypes="#//ContenuColonne">
     <eStructuralFeatures xsi:type="ecore:EReference" name="algo" lowerBound="1" eType="ecore:EClass ../../Algo/model/algo.ecore#//Algo"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"

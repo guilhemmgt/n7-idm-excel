@@ -1,11 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/SchemaTable/src-gen" creationIcons="false" editDirectory="/SchemaTable.edit/src-gen"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/SchemaTable/src-gen" creationIcons="false" editDirectory="/SchemaTable.edit/src-gen"
     editorDirectory="/SchemaTable.editor/src-gen" modelPluginID="SchemaTable" modelName="SchemaTable"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>schemaTable.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="SchemaTable" disposableProviderFactory="true" ecorePackage="schemaTable.ecore#/"/>
+  <genPackages prefix="SchemaTable" disposableProviderFactory="true" ecorePackage="schemaTable.ecore#/">
+    <genClasses ecoreClass="schemaTable.ecore#//Tableau">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Tableau/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Tableau/colonneLignes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Tableau/colonnes"/>
+    </genClasses>
+    <genClasses ecoreClass="schemaTable.ecore#//Colonne">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Colonne/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Colonne/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Colonne/dataType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Colonne/contenu"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Colonne/contraintes"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference schemaTable.ecore#//Colonne/tableau"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="schemaTable.ecore#//ContenuColonne">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference schemaTable.ecore#//ContenuColonne/colonne"/>
+    </genClasses>
+    <genClasses ecoreClass="schemaTable.ecore#//AppelAlgo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//AppelAlgo/algo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference schemaTable.ecore#//AppelAlgo/input"/>
+    </genClasses>
+    <genClasses ecoreClass="schemaTable.ecore#//ImportTable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//ImportTable/table"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//ImportTable/idColumn"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Algo" ecorePackage="../../Algo/model/algo.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../Algo/model/algo.ecore#//DataType">
+      <genEnumLiterals ecoreEnumLiteral="../../Algo/model/algo.ecore#//DataType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="../../Algo/model/algo.ecore#//DataType/int"/>
+      <genEnumLiterals ecoreEnumLiteral="../../Algo/model/algo.ecore#//DataType/bool"/>
+    </genEnums>
+    <genClasses ecoreClass="../../Algo/model/algo.ecore#//Algo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../Algo/model/algo.ecore#//Algo/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../Algo/model/algo.ecore#//Algo/ressource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../Algo/model/algo.ecore#//Algo/output"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../Algo/model/algo.ecore#//Algo/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../Algo/model/algo.ecore#//Algo/documentations"/>
+    </genClasses>
+    <genClasses ecoreClass="../../Algo/model/algo.ecore#//Ressource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../Algo/model/algo.ecore#//Ressource/path"/>
+    </genClasses>
+    <genClasses ecoreClass="../../Algo/model/algo.ecore#//Flux">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../Algo/model/algo.ecore#//Flux/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../Algo/model/algo.ecore#//Flux/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../Algo/model/algo.ecore#//Documentable"/>
+    <genClasses ecoreClass="../../Algo/model/algo.ecore#//Documentation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../Algo/model/algo.ecore#//Documentation/commentaire"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../Algo/model/algo.ecore#//Documentation/linkToElement"/>
+    </genClasses>
+  </genPackages>
 </genmodel:GenModel>

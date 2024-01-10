@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:schemaTable="http://www.example.org/schemaTable" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description">
+  <viewpoint:DAnalysis uid="_rhG5EK8iEe696-JPzFTJ_A" selectedViews="_0QhjcK8mEe6t7p15Ef-n_Q" version="15.0.0.202209061200">
+    <semanticResources>Coeff.schemaTable</semanticResources>
+    <semanticResources>Resultats.schemaTable</semanticResources>
+    <semanticResources>Algo_Positif.xmi</semanticResources>
+    <semanticResources>Algo_moyenne_binaire.xmi</semanticResources>
+    <semanticResources>Tableau.schemaTable</semanticResources>
+    <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/Resultats.xmi</semanticResources>
+    <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/Coeff.xmi</semanticResources>
+    <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/Algo/model/Algo_Positif.xmi</semanticResources>
+    <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_0QhjcK8mEe6t7p15Ef-n_Q">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_3Zze8K_eEe6YYcYxMS-iIg" name="new SchemaTableTable" repPath="#_3Zn4wK_eEe6YYcYxMS-iIg" changeId="666983bd-2ee6-4412-8bba-706eb00b95b6">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']"/>
+        <target xmi:type="schemaTable:Tableau" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <table:DTable uid="_3Zn4wK_eEe6YYcYxMS-iIg" headerColumnWidth="244">
+    <target xmi:type="schemaTable:Tableau" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#/"/>
+    <lines xmi:type="table:DLine" uid="_3Zof0K_eEe6YYcYxMS-iIg" label="NomMatiere">
+      <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.0"/>
+      <lines xmi:type="table:DLine" uid="_3ZsKMK_eEe6YYcYxMS-iIg" label="Import Table Coeff.Matiere">
+        <target xmi:type="schemaTable:ImportTable" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.0/@contenu"/>
+        <semanticElements xmi:type="schemaTable:ImportTable" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.0/@contenu"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='ImportTableLine']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" uid="_7DCPcK_eEe6YYcYxMS-iIg" backgroundColor="194,239,255"/>
+      </lines>
+      <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_3ZyQ2K_eEe6YYcYxMS-iIg" label="test.matieres" column="_3ZyQ0K_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_3ZyQ2q_eEe6YYcYxMS-iIg" label="NomMatiere" column="_3ZyQ0q_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_3ZyQ3K_eEe6YYcYxMS-iIg" label="string" column="_3ZyQ1K_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_3ZyQ3q_eEe6YYcYxMS-iIg" label="[]" column="_3ZyQ1q_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.0"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_3Zof0a_eEe6YYcYxMS-iIg" backgroundColor="194,239,255"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_3ZpG4K_eEe6YYcYxMS-iIg" label="colonne_a">
+      <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.1"/>
+      <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_3Zy35K_eEe6YYcYxMS-iIg" label="test.a" column="_3ZyQ0K_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_3Zy35q_eEe6YYcYxMS-iIg" label="colonne_a" column="_3ZyQ0q_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_3Zy36K_eEe6YYcYxMS-iIg" label="int" column="_3ZyQ1K_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_3Zy36q_eEe6YYcYxMS-iIg" label="[Algo positif]" column="_3ZyQ1q_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.1"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_3Zpt8K_eEe6YYcYxMS-iIg" label="colonne_b">
+      <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.2"/>
+      <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.2"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_3Zy37K_eEe6YYcYxMS-iIg" label="test.b" column="_3ZyQ0K_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_3Zy37q_eEe6YYcYxMS-iIg" label="colonne_b" column="_3ZyQ0q_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_3Zy38K_eEe6YYcYxMS-iIg" label="int" column="_3ZyQ1K_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_3Zy38q_eEe6YYcYxMS-iIg" label="[]" column="_3ZyQ1q_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.2"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_3ZqVAK_eEe6YYcYxMS-iIg" label="MoyenneBinaire">
+      <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.3"/>
+      <lines xmi:type="table:DLine" uid="_3ZxpwK_eEe6YYcYxMS-iIg" label="Appel Algo">
+        <target xmi:type="schemaTable:AppelAlgo" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.3/@contenu"/>
+        <semanticElements xmi:type="schemaTable:AppelAlgo" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.3/@contenu"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='AppelAlgoLine']"/>
+      </lines>
+      <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.3"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_3Zy39K_eEe6YYcYxMS-iIg" label="colonne.moy" column="_3ZyQ0K_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_3Zy39q_eEe6YYcYxMS-iIg" label="MoyenneBinaire" column="_3ZyQ0q_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_3Zy3-K_eEe6YYcYxMS-iIg" label="int" column="_3ZyQ1K_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_3Zy3-q_eEe6YYcYxMS-iIg" label="[]" column="_3ZyQ1q_eEe6YYcYxMS-iIg">
+        <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/SchemaTable/model/TableauTest.xmi#//@colonnes.3"/>
+      </cells>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_3ZyQ0K_eEe6YYcYxMS-iIg" label="Id" cells="_3ZyQ2K_eEe6YYcYxMS-iIg _3Zy35K_eEe6YYcYxMS-iIg _3Zy37K_eEe6YYcYxMS-iIg _3Zy39K_eEe6YYcYxMS-iIg" width="100" featureName="id">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedColumnMappings[name='IdColumn']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_3ZyQ0q_eEe6YYcYxMS-iIg" label="Name" cells="_3ZyQ2q_eEe6YYcYxMS-iIg _3Zy35q_eEe6YYcYxMS-iIg _3Zy37q_eEe6YYcYxMS-iIg _3Zy39q_eEe6YYcYxMS-iIg" width="100" featureName="name">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedColumnMappings[name='NameColumn']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_3ZyQ1K_eEe6YYcYxMS-iIg" label="Type" cells="_3ZyQ3K_eEe6YYcYxMS-iIg _3Zy36K_eEe6YYcYxMS-iIg _3Zy38K_eEe6YYcYxMS-iIg _3Zy3-K_eEe6YYcYxMS-iIg" width="100" featureName="dataType">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedColumnMappings[name='TypeColumn']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_3ZyQ1q_eEe6YYcYxMS-iIg" label="Contraintes" cells="_3ZyQ3q_eEe6YYcYxMS-iIg _3Zy36q_eEe6YYcYxMS-iIg _3Zy38q_eEe6YYcYxMS-iIg _3Zy3-q_eEe6YYcYxMS-iIg" width="100" featureName="contraintes">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedColumnMappings[name='ContraintesColumn']"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']"/>
+  </table:DTable>
+</xmi:XMI>

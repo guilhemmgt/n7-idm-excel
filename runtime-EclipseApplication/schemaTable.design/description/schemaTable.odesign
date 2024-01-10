@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:description_3="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="schemaTable" version="12.0.0.2017041100">
+  <ownedViewpoints name="schemaTableViewpoint" modelFileExtension="schemaTable">
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="SchemaTableTable" domainClass="schemaTable::Tableau">
+      <metamodel href="http://www.example.org/algo#/"/>
+      <ownedLineMappings name="ColonneLine" domainClass="schemaTable::Colonne" headerLabelExpression="[self.name/]">
+        <backgroundConditionalStyle predicateExpression="[self.tableau.colonneLignes=self/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </backgroundConditionalStyle>
+        <ownedSubLines name="ImportTableLine" domainClass="schemaTable::ImportTable" semanticCandidatesExpression="[self.contenu.oclAsType(ImportTable)/]">
+          <backgroundConditionalStyle predicateExpression="[self.oclAsType(ContenuColonne).colonne.tableau.colonneLignes=self.oclAsType(ContenuColonne).colonne/]">
+            <style>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </backgroundConditionalStyle>
+        </ownedSubLines>
+        <ownedSubLines name="AppelAlgoLine" domainClass="schemaTable::AppelAlgo" semanticCandidatesExpression="[self.contenu.oclAsType(AppelAlgo)/]">
+          <backgroundConditionalStyle predicateExpression="[self.oclAsType(ContenuColonne).colonne.tableau.colonneLignes=self.oclAsType(ContenuColonne).colonne/]">
+            <style>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </backgroundConditionalStyle>
+        </ownedSubLines>
+      </ownedLineMappings>
+      <ownedColumnMappings name="IdColumn" headerLabelExpression="Id" initialWidth="100" featureName="id"/>
+      <ownedColumnMappings name="NameColumn" headerLabelExpression="Name" initialWidth="100" featureName="name"/>
+      <ownedColumnMappings name="TypeColumn" headerLabelExpression="Type" initialWidth="100" featureName="dataType"/>
+      <ownedColumnMappings name="ContraintesColumn" headerLabelExpression="Contraintes" initialWidth="100" featureName="contraintes"/>
+      <ownedColumnMappings name="AppelAlgoAlgoColumn" headerLabelExpression="AppelAlgo: algo" initialWidth="100" featureName="algo"/>
+      <ownedColumnMappings name="AppelAlgoInputColumn" headerLabelExpression="AppelAlgo: input" initialWidth="100" featureName="input"/>
+      <ownedColumnMappings name="ImportTableTableColumn" headerLabelExpression="ImportTable: table" initialWidth="100" featureName="table"/>
+      <ownedColumnMappings name="ImportTableIdColumnColumn" headerLabelExpression="ImportTable: idColumn" initialWidth="100" featureName="idColumn"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="SchemaTableTree" domainClass="schemaTable::Tableau">
+      <metamodel href="http://www.example.org/algo#/"/>
+      <subItemMappings name="SchemaItem" domainClass="schemaTable::Tableau" semanticCandidatesExpression="[self/]">
+        <defaultStyle>
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="ColonnesItem" domainClass="schemaTable::Colonne" semanticCandidatesExpression="feature:eAllContents">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <subItemMappings name="Contraintes" domainClass="algo::Algo" semanticCandidatesExpression="[self.contraintes/]">
+            <defaultStyle labelExpression="[self.name/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </defaultStyle>
+          </subItemMappings>
+        </subItemMappings>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_3:DiagramDescription" name="SchemaDiagram" domainClass="schemaTable::Tableau" enablePopupBars="true">
+      <metamodel href="http://www.example.org/algo#/"/>
+      <defaultLayer name="Default">
+        <edgeMappings name="TableauToColonnes" targetFinderExpression="[self.colonnes/]">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="TableauContainer" semanticCandidatesExpression="[self/]" domainClass="schemaTable::Tableau" childrenPresentation="HorizontalStack">
+          <subContainerMappings name="ColonneContainer" semanticCandidatesExpression="[self.colonnes/]" domainClass="schemaTable::Colonne" childrenPresentation="VerticalStack">
+            <subContainerMappings name="ContraintesContainer" semanticCandidatesExpression="[self/]" domainClass="schemaTable::Colonne" childrenPresentation="List">
+              <subNodeMappings name="AlgoNode" semanticCandidatesExpression="[self.contraintes/]" domainClass="algo::Algo">
+                <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" labelSize="12" labelExpression="Contraintes" widthComputationExpression="20">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </subContainerMappings>
+            <subContainerMappings name="ContenuContainer" semanticCandidatesExpression="[self/]" domainClass="schemaTable::Colonne" childrenPresentation="List">
+              <subNodeMappings name="ContenuNode" semanticCandidatesExpression="[self.contenu/]" domainClass="schemaTable::ContenuColonne">
+                <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="Import" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="Contenu">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" widthComputationExpression="20" heightComputationExpression="50">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>underline</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Yrdy">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Tatatata">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="schemaTable::Colonne" referenceName="colonnes"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="schemaTable.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
