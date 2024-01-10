@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated schemaTable -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="schemaTable.presentation.SchemaTableModelWizardID"
+            name="%_UI_SchemaTableModelWizard_label"
+            class="schemaTable.presentation.SchemaTableModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SchemaTableModelFile.gif">
+         <description>%_UI_SchemaTableModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated schemaTable -->
+      <editor
+            id="schemaTable.presentation.SchemaTableEditorID"
+            name="%_UI_SchemaTableEditor_label"
+            icon="icons/full/obj16/SchemaTableModelFile.gif"
+            extensions="schematable"
+            class="schemaTable.presentation.SchemaTableEditor"
+            contributorClass="schemaTable.presentation.SchemaTableActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated schemaTable -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="algo.presentation.AlgoModelWizardID"
+            name="%_UI_AlgoModelWizard_label"
+            class="algo.presentation.AlgoModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AlgoModelFile.gif">
+         <description>%_UI_AlgoModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated schemaTable -->
+      <editor
+            id="algo.presentation.AlgoEditorID"
+            name="%_UI_AlgoEditor_label"
+            icon="icons/full/obj16/AlgoModelFile.gif"
+            extensions="algo"
+            class="algo.presentation.AlgoEditor"
+            contributorClass="algo.presentation.AlgoActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
