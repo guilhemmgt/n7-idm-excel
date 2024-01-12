@@ -45,13 +45,12 @@ class [aTableau.name /]:
         # Convertir le DataFrame en une chaîne HTML représentant un tableau
 		return self.table.to_html()
 
-	def load_functions_from_paths(self, matrix_of_paths):
+	def load_functions_from_paths(self, matrix_of_paths, function_name):
 		functions_matrix = ['[]'/]
 		for paths in matrix_of_paths:
 			functions = ['[]'/]
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				function_name = path.split('/')['[-1]'/].split('.')['[0]'/]  # Nom de la fonction à partir du nom du fichier
 				spec = importlib.util.spec_from_file_location(function_name, path)
 				module = importlib.util.module_from_spec(spec)
 				spec.loader.exec_module(module)
@@ -67,7 +66,7 @@ class [aTableau.name /]:
 		erreurs = ['[]'/]
 		
 		# Charger dynamiquement les fonctions à partir des chemins
-		conditions = self.load_functions_from_paths(chemins_conditions)
+		conditions = self.load_functions_from_paths(chemins_conditions, "check")
 
      	# Itérer sur les colonnes et vérifier les conditions
 		for i,colonne in enumerate(self.table.columns):
@@ -99,13 +98,24 @@ class [aTableau.name /]:
 		
 
 	def calcAll(self):
+		# Recuperer la matrice des paths
 		[let cols : Sequence(Colonne) = aTableau.getColonnesAppelAlgo()]
 			[if (cols->size()) = 0 ]
 			pass
-			[/if]
+			[else]
+		# Itérer sur les colonnes et calculer si nécessaire
+		for i,colonne in enumerate(self.table.columns):
+			if algos[i] != null :
+			colonne_provisoire = []
+        # Calculer chaque élément de la colonne
+			for element in self.table['[colonne]:'/]
+[comment]				colonne_provisoire.append([/comment]
+				
+				
 			[for (c : Colonne | cols)]
-			
+				# 
 			[/for]
+			[/if]
 		[/let]
 
 	def export(self, csv_file):

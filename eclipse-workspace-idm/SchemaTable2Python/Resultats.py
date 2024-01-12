@@ -38,13 +38,12 @@ class Resultats:
         # Convertir le DataFrame en une chaîne HTML représentant un tableau
 		return self.table.to_html()
 
-	def load_functions_from_paths(self, matrix_of_paths):
+	def load_functions_from_paths(self, matrix_of_paths, function_name):
 		functions_matrix = []
 		for paths in matrix_of_paths:
 			functions = []
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				function_name = path.split('/')[-1].split('.')[0]  # Nom de la fonction à partir du nom du fichier
 				spec = importlib.util.spec_from_file_location(function_name, path)
 				module = importlib.util.module_from_spec(spec)
 				spec.loader.exec_module(module)
@@ -60,7 +59,7 @@ class Resultats:
 		erreurs = []
 		
 		# Charger dynamiquement les fonctions à partir des chemins
-		conditions = self.load_functions_from_paths(chemins_conditions)
+		conditions = self.load_functions_from_paths(chemins_conditions, "check")
 
      	# Itérer sur les colonnes et vérifier les conditions
 		for i,colonne in enumerate(self.table.columns):
@@ -81,10 +80,11 @@ class Resultats:
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
 			self.table.fusionner_colonnes(Coeff.get_instance().table, "Examen", "Examen", "Matiere", "Matiere")
+
 		
 
 	def calcAll(self):
-		pass
+			pass
 
 	def export(self, csv_file):
         # Exporter le DataFrame en tant que fichier CSV

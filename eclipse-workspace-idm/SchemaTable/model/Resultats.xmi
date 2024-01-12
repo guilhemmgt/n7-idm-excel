@@ -20,4 +20,26 @@
           href="Coeff.xmi#/"/>
     </contenu>
   </colonnes>
+  <colonnes
+      name="NotePonderee"
+      id="Resultats.NotePonderee">
+    <contenu
+        xsi:type="schemaTable:AppelAlgo">
+      <algo
+          href="../../Algo/model/termeMoyenne.xmi#/"/>
+    </contenu>
+  </colonnes>
+  <colonnes
+      name="Notes"
+      id="Resultats.Notes"/>
+  <colonnes
+      name="CoeffDansMat"
+      id="Resultats.CoeffDansMat">
+    <contenu
+        xsi:type="schemaTable:ImportTable"
+        id="Coeff.CoeffDansMat">
+      <table
+          href="Coeff.xmi#/"/>
+    </contenu>
+  </colonnes>
 </schemaTable:Tableau>
