@@ -11,11 +11,6 @@ import importlib
 
 class [aTableau.name /]:
 
-[comment]	def __init__(self):
-		self.table = [ '[[]]' /]  # Initialisation du tableau
-		# Initialisation de la première ligne avec le nom des colonnes
-		self.table['[0]'/]=[aTableau.ListeNomsColonnes() /][/comment]
-
 	_instance = None
 
 	# Assure qu'il y a une seule instance par classe
@@ -36,14 +31,6 @@ class [aTableau.name /]:
 			cls._instance = cls()
 		return cls._instance
 
-[comment]	#Initialisation avec panda
-	def __init__(self):
-        # Récupérer la liste de noms des colonnes
-		noms_colonnes = [aTableau.ListeNomsColonnes() /]
-
-        # Initialisation du DataFrame avec les noms de colonnes
-		self.table = pd.DataFrame(columns=noms_colonnes)[/comment]
-
 	def load(self, csv_file):
 		# Charger le CSV en utilisant pandas
 		df = pd.read_csv(csv_file)
@@ -58,13 +45,12 @@ class [aTableau.name /]:
         # Convertir le DataFrame en une chaîne HTML représentant un tableau
 		return self.table.to_html()
 
-	def load_functions_from_paths(self, matrix_of_paths):
+	def load_functions_from_paths(self, matrix_of_paths, function_name):
 		functions_matrix = ['[]'/]
 		for paths in matrix_of_paths:
 			functions = ['[]'/]
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				function_name = path.split('/')['[-1]'/].split('.')['[0]'/]  # Nom de la fonction à partir du nom du fichier
 				spec = importlib.util.spec_from_file_location(function_name, path)
 				module = importlib.util.module_from_spec(spec)
 				spec.loader.exec_module(module)
@@ -80,7 +66,7 @@ class [aTableau.name /]:
 		erreurs = ['[]'/]
 		
 		# Charger dynamiquement les fonctions à partir des chemins
-		conditions = self.load_functions_from_paths(chemins_conditions)
+		conditions = self.load_functions_from_paths(chemins_conditions, "check")
 
      	# Itérer sur les colonnes et vérifier les conditions
 		for i,colonne in enumerate(self.table.columns):
@@ -100,14 +86,37 @@ class [aTableau.name /]:
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-			# Récupérer l'instance python correspondante
-			# Récupérer la colonne d'ID souhaitée
+		[let cols : Sequence(Colonne) = aTableau.getColonnesImportTable()]
+			[if (cols->size()) = 0 ]
+			pass
+			[/if]
+			[for (c : Colonne | cols)]
+			self.table.fusionner_colonnes([c.getTable().name /].get_instance().table, "[aTableau.colonneLignes.name /]", "[c.getColonneLigne() /]", "[c.getColSource() /]", "[c.name /]")
+			[/for]
+		[/let]
 
-		pass
 		
 
 	def calcAll(self):
-		pass
+		# Recuperer la matrice des paths
+		[let cols : Sequence(Colonne) = aTableau.getColonnesAppelAlgo()]
+			[if (cols->size()) = 0 ]
+			pass
+			[else]
+		# Itérer sur les colonnes et calculer si nécessaire
+		for i,colonne in enumerate(self.table.columns):
+			if algos[i] != null :
+			colonne_provisoire = []
+        # Calculer chaque élément de la colonne
+			for element in self.table['[colonne]:'/]
+[comment]				colonne_provisoire.append([/comment]
+				
+				
+			[for (c : Colonne | cols)]
+				# 
+			[/for]
+			[/if]
+		[/let]
 
 	def export(self, csv_file):
         # Exporter le DataFrame en tant que fichier CSV
@@ -125,9 +134,30 @@ class [aTableau.name /]:
     c.contraintes->asOrderedSet()
 /]
 
-[query public getColonnesImportTable(t : Tableau) : OrderedSet(Colonne) = 
-    t.colonnes->select(c | c.contenu.oclIsTypeOf(ImportTable))
-        ->asOrderedSet()
+[query public getColonnesImportTable(t : Tableau) : Sequence(Colonne) = 
+    t.colonnes->select(c | c.contenu <> null and c.contenu.oclIsTypeOf(ImportTable))
+        ->asSequence()
+/]
+
+[query public getColonnesAppelAlgo(t : Tableau) : Sequence(Colonne) = 
+    t.colonnes->select(c | c.contenu <> null and c.contenu.oclIsTypeOf(AppelAlgo))
+        ->asSequence()
+/]
+
+[query public getTable(c : Colonne) : Tableau =
+	c.contenu.oclAsType(ImportTable).table
+/]
+
+[query public getColonneLigne(c : Colonne) : String =
+	c.contenu.oclAsType(ImportTable).table.colonneLignes.name
+/]
+
+[query public getID(c : Colonne) : String =
+	c.contenu.oclAsType(ImportTable).idColumn
+/]
+
+[query public getColSource(c : Colonne) : String = 
+	c.getTable().colonnes -> select(source | source.id = c.getID())->first().name
 /]
 
 [template public ListeNomsColonnesImportTable (t : Tableau) post(trim())]
@@ -146,4 +176,3 @@ class [aTableau.name /]:
 ['[' /][for (contrainte : Algo | contraintes)]"[contrainte.ressource.path/]"[if contrainte <> contraintes->last()], [/if][/for][']'/][/let]
 [if c <> colonnes->last()], [/if][/for][']'/][/let]
 [/template]
-
