@@ -9,6 +9,13 @@
 import pandas as pd
 import importlib
 
+[let tables : OrderedSet(Tableau) = aTableau.getTablesToImport()]
+[for (t : Tableau | tables)]
+from [t.name/] import [t.name /]
+[/for]
+[/let]
+
+
 class [aTableau.name /]:
 
 	_instance = None
@@ -45,20 +52,26 @@ class [aTableau.name /]:
         # Convertir le DataFrame en une chaîne HTML représentant un tableau
 		return self.table.to_html()
 
+	def load_fct(self, function_name, path):
+		spec = importlib.util.spec_from_file_location(function_name, path)
+		module = importlib.util.module_from_spec(spec)
+		spec.loader.exec_module(module)
+		return getattr(module, function_name)
+
+
 	def load_functions_from_paths(self, matrix_of_paths, function_name):
 		functions_matrix = ['[]'/]
 		for paths in matrix_of_paths:
 			functions = ['[]'/]
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				spec = importlib.util.spec_from_file_location(function_name, path)
-				module = importlib.util.module_from_spec(spec)
-				spec.loader.exec_module(module)
-				functions.append(getattr(module, function_name))
+				functions.append(load_fct(function_name, path))
 			functions_matrix.append(functions)
 		return functions_matrix
 
 	def checkAll(self):
+
+		#TODO : check si les éléments de colonneLigne sont tous différent
         # Matrice des chemins vers les fichiers contenant les fonctions
 		chemins_conditions = [aTableau.MatriceContraintes() /]
 
@@ -91,32 +104,32 @@ class [aTableau.name /]:
 			pass
 			[/if]
 			[for (c : Colonne | cols)]
-			self.table.fusionner_colonnes([c.getTable().name /].get_instance().table, "[aTableau.colonneLignes.name /]", "[c.getColonneLigne() /]", "[c.getColSource() /]", "[c.name /]")
+			self.fusionner_colonnes([c.getTable().name /].get_instance().table, "[aTableau.colonneLignes.name /]", "[c.getColonneLigne() /]", "[c.getColSource() /]", "[c.name /]")
 			[/for]
 		[/let]
 
 		
 
 	def calcAll(self):
+		print("Table après importation :")
+		print(self.table)
+		self.insertFromTable()
 		# Recuperer la matrice des paths
 		[let cols : Sequence(Colonne) = aTableau.getColonnesAppelAlgo()]
 			[if (cols->size()) = 0 ]
-			pass
+		pass
 			[else]
-		# Itérer sur les colonnes et calculer si nécessaire
-		for i,colonne in enumerate(self.table.columns):
-			if algos[i] != null :
-			colonne_provisoire = []
-        # Calculer chaque élément de la colonne
-			for element in self.table['[colonne]:'/]
-[comment]				colonne_provisoire.append([/comment]
-				
-				
-			[for (c : Colonne | cols)]
-				# 
+		[for (c : Colonne | cols)]
+			[let entrees : OrderedSet(Colonne) = c.getEntrees()]
+		colonne_provisoire = ['[]'/]
+		for j,element in enumerate(self.table['['/]"[c.name/]"[']):'/]
+			colonne_provisoire.append(self.load_fct("calcul", "[c.contenu.oclAsType(AppelAlgo).algo.ressource.path /]")([c.listeEntrees() /]))
+		self.table['['/]"[c.name/]"[']'/] = colonne_provisoire
+			[/let]
 			[/for]
 			[/if]
 		[/let]
+
 
 	def export(self, csv_file):
         # Exporter le DataFrame en tant que fichier CSV
@@ -130,6 +143,10 @@ class [aTableau.name /]:
     t.colonnes->asOrderedSet()
 /]
 
+[query public getEntrees(c : Colonne) : OrderedSet(Colonne) = 
+    c.contenu.oclAsType(AppelAlgo).input
+/]
+
 [query public getContraintes(c : Colonne) : OrderedSet(Algo) = 
     c.contraintes->asOrderedSet()
 /]
@@ -137,6 +154,10 @@ class [aTableau.name /]:
 [query public getColonnesImportTable(t : Tableau) : Sequence(Colonne) = 
     t.colonnes->select(c | c.contenu <> null and c.contenu.oclIsTypeOf(ImportTable))
         ->asSequence()
+/]
+
+[query public getTablesToImport(t : Tableau) : OrderedSet(Tableau) = 
+    t.getColonnesImportTable()-> collect(c|c.getTable()) -> asOrderedSet()
 /]
 
 [query public getColonnesAppelAlgo(t : Tableau) : Sequence(Colonne) = 
@@ -160,9 +181,14 @@ class [aTableau.name /]:
 	c.getTable().colonnes -> select(source | source.id = c.getID())->first().name
 /]
 
+[template public listeEntrees (c : Colonne) post(trim())]
+[let cs : Sequence(Colonne) = c.getEntrees() -> asSequence()]
+[for (c : Colonne | cs)]self.table.at['['/]j,'[c.name/]'[']'/][if c <> cs->last()], [/if][/for][/let]
+[/template]
+
 [template public ListeNomsColonnesImportTable (t : Tableau) post(trim())]
 [let cs : Sequence(Colonne) = t.getColonnesImportTable() -> asSequence()]
-['[' /][for (c : Colonne | cs)]"[c.name/]"[if c <> cs->last()], [/if][/for][']'/][/let]
+['' /][for (c : Colonne | cs)][c.name/][if c <> cs->last()], [/if][/for][']'/][/let]
 [/template]
 
 [template public ListeNomsColonnes (t : Tableau) post(trim())]
