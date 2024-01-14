@@ -182,11 +182,11 @@ public class AlgoImpl extends DocumentableImpl implements Algo {
 		if (newRessource != ressource) {
 			NotificationChain msgs = null;
 			if (ressource != null)
-				msgs = ((InternalEObject) ressource).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - AlgoPackage.ALGO__RESSOURCE, null, msgs);
+				msgs = ((InternalEObject) ressource).eInverseRemove(this, AlgoPackage.RESSOURCE__ALGO, Ressource.class,
+						msgs);
 			if (newRessource != null)
-				msgs = ((InternalEObject) newRessource).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - AlgoPackage.ALGO__RESSOURCE, null, msgs);
+				msgs = ((InternalEObject) newRessource).eInverseAdd(this, AlgoPackage.RESSOURCE__ALGO, Ressource.class,
+						msgs);
 			msgs = basicSetRessource(newRessource, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -271,6 +271,23 @@ public class AlgoImpl extends DocumentableImpl implements Algo {
 					AlgoPackage.ALGO__DOCUMENTATIONS);
 		}
 		return documentations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case AlgoPackage.ALGO__RESSOURCE:
+			if (ressource != null)
+				msgs = ((InternalEObject) ressource).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - AlgoPackage.ALGO__RESSOURCE, null, msgs);
+			return basicSetRessource((Ressource) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**

@@ -4,7 +4,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Algo" eSuperTypes="#//Documentable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ressource" lowerBound="1"
-        eType="#//Ressource" containment="true"/>
+        eType="#//Ressource" containment="true" eOpposite="#//Ressource/algo"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
         eType="#//Flux" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
@@ -14,6 +14,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ressource" eSuperTypes="#//Documentable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="algo" lowerBound="1" eType="#//Algo"
+        eOpposite="#//Algo/ressource"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Flux" eSuperTypes="#//Documentable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

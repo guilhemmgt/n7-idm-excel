@@ -12,6 +12,7 @@ package algo;
  * </p>
  * <ul>
  *   <li>{@link algo.Ressource#getPath <em>Path</em>}</li>
+ *   <li>{@link algo.Ressource#getAlgo <em>Algo</em>}</li>
  * </ul>
  *
  * @see algo.AlgoPackage#getRessource()
@@ -40,5 +41,29 @@ public interface Ressource extends Documentable {
 	 * @generated
 	 */
 	void setPath(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Algo</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link algo.Algo#getRessource <em>Ressource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Algo</em>' container reference.
+	 * @see #setAlgo(Algo)
+	 * @see algo.AlgoPackage#getRessource_Algo()
+	 * @see algo.Algo#getRessource
+	 * @model opposite="ressource" required="true" transient="false"
+	 * @generated
+	 */
+	Algo getAlgo();
+
+	/**
+	 * Sets the value of the '{@link algo.Ressource#getAlgo <em>Algo</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Algo</em>' container reference.
+	 * @see #getAlgo()
+	 * @generated
+	 */
+	void setAlgo(Algo value);
 
 } // Ressource
