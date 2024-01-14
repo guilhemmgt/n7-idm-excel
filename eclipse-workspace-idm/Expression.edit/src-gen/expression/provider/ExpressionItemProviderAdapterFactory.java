@@ -211,6 +211,98 @@ public class ExpressionItemProviderAdapterFactory extends ExpressionAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link expression.Sinus} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SinusItemProvider sinusItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link expression.Sinus}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSinusAdapter() {
+		if (sinusItemProvider == null) {
+			sinusItemProvider = new SinusItemProvider(this);
+		}
+
+		return sinusItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link expression.Cosinus} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CosinusItemProvider cosinusItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link expression.Cosinus}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCosinusAdapter() {
+		if (cosinusItemProvider == null) {
+			cosinusItemProvider = new CosinusItemProvider(this);
+		}
+
+		return cosinusItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link expression.Racine_carree} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Racine_carreeItemProvider racine_carreeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link expression.Racine_carree}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRacine_carreeAdapter() {
+		if (racine_carreeItemProvider == null) {
+			racine_carreeItemProvider = new Racine_carreeItemProvider(this);
+		}
+
+		return racine_carreeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link expression.Exponentielle} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ExponentielleItemProvider exponentielleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link expression.Exponentielle}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExponentielleAdapter() {
+		if (exponentielleItemProvider == null) {
+			exponentielleItemProvider = new ExponentielleItemProvider(this);
+		}
+
+		return exponentielleItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link expression.Soustraction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -465,6 +557,14 @@ public class ExpressionItemProviderAdapterFactory extends ExpressionAdapterFacto
 			opposeItemProvider.dispose();
 		if (inverseItemProvider != null)
 			inverseItemProvider.dispose();
+		if (sinusItemProvider != null)
+			sinusItemProvider.dispose();
+		if (cosinusItemProvider != null)
+			cosinusItemProvider.dispose();
+		if (racine_carreeItemProvider != null)
+			racine_carreeItemProvider.dispose();
+		if (exponentielleItemProvider != null)
+			exponentielleItemProvider.dispose();
 		if (soustractionItemProvider != null)
 			soustractionItemProvider.dispose();
 		if (additionItemProvider != null)

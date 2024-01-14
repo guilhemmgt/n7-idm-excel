@@ -162,6 +162,52 @@ public class ExpressionSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case ExpressionPackage.SINUS: {
+			Sinus sinus = (Sinus) theEObject;
+			T result = caseSinus(sinus);
+			if (result == null)
+				result = caseOperationUnaire(sinus);
+			if (result == null)
+				result = caseExpressionElement(sinus);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ExpressionPackage.COSINUS: {
+			Cosinus cosinus = (Cosinus) theEObject;
+			T result = caseCosinus(cosinus);
+			if (result == null)
+				result = caseOperationUnaire(cosinus);
+			if (result == null)
+				result = caseExpressionElement(cosinus);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ExpressionPackage.RACINE_CARREE: {
+			Racine_carree racine_carree = (Racine_carree) theEObject;
+			T result = caseRacine_carree(racine_carree);
+			if (result == null)
+				result = caseOperationUnaire(racine_carree);
+			if (result == null)
+				result = caseExpressionElement(racine_carree);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ExpressionPackage.EXPONENTIELLE: {
+			Exponentielle exponentielle = (Exponentielle) theEObject;
+			T result = caseExponentielle(exponentielle);
+			if (result == null)
+				result = caseRacine_carree(exponentielle);
+			if (result == null)
+				result = caseOperationUnaire(exponentielle);
+			if (result == null)
+				result = caseExpressionElement(exponentielle);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case ExpressionPackage.OPERATION_BINAIRE: {
 			OperationBinaire operationBinaire = (OperationBinaire) theEObject;
 			T result = caseOperationBinaire(operationBinaire);
@@ -389,6 +435,66 @@ public class ExpressionSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInverse(Inverse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sinus</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sinus</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSinus(Sinus object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cosinus</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cosinus</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCosinus(Cosinus object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Racine carree</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Racine carree</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRacine_carree(Racine_carree object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Exponentielle</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Exponentielle</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExponentielle(Exponentielle object) {
 		return null;
 	}
 

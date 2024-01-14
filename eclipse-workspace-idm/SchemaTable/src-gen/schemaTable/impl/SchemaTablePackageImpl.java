@@ -440,13 +440,13 @@ public class SchemaTablePackageImpl extends EPackageImpl implements SchemaTableP
 				Colonne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getColonne_Tableau(), this.getTableau(), this.getTableau_Colonnes(), "tableau", null, 1, 1,
-				Colonne.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				Colonne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contenuColonneEClass, ContenuColonne.class, "ContenuColonne", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContenuColonne_Colonne(), this.getColonne(), this.getColonne_Contenu(), "colonne", null, 1, 1,
-				ContenuColonne.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				ContenuColonne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(appelAlgoEClass, AppelAlgo.class, "AppelAlgo", !IS_ABSTRACT, !IS_INTERFACE,
