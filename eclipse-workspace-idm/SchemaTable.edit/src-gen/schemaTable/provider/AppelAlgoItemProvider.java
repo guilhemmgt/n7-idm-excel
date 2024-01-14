@@ -10,9 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import schemaTable.AppelAlgo;
 import schemaTable.SchemaTablePackage;
 
 /**
@@ -76,7 +73,7 @@ public class AppelAlgoItemProvider extends ContenuColonneItemProvider {
 						getResourceLocator(), getString("_UI_AppelAlgo_input_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_AppelAlgo_input_feature",
 								"_UI_AppelAlgo_type"),
-						SchemaTablePackage.Literals.APPEL_ALGO__INPUT, true, false, false, null, null, null));
+						SchemaTablePackage.Literals.APPEL_ALGO__INPUT, true, false, true, null, null, null));
 	}
 
 	/**
@@ -121,12 +118,6 @@ public class AppelAlgoItemProvider extends ContenuColonneItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(AppelAlgo.class)) {
-		case SchemaTablePackage.APPEL_ALGO__INPUT:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

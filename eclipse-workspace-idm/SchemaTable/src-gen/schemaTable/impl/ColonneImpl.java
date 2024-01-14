@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import schemaTable.Colonne;
 import schemaTable.ContenuColonne;
 import schemaTable.SchemaTablePackage;
@@ -294,6 +295,41 @@ public class ColonneImpl extends MinimalEObjectImpl.Container implements Colonne
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetTableau(Tableau newTableau, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject) newTableau, SchemaTablePackage.COLONNE__TABLEAU, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTableau(Tableau newTableau) {
+		if (newTableau != eInternalContainer()
+				|| (eContainerFeatureID() != SchemaTablePackage.COLONNE__TABLEAU && newTableau != null)) {
+			if (EcoreUtil.isAncestor(this, newTableau))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newTableau != null)
+				msgs = ((InternalEObject) newTableau).eInverseAdd(this, SchemaTablePackage.TABLEAU__COLONNES,
+						Tableau.class, msgs);
+			msgs = basicSetTableau(newTableau, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchemaTablePackage.COLONNE__TABLEAU, newTableau,
+					newTableau));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -305,7 +341,7 @@ public class ColonneImpl extends MinimalEObjectImpl.Container implements Colonne
 		case SchemaTablePackage.COLONNE__TABLEAU:
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
-			return eBasicSetContainer(otherEnd, SchemaTablePackage.COLONNE__TABLEAU, msgs);
+			return basicSetTableau((Tableau) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -321,7 +357,7 @@ public class ColonneImpl extends MinimalEObjectImpl.Container implements Colonne
 		case SchemaTablePackage.COLONNE__CONTENU:
 			return basicSetContenu(null, msgs);
 		case SchemaTablePackage.COLONNE__TABLEAU:
-			return eBasicSetContainer(null, SchemaTablePackage.COLONNE__TABLEAU, msgs);
+			return basicSetTableau(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -389,6 +425,9 @@ public class ColonneImpl extends MinimalEObjectImpl.Container implements Colonne
 			getContraintes().clear();
 			getContraintes().addAll((Collection<? extends Algo>) newValue);
 			return;
+		case SchemaTablePackage.COLONNE__TABLEAU:
+			setTableau((Tableau) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -415,6 +454,9 @@ public class ColonneImpl extends MinimalEObjectImpl.Container implements Colonne
 			return;
 		case SchemaTablePackage.COLONNE__CONTRAINTES:
 			getContraintes().clear();
+			return;
+		case SchemaTablePackage.COLONNE__TABLEAU:
+			setTableau((Tableau) null);
 			return;
 		}
 		super.eUnset(featureID);
