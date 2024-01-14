@@ -22,6 +22,7 @@
     </genClasses>
     <genClasses ecoreClass="algo.ecore#//Ressource">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algo.ecore#//Ressource/path"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference algo.ecore#//Ressource/algo"/>
     </genClasses>
     <genClasses ecoreClass="algo.ecore#//Flux">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algo.ecore#//Flux/value"/>

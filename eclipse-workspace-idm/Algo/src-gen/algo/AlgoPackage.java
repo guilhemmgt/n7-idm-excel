@@ -178,13 +178,22 @@ public interface AlgoPackage extends EPackage {
 	int RESSOURCE__PATH = DOCUMENTABLE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Algo</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESSOURCE__ALGO = DOCUMENTABLE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Ressource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESSOURCE_FEATURE_COUNT = DOCUMENTABLE_FEATURE_COUNT + 1;
+	int RESSOURCE_FEATURE_COUNT = DOCUMENTABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Ressource</em>' class.
@@ -384,6 +393,17 @@ public interface AlgoPackage extends EPackage {
 	EAttribute getRessource_Path();
 
 	/**
+	 * Returns the meta object for the container reference '{@link algo.Ressource#getAlgo <em>Algo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Algo</em>'.
+	 * @see algo.Ressource#getAlgo()
+	 * @see #getRessource()
+	 * @generated
+	 */
+	EReference getRessource_Algo();
+
+	/**
 	 * Returns the meta object for class '{@link algo.Flux <em>Flux</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -557,6 +577,14 @@ public interface AlgoPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RESSOURCE__PATH = eINSTANCE.getRessource_Path();
+
+		/**
+		 * The meta object literal for the '<em><b>Algo</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESSOURCE__ALGO = eINSTANCE.getRessource_Algo();
 
 		/**
 		 * The meta object literal for the '{@link algo.impl.FluxImpl <em>Flux</em>}' class.

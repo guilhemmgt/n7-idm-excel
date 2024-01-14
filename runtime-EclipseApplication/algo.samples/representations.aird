@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description" uid="_WWD94LMjEe62CNnX-1XLCg" selectedViews="_pikPALMjEe62CNnX-1XLCg" version="15.0.0.202209061200">
+  <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_moyenne_binaire.xmi</semanticResources>
+  <ownedViews xmi:type="viewpoint:DView" uid="_pikPALMjEe62CNnX-1XLCg">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="algo" version="12.0.0.2017041100">
+  <ownedViewpoints name="algoViewpoint" modelFileExtension="algo">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="AlgoDiagram" domainClass="algo::Algo" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="RessourceNode" semanticCandidatesExpression="[self.ressource/]" domainClass="algo::Ressource">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="[self.path/]" labelPosition="node" resizeKind="NSEW" width="40" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="InputNode" semanticCandidatesExpression="[self.input/]" domainClass="algo::Flux">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="['▶ ' + self.value + ' (' + self.type + ')'/]" labelPosition="node" resizeKind="NSEW" width="20" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="OutputNode" semanticCandidatesExpression="[self.output/]" domainClass="algo::Flux">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="[self.value + ' (' + self.type + ') ▶'/]" labelPosition="node" resizeKind="NSEW" width="20" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="InputEdge" sourceMapping="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='RessourceNode']" targetMapping="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']" targetFinderExpression="[self.algo.input/]">
+          <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="OutputEdge" sourceMapping="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='RessourceNode']" targetMapping="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='OutputNode']" targetFinderExpression="[self.algo.output/]">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Noeuds">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="RessourceCreation" label="Ressource" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='RessourceNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="algo::Ressource" referenceName="ressource">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="path" valueExpression="&lt;chemin vers la ressource>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="InputCreation" label="Entrée" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="algo::Flux" referenceName="input">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="value" valueExpression="nouvelle entrée"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="OutputCreation" label="Sortie" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='OutputNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="algo::Flux" referenceName="output">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="value" valueExpression="nouvelle sortie"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="Documentation">
+        <nodeMappings name="DocumentationNode" semanticCandidatesExpression="[self.documentations/]" domainClass="algo::Documentation">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="[self.commentaire/]" labelPosition="node" resizeKind="NSEW" width="20" height="6">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="DocumentationEdge" sourceMapping="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@additionalLayers[name='Documentation']/@nodeMappings[name='DocumentationNode']" targetMapping="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='RessourceNode'] //@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='OutputNode'] //@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']" targetFinderExpression="[self.linkToElement/]">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Documentation">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="DocCreation" label="Documentation" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@additionalLayers[name='Documentation']/@nodeMappings[name='DocumentationNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="algo::Documentation" referenceName="documentations">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="commentaire" valueExpression="nouveau commentaire"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DocLinkCreation">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="linkToElement" valueExpression="[target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="algo.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
