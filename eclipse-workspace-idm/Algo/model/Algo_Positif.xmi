@@ -4,7 +4,7 @@
     xmlns:algo="http://www.example.org/algo"
     name="positif">
   <ressource
-      path="eclipse-workspace-idm/Algo/positif.py"/>
+      path="eclipse-workspace-idm/Algo/check.m"/>
   <output value="sortie"
       type="bool"/>
   <input value="entree"

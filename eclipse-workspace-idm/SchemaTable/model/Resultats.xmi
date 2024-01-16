@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schemaTable:Tableau xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaTable="http://www.example.org/schemaTable" name="Resultats" colonneLignes="//@colonnes.0">
-  <colonnes name="Examen" id="Resultats.Examen"/>
-  <colonnes name="Matiere" id="Resultats.Matiere">
-    <contenu xsi:type="schemaTable:ImportTable" idColumn="Coeff.Matiere">
-      <table href="Coeff.xmi#/"/>
+<schemaTable:Tableau
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:schemaTable="http://www.example.org/schemaTable"
+    name="Resultats"
+    colonneLignes="//@colonnes.0">
+  <colonnes
+      name="Examen"
+      id="Resultats.Examen"/>
+  <colonnes
+      name="Matiere"
+      id="Resultats.Matiere">
+    <contenu
+        xsi:type="schemaTable:ImportTable"
+        idColumn="Coeff.Matiere">
+      <table
+          href="Coeff.xmi#/"/>
     </contenu>
   </colonnes>
-  <colonnes name="NotePonderee" id="Resultats.NotePonderee">
-    <contenu xsi:type="schemaTable:AppelAlgo" input="//@colonnes.3 //@colonnes.4">
-      <algo href="../../Algo/model/Algo_NotePonderee.xmi#/"/>
+  <colonnes
+      name="NotePonderee"
+      id="Resultats.NotePonderee">
+    <contenu
+        xsi:type="schemaTable:AppelAlgo"
+        input="//@colonnes.3 //@colonnes.4">
+      <algo
+          href="../../Algo/model/Algo_NotePonderee.xmi#/"/>
     </contenu>
   </colonnes>
-  <colonnes name="Notes" id="Resultats.Notes"/>
+  <colonnes
+      name="Notes"
+      id="Resultats.Notes"/>
   <colonnes
       name="CoeffDansMat"
       id="Resultats.CoeffDansMat">
