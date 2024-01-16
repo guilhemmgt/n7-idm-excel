@@ -2,8 +2,9 @@
 import pandas as pd
 import importlib
 
-class Coeff:
 
+
+class Coeff:
 
 	_instance = None
 
@@ -13,7 +14,7 @@ class Coeff:
 			cls._instance = super(Coeff, cls).__new__(cls)
 
 			# Récupére la liste de noms des colonnes
-			noms_colonnes = ["Examen", "Matiere", "CoeffDansMat"]
+			noms_colonnes = ["Examen", "Matiere", "CoeffDansMattt"]
 
 	        # Initialisation du DataFrame avec les noms de colonnes
 			cls._instance.table = pd.DataFrame(columns=noms_colonnes)
@@ -24,7 +25,6 @@ class Coeff:
 		if not cls._instance:
 			cls._instance = cls()
 		return cls._instance
-
 
 	def load(self, csv_file):
 		# Charger le CSV en utilisant pandas
@@ -40,21 +40,27 @@ class Coeff:
         # Convertir le DataFrame en une chaîne HTML représentant un tableau
 		return self.table.to_html()
 
-	def load_functions_from_paths(self, matrix_of_paths):
+	def load_fct(self, function_name, path):
+		spec = importlib.util.spec_from_file_location(function_name, path)
+		module = importlib.util.module_from_spec(spec)
+		spec.loader.exec_module(module)
+		return getattr(module, function_name)
+
+
+	def load_functions_from_paths(self, matrix_of_paths, function_name):
 		functions_matrix = []
 		for paths in matrix_of_paths:
 			functions = []
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				function_name = path.split('/')[-1].split('.')[0]  # Nom de la fonction à partir du nom du fichier
-				spec = importlib.util.spec_from_file_location(function_name, path)
-				module = importlib.util.module_from_spec(spec)
-				spec.loader.exec_module(module)
-				functions.append(getattr(module, function_name))
+				functions.append(load_fct(function_name, path))
 			functions_matrix.append(functions)
 		return functions_matrix
 
 	def checkAll(self):
+
+		#TODO : check si les éléments de colonneLigne sont tous différents
+		colonneLigne = []
         # Matrice des chemins vers les fichiers contenant les fonctions
 		chemins_conditions = [[], [], ["/home/claire/Documents/Cours/IDM_propre/IDM/eclipse-workspace-idm/Algo/positif.py"]]
 
@@ -62,7 +68,7 @@ class Coeff:
 		erreurs = []
 		
 		# Charger dynamiquement les fonctions à partir des chemins
-		conditions = self.load_functions_from_paths(chemins_conditions)
+		conditions = self.load_functions_from_paths(chemins_conditions, "check")
 
      	# Itérer sur les colonnes et vérifier les conditions
 		for i,colonne in enumerate(self.table.columns):
@@ -82,14 +88,17 @@ class Coeff:
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-			# Récupérer l'instance python correspondante
-			# Récupérer la colonne d'ID souhaitée
+			pass
 
-		pass
 		
 
 	def calcAll(self):
+		self.insertFromTable()
+		print("Table après importation :")
+		print(self.table)
+		# Recuperer la matrice des paths
 		pass
+
 
 	def export(self, csv_file):
         # Exporter le DataFrame en tant que fichier CSV

@@ -71,7 +71,8 @@ class [aTableau.name /]:
 
 	def checkAll(self):
 
-		#TODO : check si les éléments de colonneLigne sont tous différent
+		#TODO : check si les éléments de colonneLigne sont tous différents
+		colonneLigne = ['[]'/]
         # Matrice des chemins vers les fichiers contenant les fonctions
 		chemins_conditions = [aTableau.MatriceContraintes() /]
 
@@ -111,9 +112,9 @@ class [aTableau.name /]:
 		
 
 	def calcAll(self):
+		self.insertFromTable()
 		print("Table après importation :")
 		print(self.table)
-		self.insertFromTable()
 		# Recuperer la matrice des paths
 		[let cols : Sequence(Colonne) = aTableau.getColonnesAppelAlgo()]
 			[if (cols->size()) = 0 ]
