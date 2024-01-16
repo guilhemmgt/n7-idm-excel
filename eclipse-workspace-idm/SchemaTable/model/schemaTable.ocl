@@ -18,9 +18,9 @@ inv nombreContraintesInput('Un algo en contrainte ne doit avoir qu\'une unique e
 inv typeAlgoOutput('Un algo en contrainte ne peut pas renvoyer autre chose qu\'un booléen'):
 	self.contraintes
 	->collect(output)
-	->select(f|f.type=bool)
+	->select(f|f.type=2)
 	->notEmpty()
-inv typeAlgoInput('Un algo en contrainte ne peut pas renvoyer autre chose qu\'un booléen'):
+inv typeAlgoInput('Un algo en contrainte doit avoir une entrée du même type que la colonne'):
 	self.contraintes
 	->collect(input)
 	->select(f|f.type=self.dataType)
