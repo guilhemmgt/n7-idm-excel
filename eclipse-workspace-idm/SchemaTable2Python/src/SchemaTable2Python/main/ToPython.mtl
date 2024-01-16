@@ -111,7 +111,6 @@ class [aTableau.name /]:
 			[/for]
 		[/let]
 
-		
 
 	def calcAll(self):
 		self.insertFromTable()

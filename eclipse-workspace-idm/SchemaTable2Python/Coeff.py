@@ -4,6 +4,8 @@ import importlib
 
 
 
+
+
 class Coeff:
 
 	_instance = None
@@ -53,16 +55,17 @@ class Coeff:
 			functions = []
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				functions.append(load_fct(function_name, path))
+				function_name = path.split('/')[-1].split('.')[0]  # Nom de la fonction à partir du nom du fichier
+				spec = importlib.util.spec_from_file_location(function_name, path)
+				module = importlib.util.module_from_spec(spec)
+				spec.loader.exec_module(module)
+				functions.append(getattr(module, function_name))
 			functions_matrix.append(functions)
 		return functions_matrix
 
 	def checkAll(self):
-
-		#TODO : check si les éléments de colonneLigne sont tous différents
-		colonneLigne = []
         # Matrice des chemins vers les fichiers contenant les fonctions
-		chemins_conditions = [[], [], ["/home/claire/Documents/Cours/IDM_propre/IDM/eclipse-workspace-idm/Algo/positif.py"]]
+		chemins_conditions = [[], [], ["D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/positif.py"]]
 
         # Initialiser la liste des colonnes non satisfaites
 		erreurs = []
@@ -88,15 +91,13 @@ class Coeff:
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-			pass
+			# Récupérer l'instance python correspondante
+			# Récupérer la colonne d'ID souhaitée
 
+		pass
 		
 
 	def calcAll(self):
-		self.insertFromTable()
-		print("Table après importation :")
-		print(self.table)
-		# Recuperer la matrice des paths
 		pass
 
 

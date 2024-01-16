@@ -49,6 +49,7 @@
     </genClasses>
     <genClasses ecoreClass="../../Algo/model/algo.ecore#//Ressource">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../Algo/model/algo.ecore#//Ressource/path"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../Algo/model/algo.ecore#//Ressource/algo"/>
     </genClasses>
     <genClasses ecoreClass="../../Algo/model/algo.ecore#//Flux">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../Algo/model/algo.ecore#//Flux/value"/>

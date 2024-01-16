@@ -54,7 +54,7 @@ class Resultats:
 			functions = []
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				functions.append(load_fct(function_name, path))
+				functions.append(self.load_fct(function_name, path))
 			functions_matrix.append(functions)
 		return functions_matrix
 
@@ -91,7 +91,6 @@ class Resultats:
 			self.fusionner_colonnes(Coeff.get_instance().table, "Examen", "Examen", "Matiere", "Matiere")
 			self.fusionner_colonnes(Coeff.get_instance().table, "Examen", "Examen", "CoeffDansMat", "CoeffDansMat")
 
-		
 
 	def calcAll(self):
 		print("Table après importation :")
@@ -100,7 +99,7 @@ class Resultats:
 		# Recuperer la matrice des paths
 		colonne_provisoire = []
 		for j,element in enumerate(self.table["NotePonderee"]):
-			colonne_provisoire.append(self.load_fct("calcul", "/home/claire/Documents/Cours/IDM_propre/IDM/eclipse-workspace-idm/Algo/NotePonderee.py")(self.table.at[j,'Notes'], self.table.at[j,'CoeffDansMat']))
+			colonne_provisoire.append(self.load_fct("calcul", "D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/NotePonderee.py")(self.table.at[j,'Notes'], self.table.at[j,'CoeffDansMat']))
 		self.table["NotePonderee"] = colonne_provisoire
 
 
