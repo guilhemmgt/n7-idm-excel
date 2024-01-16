@@ -71,7 +71,7 @@ class Coeff:
 		if self.table[colonneLigne].nunique() != len(self.table[colonneLigne]) :
 			erreurs.append(["il faut des données unique dans "+colonneLigne])
         # Matrice des chemins vers les fichiers contenant les fonctions
-		chemins_conditions = [[], [], ["eclipse-workspace-idm/Algo/check.m"]]
+		chemins_conditions = [[], [], ["eclipse-workspace-idm/Algo/positif.py"]]
 
         # Initialiser la liste des colonnes non satisfaites
 		

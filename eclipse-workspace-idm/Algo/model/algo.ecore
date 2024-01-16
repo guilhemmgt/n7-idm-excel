@@ -32,5 +32,6 @@
     <eLiterals name="string"/>
     <eLiterals name="int" value="1"/>
     <eLiterals name="bool" value="2"/>
+    <eLiterals name="float" value="3"/>
   </eClassifiers>
 </ecore:EPackage>

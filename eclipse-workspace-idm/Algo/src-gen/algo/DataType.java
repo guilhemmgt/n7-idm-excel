@@ -46,7 +46,16 @@ public enum DataType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOOL(2, "bool", "bool");
+	BOOL(2, "bool", "bool"),
+	/**
+	 * The '<em><b>Float</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #FLOAT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	FLOAT(3, "float", "float");
 
 	/**
 	 * The '<em><b>String</b></em>' literal value.
@@ -82,12 +91,23 @@ public enum DataType implements Enumerator {
 	public static final int BOOL_VALUE = 2;
 
 	/**
+	 * The '<em><b>Float</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #FLOAT
+	 * @model name="float"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int FLOAT_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Data Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final DataType[] VALUES_ARRAY = new DataType[] { STRING, INT, BOOL, };
+	private static final DataType[] VALUES_ARRAY = new DataType[] { STRING, INT, BOOL, FLOAT, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Data Type</b></em>' enumerators.
@@ -149,6 +169,8 @@ public enum DataType implements Enumerator {
 			return INT;
 		case BOOL_VALUE:
 			return BOOL;
+		case FLOAT_VALUE:
+			return FLOAT;
 		}
 		return null;
 	}

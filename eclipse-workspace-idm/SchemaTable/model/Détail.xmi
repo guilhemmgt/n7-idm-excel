@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemaTable:Tableau xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaTable="http://www.example.org/schemaTable" name="detail" colonneLignes="//@colonnes.0">
+  <colonnes name="Annee" id="detail.annee" dataType="int">
+    <contenu xsi:type="schemaTable:ImportTable" idColumn="recettes.annee">
+      <table href="Recettes.xmi#/"/>
+    </contenu>
+  </colonnes>
+  <colonnes name="Recettes T1" id="detail.recettes-t1" dataType="float">
+    <contenu xsi:type="schemaTable:ImportTable" idColumn="recettes.t1">
+      <table href="Recettes.xmi#/"/>
+    </contenu>
+    <contraintes href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
+  <colonnes name="Recettes T2" id="detail.recettes-t2" dataType="float">
+    <contenu xsi:type="schemaTable:ImportTable" idColumn="recettes.t2">
+      <table href="Recettes.xmi#/"/>
+    </contenu>
+    <contraintes href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
+  <colonnes name="Recettes T3" id="detail.recettes-t3" dataType="float">
+    <contenu xsi:type="schemaTable:ImportTable" idColumn="recettes.t3">
+      <table href="Recettes.xmi#/"/>
+    </contenu>
+    <contraintes href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
+  <colonnes name="Dépenses T1" id="detail.depenses-t1" dataType="float">
+    <contenu xsi:type="schemaTable:ImportTable" idColumn="depenses.t1">
+      <table href="Dépenses.xmi#/"/>
+    </contenu>
+    <contraintes href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
+  <colonnes name="Dépenses T2" id="detail.depenses-t2" dataType="float">
+    <contenu xsi:type="schemaTable:ImportTable" idColumn="depenses.t2">
+      <table href="Dépenses.xmi#/"/>
+    </contenu>
+    <contraintes href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
+  <colonnes name="Dépenses T3" id="detail.depenses-t3" dataType="float">
+    <contenu xsi:type="schemaTable:ImportTable" idColumn="depenses.t3">
+      <table href="Dépenses.xmi#/"/>
+    </contenu>
+    <contraintes href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
+  <colonnes name="Bilan T1" id="detail.bilan-t1" dataType="float">
+    <contenu xsi:type="schemaTable:AppelAlgo" input="//@colonnes.1 //@colonnes.4">
+      <algo href="../../Algo/model/Algo_SoustractionBinaire.xmi#/"/>
+    </contenu>
+  </colonnes>
+  <colonnes name="Bilan T2" id="detail.bilan-t2" dataType="float">
+    <contenu xsi:type="schemaTable:AppelAlgo" input="//@colonnes.2 //@colonnes.5">
+      <algo href="../../Algo/model/Algo_SoustractionBinaire.xmi#/"/>
+    </contenu>
+  </colonnes>
+  <colonnes name="Bilan T3" id="detail.bilan-t3" dataType="float">
+    <contenu xsi:type="schemaTable:AppelAlgo" input="//@colonnes.3 //@colonnes.6">
+      <algo href="../../Algo/model/Algo_SoustractionBinaire.xmi#/"/>
+    </contenu>
+  </colonnes>
+  <colonnes name="Bilan" id="detail.bilan" dataType="float">
+    <contenu xsi:type="schemaTable:AppelAlgo" input="//@colonnes.7 //@colonnes.8 //@colonnes.9">
+      <algo href="../../Algo/model/Algo_SommeTernaire_m.xmi#/"/>
+    </contenu>
+  </colonnes>
+  <colonnes name="Meilleur trimestre" id="detail.meilleur">
+    <contenu xsi:type="schemaTable:AppelAlgo" input="//@colonnes.7 //@colonnes.8 //@colonnes.9">
+      <algo href="../../Algo/model/Algo_MeilleurTrimestre.xmi#/"/>
+    </contenu>
+  </colonnes>
+  <colonnes name="Rapport recettes/dépenses (%)" id="detail.rapport" dataType="float">
+    <contenu xsi:type="schemaTable:AppelAlgo" input="//@colonnes.1 //@colonnes.2 //@colonnes.3 //@colonnes.4 //@colonnes.5 //@colonnes.6">
+      <algo href="../../Algo/model/Algo_RapportRecettesSurDepenses.xmi#/"/>
+    </contenu>
+    <contraintes href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
+</schemaTable:Tableau>

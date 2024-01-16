@@ -12,6 +12,7 @@
       <genEnumLiterals ecoreEnumLiteral="algo.ecore#//DataType/string"/>
       <genEnumLiterals ecoreEnumLiteral="algo.ecore#//DataType/int"/>
       <genEnumLiterals ecoreEnumLiteral="algo.ecore#//DataType/bool"/>
+      <genEnumLiterals ecoreEnumLiteral="algo.ecore#//DataType/float"/>
     </genEnums>
     <genClasses ecoreClass="algo.ecore#//Algo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algo.ecore#//Algo/name"/>

@@ -438,6 +438,7 @@ public class AlgoPackageImpl extends EPackageImpl implements AlgoPackage {
 		addEEnumLiteral(dataTypeEEnum, DataType.STRING);
 		addEEnumLiteral(dataTypeEEnum, DataType.INT);
 		addEEnumLiteral(dataTypeEEnum, DataType.BOOL);
+		addEEnumLiteral(dataTypeEEnum, DataType.FLOAT);
 
 		// Create resource
 		createResource(eNS_URI);
