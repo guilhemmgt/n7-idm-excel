@@ -8,6 +8,7 @@
 
 import pandas as pd
 import importlib
+import config
 
 [let tables : OrderedSet(Tableau) = aTableau.getTablesToImport()]
 [for (t : Tableau | tables)]
@@ -65,7 +66,7 @@ class [aTableau.name /]:
 			functions = ['[]'/]
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				functions.append(load_fct(function_name, path))
+				functions.append(self.load_fct(function_name,PATH + path))
 			functions_matrix.append(functions)
 		return functions_matrix
 
@@ -73,6 +74,7 @@ class [aTableau.name /]:
 
 		#TODO : check si les éléments de colonneLigne sont tous différents
 		colonneLigne = ['[]'/]
+		
         # Matrice des chemins vers les fichiers contenant les fonctions
 		chemins_conditions = [aTableau.MatriceContraintes() /]
 
