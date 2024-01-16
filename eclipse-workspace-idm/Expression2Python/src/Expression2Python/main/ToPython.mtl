@@ -1,0 +1,49 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module ToPython.
+ */]
+[module ToPython('http://www.example.org/expression')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param anAddition
+ */]
+
+
+[template public generateElement(anExpression : Expression)]
+[comment @main/]
+[file (anExpression.nom.concat('.py'), false, 'UTF-8')]
+
+// definition des fonctions en python
+def addition(a, b):
+    return a + b
+def multiplication(a, b):
+    return a * b
+def oppose(a):
+    return -a
+def inverse(a):
+    return 1/a
+
+def ma_fonction( [for (entree : Flux | anExpression.entree)] [entree.nom/] [/for] ):
+    return[recursif( anExpression.sortie)/]
+[/file]
+[/template]
+
+[template public recursif(anElement : ExpressionElement)]
+    [if (anElement.oclIsTypeOf(Addition))]
+        addition([recursif(anElement.entree->at(1))/], [recursif(anElement.entree->at(2))/])
+
+    [elseif (anElement.oclIsTypeOf(Multiplication))]
+        multiplication([recursif(anElement.entree->at(1))/], [recursif(anElement.entree->at(2))/])
+    [elseif (anElement.oclIsTypeOf(Entree))]
+        [anElement.oclAsType(Entree).nom/]
+    [elseif (anElement.oclIsTypeOf(Constante))]
+        [anElement.oclAsType(Constante).valeur.toString()/]
+    [elseif (anElement.oclIsTypeOf(Oppose))]
+        oppose([recursif(anElement.entree->at(1))/])
+    [elseif (anElement.oclIsTypeOf(Inverse))]
+        inverse([recursif(anElement.entree->at(1))/])
+    [/if]
+    
+[/template]

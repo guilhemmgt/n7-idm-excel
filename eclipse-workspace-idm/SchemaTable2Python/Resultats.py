@@ -1,6 +1,7 @@
 
 import pandas as pd
 import importlib
+from Config import Config
 
 from Coeff import Coeff
 
@@ -13,7 +14,6 @@ class Resultats:
 	def __new__(cls):
 		if not cls._instance:
 			cls._instance = super(Resultats, cls).__new__(cls)
-
 			# Récupére la liste de noms des colonnes
 			noms_colonnes = ["Examen", "Matiere", "NotePonderee", "Notes", "CoeffDansMat"]
 
@@ -35,14 +35,9 @@ class Resultats:
 		for colonne in df.columns:
 			if colonne in self.table.columns:
 				self.table[colonne] = df[colonne]
-		return df #A enlever plus tard, c'est juste pour visualiser
-
-	def afficher_html(self):
-        # Convertir le DataFrame en une chaîne HTML représentant un tableau
-		return self.table.to_html()
 
 	def load_fct(self, function_name, path):
-		spec = importlib.util.spec_from_file_location(function_name, path)
+		spec = importlib.util.spec_from_file_location(function_name, Config.PATH + path)
 		module = importlib.util.module_from_spec(spec)
 		spec.loader.exec_module(module)
 		return getattr(module, function_name)
@@ -54,18 +49,19 @@ class Resultats:
 			functions = []
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				functions.append(self.load_fct(function_name, path))
+					functions.append(self.load_fct(function_name, path))
 			functions_matrix.append(functions)
 		return functions_matrix
 
 	def checkAll(self):
-
-		#TODO : check si les éléments de colonneLigne sont tous différent
+		erreurs = []
+		colonneLigne = "Examen"
+		if self.table[colonneLigne].nunique() != len(self.table[colonneLigne]) :
+			erreurs.append(["il faut des données unique dans "+colonneLigne])
         # Matrice des chemins vers les fichiers contenant les fonctions
 		chemins_conditions = [[], [], [], [], []]
 
         # Initialiser la liste des colonnes non satisfaites
-		erreurs = []
 		
 		# Charger dynamiquement les fonctions à partir des chemins
 		conditions = self.load_functions_from_paths(chemins_conditions, "check")
@@ -93,13 +89,12 @@ class Resultats:
 
 
 	def calcAll(self):
-		print("Table après importation :")
-		print(self.table)
 		self.insertFromTable()
 		# Recuperer la matrice des paths
 		colonne_provisoire = []
-		for j,element in enumerate(self.table["NotePonderee"]):
-			colonne_provisoire.append(self.load_fct("calcul", "D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/NotePonderee.py")(self.table.at[j,'Notes'], self.table.at[j,'CoeffDansMat']))
+		# Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
+			for j,element in enumerate(self.table["NotePonderee"]):
+				colonne_provisoire.append(self.load_fct("calcul", "eclipse-workspace-idm/Algo/NotePonderee.py")(self.table.at[j,'Notes'], self.table.at[j,'CoeffDansMat']))
 		self.table["NotePonderee"] = colonne_provisoire
 
 
