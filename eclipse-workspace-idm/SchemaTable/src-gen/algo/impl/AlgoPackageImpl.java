@@ -230,6 +230,16 @@ public class AlgoPackageImpl extends EPackageImpl implements AlgoPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getRessource_Algo() {
+		return (EReference) ressourceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFlux() {
 		return fluxEClass;
 	}
@@ -343,6 +353,7 @@ public class AlgoPackageImpl extends EPackageImpl implements AlgoPackage {
 
 		ressourceEClass = createEClass(RESSOURCE);
 		createEAttribute(ressourceEClass, RESSOURCE__PATH);
+		createEReference(ressourceEClass, RESSOURCE__ALGO);
 
 		fluxEClass = createEClass(FLUX);
 		createEAttribute(fluxEClass, FLUX__VALUE);
@@ -395,9 +406,9 @@ public class AlgoPackageImpl extends EPackageImpl implements AlgoPackage {
 		initEClass(algoEClass, Algo.class, "Algo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAlgo_Name(), ecorePackage.getEString(), "name", null, 1, 1, Algo.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAlgo_Ressource(), this.getRessource(), null, "ressource", null, 1, 1, Algo.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAlgo_Ressource(), this.getRessource(), this.getRessource_Algo(), "ressource", null, 1, 1,
+				Algo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAlgo_Output(), this.getFlux(), null, "output", null, 1, 1, Algo.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
@@ -412,6 +423,9 @@ public class AlgoPackageImpl extends EPackageImpl implements AlgoPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRessource_Path(), ecorePackage.getEString(), "path", null, 1, 1, Ressource.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRessource_Algo(), this.getAlgo(), this.getAlgo_Ressource(), "algo", null, 1, 1,
+				Ressource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fluxEClass, Flux.class, "Flux", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFlux_Value(), ecorePackage.getEString(), "value", null, 1, 1, Flux.class, !IS_TRANSIENT,

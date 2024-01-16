@@ -3,12 +3,12 @@ from Resultats import Resultats
 
 #test
 instanceCoeff = Coeff()
-instanceCoeff.load("/home/claire/Documents/Cours/IDM_propre/IDM/eclipse-workspace-idm/CSV_exemples/Coeff.csv")
+instanceCoeff.load("D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/CSV_exemples/Coeff.csv")
 print(instanceCoeff.table)
 print(instanceCoeff.checkAll())
 instanceRes = Resultats()
-instanceRes.load("/home/claire/Documents/Cours/IDM_propre/IDM/eclipse-workspace-idm/CSV_exemples/Res.csv")
+instanceRes.load("D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/CSV_exemples/Res.csv")
 print(instanceRes.table)
 instanceRes.calcAll()
 print(instanceRes.table)
-instanceRes.export("/home/claire/Documents/Cours/IDM_propre/IDM/eclipse-workspace-idm/CSV_exemples/Resultat.csv")
+instanceRes.export("D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/CSV_exemples/Resultat.csv")

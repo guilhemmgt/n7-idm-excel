@@ -65,7 +65,7 @@ class [aTableau.name /]:
 			functions = ['[]'/]
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				functions.append(load_fct(function_name, path))
+				functions.append(self.load_fct(function_name, path))
 			functions_matrix.append(functions)
 		return functions_matrix
 
@@ -108,7 +108,6 @@ class [aTableau.name /]:
 			[/for]
 		[/let]
 
-		
 
 	def calcAll(self):
 		print("Table après importation :")

@@ -49,12 +49,14 @@ public interface Algo extends Documentable {
 
 	/**
 	 * Returns the value of the '<em><b>Ressource</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link algo.Ressource#getAlgo <em>Algo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ressource</em>' containment reference.
 	 * @see #setRessource(Ressource)
 	 * @see algo.AlgoPackage#getAlgo_Ressource()
-	 * @model containment="true" required="true"
+	 * @see algo.Ressource#getAlgo
+	 * @model opposite="algo" containment="true" required="true"
 	 * @generated
 	 */
 	Ressource getRessource();
