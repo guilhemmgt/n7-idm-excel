@@ -571,6 +571,190 @@ public interface ExpressionPackage extends EPackage {
 	int INVERSE_OPERATION_COUNT = OPERATION_UNAIRE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link expression.impl.SinusImpl <em>Sinus</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see expression.impl.SinusImpl
+	 * @see expression.impl.ExpressionPackageImpl#getSinus()
+	 * @generated
+	 */
+	int SINUS = 10;
+
+	/**
+	 * The feature id for the '<em><b>Entree</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINUS__ENTREE = OPERATION_UNAIRE__ENTREE;
+
+	/**
+	 * The feature id for the '<em><b>Sortie</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINUS__SORTIE = OPERATION_UNAIRE__SORTIE;
+
+	/**
+	 * The number of structural features of the '<em>Sinus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINUS_FEATURE_COUNT = OPERATION_UNAIRE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Sinus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINUS_OPERATION_COUNT = OPERATION_UNAIRE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link expression.impl.CosinusImpl <em>Cosinus</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see expression.impl.CosinusImpl
+	 * @see expression.impl.ExpressionPackageImpl#getCosinus()
+	 * @generated
+	 */
+	int COSINUS = 11;
+
+	/**
+	 * The feature id for the '<em><b>Entree</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COSINUS__ENTREE = OPERATION_UNAIRE__ENTREE;
+
+	/**
+	 * The feature id for the '<em><b>Sortie</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COSINUS__SORTIE = OPERATION_UNAIRE__SORTIE;
+
+	/**
+	 * The number of structural features of the '<em>Cosinus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COSINUS_FEATURE_COUNT = OPERATION_UNAIRE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Cosinus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COSINUS_OPERATION_COUNT = OPERATION_UNAIRE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link expression.impl.Racine_carreeImpl <em>Racine carree</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see expression.impl.Racine_carreeImpl
+	 * @see expression.impl.ExpressionPackageImpl#getRacine_carree()
+	 * @generated
+	 */
+	int RACINE_CARREE = 12;
+
+	/**
+	 * The feature id for the '<em><b>Entree</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RACINE_CARREE__ENTREE = OPERATION_UNAIRE__ENTREE;
+
+	/**
+	 * The feature id for the '<em><b>Sortie</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RACINE_CARREE__SORTIE = OPERATION_UNAIRE__SORTIE;
+
+	/**
+	 * The number of structural features of the '<em>Racine carree</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RACINE_CARREE_FEATURE_COUNT = OPERATION_UNAIRE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Racine carree</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RACINE_CARREE_OPERATION_COUNT = OPERATION_UNAIRE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link expression.impl.ExponentielleImpl <em>Exponentielle</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see expression.impl.ExponentielleImpl
+	 * @see expression.impl.ExpressionPackageImpl#getExponentielle()
+	 * @generated
+	 */
+	int EXPONENTIELLE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Entree</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPONENTIELLE__ENTREE = RACINE_CARREE__ENTREE;
+
+	/**
+	 * The feature id for the '<em><b>Sortie</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPONENTIELLE__SORTIE = RACINE_CARREE__SORTIE;
+
+	/**
+	 * The number of structural features of the '<em>Exponentielle</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPONENTIELLE_FEATURE_COUNT = RACINE_CARREE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Exponentielle</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPONENTIELLE_OPERATION_COUNT = RACINE_CARREE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link expression.impl.OperationBinaireImpl <em>Operation Binaire</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -578,7 +762,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see expression.impl.ExpressionPackageImpl#getOperationBinaire()
 	 * @generated
 	 */
-	int OPERATION_BINAIRE = 10;
+	int OPERATION_BINAIRE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Entree</b></em>' reference list.
@@ -624,7 +808,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see expression.impl.ExpressionPackageImpl#getSoustraction()
 	 * @generated
 	 */
-	int SOUSTRACTION = 11;
+	int SOUSTRACTION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Entree</b></em>' reference list.
@@ -670,7 +854,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see expression.impl.ExpressionPackageImpl#getAddition()
 	 * @generated
 	 */
-	int ADDITION = 12;
+	int ADDITION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Entree</b></em>' reference list.
@@ -716,7 +900,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see expression.impl.ExpressionPackageImpl#getDivision()
 	 * @generated
 	 */
-	int DIVISION = 13;
+	int DIVISION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Entree</b></em>' reference list.
@@ -762,7 +946,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see expression.impl.ExpressionPackageImpl#getMultiplication()
 	 * @generated
 	 */
-	int MULTIPLICATION = 14;
+	int MULTIPLICATION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Entree</b></em>' reference list.
@@ -808,7 +992,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see expression.impl.ExpressionPackageImpl#getMinimum()
 	 * @generated
 	 */
-	int MINIMUM = 15;
+	int MINIMUM = 19;
 
 	/**
 	 * The feature id for the '<em><b>Entree</b></em>' reference list.
@@ -854,7 +1038,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see expression.impl.ExpressionPackageImpl#getMaximum()
 	 * @generated
 	 */
-	int MAXIMUM = 16;
+	int MAXIMUM = 20;
 
 	/**
 	 * The feature id for the '<em><b>Entree</b></em>' reference list.
@@ -1079,6 +1263,46 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInverse();
+
+	/**
+	 * Returns the meta object for class '{@link expression.Sinus <em>Sinus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sinus</em>'.
+	 * @see expression.Sinus
+	 * @generated
+	 */
+	EClass getSinus();
+
+	/**
+	 * Returns the meta object for class '{@link expression.Cosinus <em>Cosinus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cosinus</em>'.
+	 * @see expression.Cosinus
+	 * @generated
+	 */
+	EClass getCosinus();
+
+	/**
+	 * Returns the meta object for class '{@link expression.Racine_carree <em>Racine carree</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Racine carree</em>'.
+	 * @see expression.Racine_carree
+	 * @generated
+	 */
+	EClass getRacine_carree();
+
+	/**
+	 * Returns the meta object for class '{@link expression.Exponentielle <em>Exponentielle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Exponentielle</em>'.
+	 * @see expression.Exponentielle
+	 * @generated
+	 */
+	EClass getExponentielle();
 
 	/**
 	 * Returns the meta object for class '{@link expression.OperationBinaire <em>Operation Binaire</em>}'.
@@ -1336,6 +1560,46 @@ public interface ExpressionPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INVERSE = eINSTANCE.getInverse();
+
+		/**
+		 * The meta object literal for the '{@link expression.impl.SinusImpl <em>Sinus</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see expression.impl.SinusImpl
+		 * @see expression.impl.ExpressionPackageImpl#getSinus()
+		 * @generated
+		 */
+		EClass SINUS = eINSTANCE.getSinus();
+
+		/**
+		 * The meta object literal for the '{@link expression.impl.CosinusImpl <em>Cosinus</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see expression.impl.CosinusImpl
+		 * @see expression.impl.ExpressionPackageImpl#getCosinus()
+		 * @generated
+		 */
+		EClass COSINUS = eINSTANCE.getCosinus();
+
+		/**
+		 * The meta object literal for the '{@link expression.impl.Racine_carreeImpl <em>Racine carree</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see expression.impl.Racine_carreeImpl
+		 * @see expression.impl.ExpressionPackageImpl#getRacine_carree()
+		 * @generated
+		 */
+		EClass RACINE_CARREE = eINSTANCE.getRacine_carree();
+
+		/**
+		 * The meta object literal for the '{@link expression.impl.ExponentielleImpl <em>Exponentielle</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see expression.impl.ExponentielleImpl
+		 * @see expression.impl.ExpressionPackageImpl#getExponentielle()
+		 * @generated
+		 */
+		EClass EXPONENTIELLE = eINSTANCE.getExponentielle();
 
 		/**
 		 * The meta object literal for the '{@link expression.impl.OperationBinaireImpl <em>Operation Binaire</em>}' class.

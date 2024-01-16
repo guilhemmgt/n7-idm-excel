@@ -31,6 +31,10 @@
     <genClasses image="false" ecoreClass="expression.ecore#//OperationUnaire"/>
     <genClasses ecoreClass="expression.ecore#//Oppose"/>
     <genClasses ecoreClass="expression.ecore#//Inverse"/>
+    <genClasses ecoreClass="expression.ecore#//Sinus"/>
+    <genClasses ecoreClass="expression.ecore#//Cosinus"/>
+    <genClasses ecoreClass="expression.ecore#//Racine_carree"/>
+    <genClasses ecoreClass="expression.ecore#//Exponentielle"/>
     <genClasses image="false" ecoreClass="expression.ecore#//OperationBinaire"/>
     <genClasses ecoreClass="expression.ecore#//Soustraction"/>
     <genClasses ecoreClass="expression.ecore#//Addition"/>

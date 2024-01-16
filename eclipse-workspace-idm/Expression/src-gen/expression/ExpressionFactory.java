@@ -76,6 +76,42 @@ public interface ExpressionFactory extends EFactory {
 	Inverse createInverse();
 
 	/**
+	 * Returns a new object of class '<em>Sinus</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sinus</em>'.
+	 * @generated
+	 */
+	Sinus createSinus();
+
+	/**
+	 * Returns a new object of class '<em>Cosinus</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cosinus</em>'.
+	 * @generated
+	 */
+	Cosinus createCosinus();
+
+	/**
+	 * Returns a new object of class '<em>Racine carree</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Racine carree</em>'.
+	 * @generated
+	 */
+	Racine_carree createRacine_carree();
+
+	/**
+	 * Returns a new object of class '<em>Exponentielle</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Exponentielle</em>'.
+	 * @generated
+	 */
+	Exponentielle createExponentielle();
+
+	/**
 	 * Returns a new object of class '<em>Soustraction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

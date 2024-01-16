@@ -117,6 +117,26 @@ public class ExpressionAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseSinus(Sinus object) {
+			return createSinusAdapter();
+		}
+
+		@Override
+		public Adapter caseCosinus(Cosinus object) {
+			return createCosinusAdapter();
+		}
+
+		@Override
+		public Adapter caseRacine_carree(Racine_carree object) {
+			return createRacine_carreeAdapter();
+		}
+
+		@Override
+		public Adapter caseExponentielle(Exponentielle object) {
+			return createExponentielleAdapter();
+		}
+
+		@Override
 		public Adapter caseOperationBinaire(OperationBinaire object) {
 			return createOperationBinaireAdapter();
 		}
@@ -307,6 +327,62 @@ public class ExpressionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInverseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link expression.Sinus <em>Sinus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see expression.Sinus
+	 * @generated
+	 */
+	public Adapter createSinusAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link expression.Cosinus <em>Cosinus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see expression.Cosinus
+	 * @generated
+	 */
+	public Adapter createCosinusAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link expression.Racine_carree <em>Racine carree</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see expression.Racine_carree
+	 * @generated
+	 */
+	public Adapter createRacine_carreeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link expression.Exponentielle <em>Exponentielle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see expression.Exponentielle
+	 * @generated
+	 */
+	public Adapter createExponentielleAdapter() {
 		return null;
 	}
 

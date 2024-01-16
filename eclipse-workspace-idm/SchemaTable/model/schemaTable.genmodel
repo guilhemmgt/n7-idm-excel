@@ -27,7 +27,7 @@
     </genClasses>
     <genClasses ecoreClass="schemaTable.ecore#//AppelAlgo">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//AppelAlgo/algo"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference schemaTable.ecore#//AppelAlgo/input"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//AppelAlgo/input"/>
     </genClasses>
     <genClasses ecoreClass="schemaTable.ecore#//ImportTable">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//ImportTable/table"/>
@@ -49,6 +49,7 @@
     </genClasses>
     <genClasses ecoreClass="../../Algo/model/algo.ecore#//Ressource">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../Algo/model/algo.ecore#//Ressource/path"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../Algo/model/algo.ecore#//Ressource/algo"/>
     </genClasses>
     <genClasses ecoreClass="../../Algo/model/algo.ecore#//Flux">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../Algo/model/algo.ecore#//Flux/value"/>

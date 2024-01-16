@@ -4,8 +4,10 @@ package expression.impl;
 
 import expression.Addition;
 import expression.Constante;
+import expression.Cosinus;
 import expression.Division;
 import expression.Entree;
+import expression.Exponentielle;
 import expression.Expression;
 import expression.ExpressionElement;
 import expression.ExpressionFactory;
@@ -19,6 +21,8 @@ import expression.OperationBinaire;
 import expression.OperationNullaire;
 import expression.OperationUnaire;
 import expression.Oppose;
+import expression.Racine_carree;
+import expression.Sinus;
 import expression.Sortie;
 import expression.Soustraction;
 
@@ -105,6 +109,34 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * @generated
 	 */
 	private EClass inverseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sinusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cosinusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass racine_carreeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass exponentielleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -405,6 +437,46 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 	 * @generated
 	 */
 	@Override
+	public EClass getSinus() {
+		return sinusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCosinus() {
+		return cosinusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRacine_carree() {
+		return racine_carreeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getExponentielle() {
+		return exponentielleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getOperationBinaire() {
 		return operationBinaireEClass;
 	}
@@ -527,6 +599,14 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 
 		inverseEClass = createEClass(INVERSE);
 
+		sinusEClass = createEClass(SINUS);
+
+		cosinusEClass = createEClass(COSINUS);
+
+		racine_carreeEClass = createEClass(RACINE_CARREE);
+
+		exponentielleEClass = createEClass(EXPONENTIELLE);
+
 		operationBinaireEClass = createEClass(OPERATION_BINAIRE);
 
 		soustractionEClass = createEClass(SOUSTRACTION);
@@ -579,6 +659,10 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		operationUnaireEClass.getESuperTypes().add(this.getExpressionElement());
 		opposeEClass.getESuperTypes().add(this.getOperationUnaire());
 		inverseEClass.getESuperTypes().add(this.getOperationUnaire());
+		sinusEClass.getESuperTypes().add(this.getOperationUnaire());
+		cosinusEClass.getESuperTypes().add(this.getOperationUnaire());
+		racine_carreeEClass.getESuperTypes().add(this.getOperationUnaire());
+		exponentielleEClass.getESuperTypes().add(this.getRacine_carree());
 		operationBinaireEClass.getESuperTypes().add(this.getExpressionElement());
 		soustractionEClass.getESuperTypes().add(this.getOperationBinaire());
 		additionEClass.getESuperTypes().add(this.getOperationBinaire());
@@ -633,6 +717,16 @@ public class ExpressionPackageImpl extends EPackageImpl implements ExpressionPac
 		initEClass(opposeEClass, Oppose.class, "Oppose", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(inverseEClass, Inverse.class, "Inverse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(sinusEClass, Sinus.class, "Sinus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(cosinusEClass, Cosinus.class, "Cosinus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(racine_carreeEClass, Racine_carree.class, "Racine_carree", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(exponentielleEClass, Exponentielle.class, "Exponentielle", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(operationBinaireEClass, OperationBinaire.class, "OperationBinaire", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

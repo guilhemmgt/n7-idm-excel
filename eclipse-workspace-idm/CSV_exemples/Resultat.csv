@@ -1,5 +1,5 @@
-Examen,Matiere
-Examen IDM,
-MiniProjet IDM,IDM
-Projet PF,PF
-Projet IDM,IDM
+Examen,Matiere,NotePonderee,Notes,CoeffDansMat
+Examen IDM,,,15,
+MiniProjet IDM,IDM,7.2,18,40.0
+Projet PF,PF,2.4,12,20.0
+Projet IDM,IDM,5.2,13,40.0

@@ -222,6 +222,18 @@ public class ExpressionItemProvider extends ItemProviderAdapter implements IEdit
 				ExpressionFactory.eINSTANCE.createInverse()));
 
 		newChildDescriptors.add(createChildParameter(ExpressionPackage.Literals.EXPRESSION__ELEMENTS,
+				ExpressionFactory.eINSTANCE.createSinus()));
+
+		newChildDescriptors.add(createChildParameter(ExpressionPackage.Literals.EXPRESSION__ELEMENTS,
+				ExpressionFactory.eINSTANCE.createCosinus()));
+
+		newChildDescriptors.add(createChildParameter(ExpressionPackage.Literals.EXPRESSION__ELEMENTS,
+				ExpressionFactory.eINSTANCE.createRacine_carree()));
+
+		newChildDescriptors.add(createChildParameter(ExpressionPackage.Literals.EXPRESSION__ELEMENTS,
+				ExpressionFactory.eINSTANCE.createExponentielle()));
+
+		newChildDescriptors.add(createChildParameter(ExpressionPackage.Literals.EXPRESSION__ELEMENTS,
 				ExpressionFactory.eINSTANCE.createSoustraction()));
 
 		newChildDescriptors.add(createChildParameter(ExpressionPackage.Literals.EXPRESSION__ELEMENTS,
