@@ -109,7 +109,6 @@ def Exporter_csv():
 def ListeDocs2String() :
     filesStr = ""
     for i in liste_dialog:
-        print(i)
         filesStr = filesStr + PassageLigne(i) + "\n--------------------------------------------------------------------\n"
     return filesStr
 
