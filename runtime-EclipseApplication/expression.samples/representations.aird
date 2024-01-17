@@ -1,9 +1,633 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description" uid="_7Dcc8KrtEe6wNrdVCmhtLA" selectedViews="_k7ggAKruEe6wNrdVCmhtLA" version="15.0.0.202209061200">
-  <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/Expression/model/Moyenne_binaire.xmi</semanticResources>
-  <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi</semanticResources>
-  <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/SoustractionBinaire.xmi</semanticResources>
-  <ownedViews xmi:type="viewpoint:DView" uid="_k7ggAKruEe6wNrdVCmhtLA">
-    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']"/>
-  </ownedViews>
-</viewpoint:DAnalysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:expression="http://www.example.org/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_7Dcc8KrtEe6wNrdVCmhtLA" selectedViews="_k7ggAKruEe6wNrdVCmhtLA" version="15.0.0.202209061200">
+    <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/Projet/eclipse-workspace-idm/Expression/model/Moyenne_binaire.xmi</semanticResources>
+    <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi</semanticResources>
+    <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/SoustractionBinaire.xmi</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_k7ggAKruEe6wNrdVCmhtLA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_9nljgLVHEe6tB9M_kzwryg" name="new ExpressionDiagram" repPath="#_9nk8cLVHEe6tB9M_kzwryg" changeId="c3a695d7-e168-445d-94bb-b00bf0180307">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']"/>
+        <target xmi:type="expression:Expression" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_9nk8cLVHEe6tB9M_kzwryg">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_9nmKkLVHEe6tB9M_kzwryg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_9nmKkbVHEe6tB9M_kzwryg" type="Sirius" element="_9nk8cLVHEe6tB9M_kzwryg" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_9qAlYLVHEe6tB9M_kzwryg" type="2001" element="_9oEEoLVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qBMcLVHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qBMcbVHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qE20LVHEe6tB9M_kzwryg" type="3003" element="_9oJkMLVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qE20bVHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qE20rVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qAlYbVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qAlYrVHEe6tB9M_kzwryg" y="750" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qBMcrVHEe6tB9M_kzwryg" type="2001" element="_9oKLQbVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qBMdbVHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qBMdrVHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qE207VHEe6tB9M_kzwryg" type="3003" element="_9oKLQrVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qE21LVHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qE21bVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qBMc7VHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qBMdLVHEe6tB9M_kzwryg" x="162" y="750" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qBMd7VHEe6tB9M_kzwryg" type="2001" element="_9oKyUbVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qBzgLVHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qBzgbVHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qE21rVHEe6tB9M_kzwryg" type="3003" element="_9oKyUrVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qE217VHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qE22LVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qBMeLVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qBMebVHEe6tB9M_kzwryg" x="264" y="588" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qBzgrVHEe6tB9M_kzwryg" type="2001" element="_9oKyVLVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qBzhbVHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qBzhrVHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qFd4LVHEe6tB9M_kzwryg" type="3003" element="_9oeUULVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qFd4bVHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qFd4rVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qBzg7VHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qBzhLVHEe6tB9M_kzwryg" x="54" y="588" width="150" height="100"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qBzh7VHEe6tB9M_kzwryg" type="2001" element="_9oeUUrVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qCakLVHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qCakbVHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qFd47VHEe6tB9M_kzwryg" type="3003" element="_9oe7YLVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qFd5LVHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qFd5bVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qBziLVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qBzibVHEe6tB9M_kzwryg" x="228" y="432" width="150" height="100"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qCakrVHEe6tB9M_kzwryg" type="2001" element="_9oficbVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qCalbVHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qCalrVHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qFd5rVHEe6tB9M_kzwryg" type="3003" element="_9oficrVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qFd57VHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qFd6LVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qCak7VHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qCalLVHEe6tB9M_kzwryg" x="636" y="588" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qCal7VHEe6tB9M_kzwryg" type="2001" element="_9ogJgbVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qCamrVHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qCam7VHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qGE8LVHEe6tB9M_kzwryg" type="3003" element="_9ogJgrVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qGE8bVHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qGE8rVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qCamLVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qCambVHEe6tB9M_kzwryg" x="372" y="750" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qCanLVHEe6tB9M_kzwryg" type="2001" element="_9ogJhLVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qDBorVHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qDBo7VHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qGE87VHEe6tB9M_kzwryg" type="3003" element="_9ogwkLVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qGsALVHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qGsAbVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qDBoLVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qDBobVHEe6tB9M_kzwryg" x="528" y="750" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qDBpLVHEe6tB9M_kzwryg" type="2001" element="_9ogwkrVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qDBp7VHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qDBqLVHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qGsArVHEe6tB9M_kzwryg" type="3003" element="_9ohXoLVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qGsA7VHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qGsBLVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qDBpbVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qDBprVHEe6tB9M_kzwryg" x="426" y="588" width="150" height="100"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qDBqbVHEe6tB9M_kzwryg" type="2001" element="_9ohXorVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qDBrLVHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qDBrbVHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qGsBbVHEe6tB9M_kzwryg" type="3003" element="_9oh-sLVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qGsBrVHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qGsB7VHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qDBqrVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qDBq7VHEe6tB9M_kzwryg" x="438" y="432" width="150" height="100"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qDosLVHEe6tB9M_kzwryg" type="2001" element="_9oh-srVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qDos7VHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qDotLVHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qHTELVHEe6tB9M_kzwryg" type="3003" element="_9ox2ULVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qHTEbVHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qHTErVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qDosbVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qDosrVHEe6tB9M_kzwryg" x="330" y="270" width="150" height="100"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qDotbVHEe6tB9M_kzwryg" type="2001" element="_9oydYbVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qDouLVHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qDoubVHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qHTE7VHEe6tB9M_kzwryg" type="3003" element="_9o_RsLVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qHTFLVHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qHTFbVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qDotrVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qDot7VHEe6tB9M_kzwryg" x="198" y="270" width="70" height="70"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qDourVHEe6tB9M_kzwryg" type="2001" element="_9o_RsrVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qEPwLVHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qEPwbVHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qH6ILVHEe6tB9M_kzwryg" type="3003" element="_9pQ-gLVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qH6IbVHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qH6IrVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qDou7VHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qDovLVHEe6tB9M_kzwryg" x="246" y="108" width="150" height="100"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9qEPwrVHEe6tB9M_kzwryg" type="2001" element="_9pQ-grVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qEPxbVHEe6tB9M_kzwryg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_9qEPxrVHEe6tB9M_kzwryg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qH6I7VHEe6tB9M_kzwryg" type="3003" element="_9paIcLVHEe6tB9M_kzwryg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9qH6JLVHEe6tB9M_kzwryg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qH6JbVHEe6tB9M_kzwryg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9qEPw7VHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qEPxLVHEe6tB9M_kzwryg" x="270" width="100" height="50"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_9nmKkrVHEe6tB9M_kzwryg"/>
+        <edges xmi:type="notation:Edge" xmi:id="_9qH6JrVHEe6tB9M_kzwryg" type="4001" element="_9ppZALVHEe6tB9M_kzwryg" source="_9qAlYLVHEe6tB9M_kzwryg" target="_9qBzgrVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qIhMLVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qIhMbVHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qIhMrVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qIhM7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qIhNLVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qIhNbVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qH6J7VHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qH6KLVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qH6KbVHEe6tB9M_kzwryg" points="[0, 0, -79, 112]$[43, -62, -36, 50]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qIhNrVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qIhN7VHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9qIhOLVHEe6tB9M_kzwryg" type="4001" element="_9puRgLVHEe6tB9M_kzwryg" source="_9qBMcrVHEe6tB9M_kzwryg" target="_9qBzgrVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qJIQLVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qJIQbVHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qJIQrVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qJIQ7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qJIRLVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qJIRbVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qIhObVHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qIhOrVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qIhO7VHEe6tB9M_kzwryg" points="[0, 0, 83, 112]$[-46, -62, 37, 50]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qJIRrVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qJIR7VHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9qJISLVHEe6tB9M_kzwryg" type="4001" element="_9pu4kLVHEe6tB9M_kzwryg" source="_9qBMd7VHEe6tB9M_kzwryg" target="_9qBzh7VHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qJITLVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qJITbVHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qJITrVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qJIT7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qJIULVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qJIUbVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qJISbVHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qJISrVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qJIS7VHEe6tB9M_kzwryg" points="[0, 0, 11, 106]$[-6, -56, 5, 50]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qJvULVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qJvUbVHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9qJvUrVHEe6tB9M_kzwryg" type="4001" element="_9pvfoLVHEe6tB9M_kzwryg" source="_9qBzgrVHEe6tB9M_kzwryg" target="_9qBzh7VHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qJvVrVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qJvV7VHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qJvWLVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qJvWbVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qJvWrVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qJvW7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qJvU7VHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qJvVLVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qJvVbVHEe6tB9M_kzwryg" points="[0, 0, -174, 106]$[99, -61, -75, 45]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qJvXLVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qJvXbVHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9qJvXrVHEe6tB9M_kzwryg" type="4001" element="_9pzKALVHEe6tB9M_kzwryg" source="_9qBzh7VHEe6tB9M_kzwryg" target="_9qDosLVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qKWYLVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qKWYbVHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qKWYrVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qKWY7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qKWZLVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qKWZbVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qJvX7VHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qJvYLVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qJvYbVHEe6tB9M_kzwryg" points="[0, 0, -102, 112]$[56, -62, -46, 50]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qKWZrVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qKWZ7VHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9qKWaLVHEe6tB9M_kzwryg" type="4001" element="_9pzxELVHEe6tB9M_kzwryg" source="_9qCakrVHEe6tB9M_kzwryg" target="_9qDBqbVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qKWbLVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qKWbbVHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qKWbrVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qKWb7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qKWcLVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qKWcbVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qKWabVHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qKWarVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qKWa7VHEe6tB9M_kzwryg" points="[0, 0, 173, 106]$[-98, -61, 75, 45]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qK9cLVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qK9cbVHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9qK9crVHEe6tB9M_kzwryg" type="4001" element="_9p0YILVHEe6tB9M_kzwryg" source="_9qCal7VHEe6tB9M_kzwryg" target="_9qDBpLVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qK9drVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qK9d7VHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qK9eLVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qK9ebVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qK9erVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qK9e7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qK9c7VHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qK9dLVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qK9dbVHEe6tB9M_kzwryg" points="[0, 0, -79, 112]$[43, -62, -36, 50]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qLkgLVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qLkgbVHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9qLkgrVHEe6tB9M_kzwryg" type="4001" element="_9p0YJbVHEe6tB9M_kzwryg" source="_9qCanLVHEe6tB9M_kzwryg" target="_9qDBpLVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qLkhrVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qLkh7VHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qLkiLVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qLkibVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qLkirVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qLki7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qLkg7VHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qLkhLVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qLkhbVHEe6tB9M_kzwryg" points="[0, 0, 77, 112]$[-43, -62, 34, 50]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qMLkLVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qMLkbVHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9qMLkrVHEe6tB9M_kzwryg" type="4001" element="_9p0_MLVHEe6tB9M_kzwryg" source="_9qDBpLVHEe6tB9M_kzwryg" target="_9qDBqbVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qMLlrVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qMLl7VHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qMLmLVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qMLmbVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qMLmrVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qMLm7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qMLk7VHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qMLlLVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qMLlbVHEe6tB9M_kzwryg" points="[0, 0, -12, 106]$[6, -56, -6, 50]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qMLnLVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qMLnbVHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9qMyoLVHEe6tB9M_kzwryg" type="4001" element="_9p1mQLVHEe6tB9M_kzwryg" source="_9qDBqbVHEe6tB9M_kzwryg" target="_9qDosLVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qMypLVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qMypbVHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qMyprVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qMyp7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qMyqLVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qMyqbVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qMyobVHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qMyorVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qMyo7VHEe6tB9M_kzwryg" points="[0, 0, 108, 112]$[-60, -62, 48, 50]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qMyqrVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qMyq7VHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9qMyrLVHEe6tB9M_kzwryg" type="4001" element="_9p1mRbVHEe6tB9M_kzwryg" source="_9qDosLVHEe6tB9M_kzwryg" target="_9qDourVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qMysLVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qMysbVHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qNZsLVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qNZsbVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qNZsrVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qNZs7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qMyrbVHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qMyrrVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qMyr7VHEe6tB9M_kzwryg" points="[0, 0, 84, 112]$[-47, -62, 37, 50]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qNZtLVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qNZtbVHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9qNZtrVHEe6tB9M_kzwryg" type="4001" element="_9p5QoLVHEe6tB9M_kzwryg" source="_9qDotbVHEe6tB9M_kzwryg" target="_9qDourVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qNZurVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qNZu7VHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qOAwLVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qOAwbVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qOAwrVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qOAw7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qNZt7VHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qNZuLVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qNZubVHEe6tB9M_kzwryg" points="[0, 0, -88, 112]$[48, -62, -40, 50]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qOAxLVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qOAxbVHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9qOAxrVHEe6tB9M_kzwryg" type="4001" element="_9p8T8LVHEe6tB9M_kzwryg" source="_9qDourVHEe6tB9M_kzwryg" target="_9qEPwrVHEe6tB9M_kzwryg">
+          <children xmi:type="notation:Node" xmi:id="_9qOAyrVHEe6tB9M_kzwryg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qOAy7VHEe6tB9M_kzwryg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qOAzLVHEe6tB9M_kzwryg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qOAzbVHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9qOAzrVHEe6tB9M_kzwryg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9qOAz7VHEe6tB9M_kzwryg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9qOAx7VHEe6tB9M_kzwryg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9qOAyLVHEe6tB9M_kzwryg" fontName="Segoe UI" fontHeight="12" italic="true"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9qOAybVHEe6tB9M_kzwryg" points="[0, 0, 1, 83]$[-1, -58, 0, 25]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qOn0LVHEe6tB9M_kzwryg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9qOn0bVHEe6tB9M_kzwryg" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_9p_-ULVHEe6tB9M_kzwryg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_9p_-UbVHEe6tB9M_kzwryg"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9oEEoLVHEe6tB9M_kzwryg" name="1 ▶ Recettes T1" outgoingEdges="_9ppZALVHEe6tB9M_kzwryg" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.0"/>
+      <semanticElements xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9oJkMLVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="10" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9oKLQbVHEe6tB9M_kzwryg" name="2 ▶ Recettes T2" outgoingEdges="_9puRgLVHEe6tB9M_kzwryg" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.1"/>
+      <semanticElements xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.1"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9oKLQrVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="10" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9oKyUbVHEe6tB9M_kzwryg" name="3 ▶ Recettes T3" outgoingEdges="_9pu4kLVHEe6tB9M_kzwryg" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.2"/>
+      <semanticElements xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.2"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9oKyUrVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="10" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9oKyVLVHEe6tB9M_kzwryg" name="Addition" outgoingEdges="_9pvfoLVHEe6tB9M_kzwryg" incomingEdges="_9ppZALVHEe6tB9M_kzwryg _9puRgLVHEe6tB9M_kzwryg" width="15" height="10" resizeKind="NSEW">
+      <target xmi:type="expression:Addition" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.3"/>
+      <semanticElements xmi:type="expression:Addition" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.3"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9oeUULVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="15" height="10" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.4/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9oeUUrVHEe6tB9M_kzwryg" name="Addition" outgoingEdges="_9pzKALVHEe6tB9M_kzwryg" incomingEdges="_9pu4kLVHEe6tB9M_kzwryg _9pvfoLVHEe6tB9M_kzwryg" width="15" height="10" resizeKind="NSEW">
+      <target xmi:type="expression:Addition" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.4"/>
+      <semanticElements xmi:type="expression:Addition" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.4"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9oe7YLVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="15" height="10" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.4/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9oficbVHEe6tB9M_kzwryg" name="4 ▶ Dépenses T1" outgoingEdges="_9pzxELVHEe6tB9M_kzwryg" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.5"/>
+      <semanticElements xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.5"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9oficrVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="10" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9ogJgbVHEe6tB9M_kzwryg" name="5 ▶ Dépenses T2" outgoingEdges="_9p0YILVHEe6tB9M_kzwryg" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.6"/>
+      <semanticElements xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.6"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9ogJgrVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="10" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9ogJhLVHEe6tB9M_kzwryg" name="6 ▶ Dépenses T3" outgoingEdges="_9p0YJbVHEe6tB9M_kzwryg" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.7"/>
+      <semanticElements xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.7"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9ogwkLVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="10" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9ogwkrVHEe6tB9M_kzwryg" name="Addition" outgoingEdges="_9p0_MLVHEe6tB9M_kzwryg" incomingEdges="_9p0YILVHEe6tB9M_kzwryg _9p0YJbVHEe6tB9M_kzwryg" width="15" height="10" resizeKind="NSEW">
+      <target xmi:type="expression:Addition" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.8"/>
+      <semanticElements xmi:type="expression:Addition" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.8"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9ohXoLVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="15" height="10" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.4/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9ohXorVHEe6tB9M_kzwryg" name="Addition" outgoingEdges="_9p1mQLVHEe6tB9M_kzwryg" incomingEdges="_9pzxELVHEe6tB9M_kzwryg _9p0_MLVHEe6tB9M_kzwryg" width="15" height="10" resizeKind="NSEW">
+      <target xmi:type="expression:Addition" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.9"/>
+      <semanticElements xmi:type="expression:Addition" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.9"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9oh-sLVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="15" height="10" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.4/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9oh-srVHEe6tB9M_kzwryg" name="Division" outgoingEdges="_9p1mRbVHEe6tB9M_kzwryg" incomingEdges="_9pzKALVHEe6tB9M_kzwryg _9p1mQLVHEe6tB9M_kzwryg" width="15" height="10" resizeKind="NSEW">
+      <target xmi:type="expression:Division" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.10"/>
+      <semanticElements xmi:type="expression:Division" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.10"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9ox2ULVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="15" height="10" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.4/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9oydYbVHEe6tB9M_kzwryg" name="100.0" outgoingEdges="_9p5QoLVHEe6tB9M_kzwryg" width="7" height="7" resizeKind="NSEW">
+      <target xmi:type="expression:Constante" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.11"/>
+      <semanticElements xmi:type="expression:Constante" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.11"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9o_RsLVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="7" height="7" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.3/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9o_RsrVHEe6tB9M_kzwryg" name="Multiplication" outgoingEdges="_9p8T8LVHEe6tB9M_kzwryg" incomingEdges="_9p1mRbVHEe6tB9M_kzwryg _9p5QoLVHEe6tB9M_kzwryg" width="15" height="10" resizeKind="NSEW">
+      <target xmi:type="expression:Multiplication" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.12"/>
+      <semanticElements xmi:type="expression:Multiplication" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.12"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9pQ-gLVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="15" height="10" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.4/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_9pQ-grVHEe6tB9M_kzwryg" name="RapportEnPourcents ▶" incomingEdges="_9p8T8LVHEe6tB9M_kzwryg" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="expression:Sortie" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.13"/>
+      <semanticElements xmi:type="expression:Sortie" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.13"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_9paIcLVHEe6tB9M_kzwryg" labelSize="12" showIcon="false" labelPosition="node" width="10" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9ppZALVHEe6tB9M_kzwryg" name="1" sourceNode="_9oEEoLVHEe6tB9M_kzwryg" targetNode="_9oKyVLVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9pqAELVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9pqAEbVHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9puRgLVHEe6tB9M_kzwryg" name="2" sourceNode="_9oKLQbVHEe6tB9M_kzwryg" targetNode="_9oKyVLVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9puRgbVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9puRgrVHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9pu4kLVHEe6tB9M_kzwryg" name="2" sourceNode="_9oKyUbVHEe6tB9M_kzwryg" targetNode="_9oeUUrVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9pu4kbVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9pu4krVHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9pvfoLVHEe6tB9M_kzwryg" name="1" sourceNode="_9oKyVLVHEe6tB9M_kzwryg" targetNode="_9oeUUrVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Addition" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9pvfobVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9pvforVHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9pzKALVHEe6tB9M_kzwryg" name="2" sourceNode="_9oeUUrVHEe6tB9M_kzwryg" targetNode="_9oh-srVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Addition" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9pzKAbVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9pzKArVHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9pzxELVHEe6tB9M_kzwryg" name="2" sourceNode="_9oficbVHEe6tB9M_kzwryg" targetNode="_9ohXorVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.5"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9pzxEbVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9pzxErVHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9p0YILVHEe6tB9M_kzwryg" name="2" sourceNode="_9ogJgbVHEe6tB9M_kzwryg" targetNode="_9ogwkrVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.6"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9p0YIbVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9p0YIrVHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9p0YJbVHEe6tB9M_kzwryg" name="1" sourceNode="_9ogJhLVHEe6tB9M_kzwryg" targetNode="_9ogwkrVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Entree" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.7"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9p0YJrVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9p0YJ7VHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9p0_MLVHEe6tB9M_kzwryg" name="1" sourceNode="_9ogwkrVHEe6tB9M_kzwryg" targetNode="_9ohXorVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Addition" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.8"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9p0_MbVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9p0_MrVHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9p1mQLVHEe6tB9M_kzwryg" name="1" sourceNode="_9ohXorVHEe6tB9M_kzwryg" targetNode="_9oh-srVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Addition" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.9"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9p1mQbVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9p1mQrVHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9p1mRbVHEe6tB9M_kzwryg" name="1" sourceNode="_9oh-srVHEe6tB9M_kzwryg" targetNode="_9o_RsrVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Division" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.10"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9p1mRrVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9p1mR7VHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9p5QoLVHEe6tB9M_kzwryg" name="2" sourceNode="_9oydYbVHEe6tB9M_kzwryg" targetNode="_9o_RsrVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Constante" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.11"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9p5QobVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9p5QorVHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9p8T8LVHEe6tB9M_kzwryg" name="1" sourceNode="_9o_RsrVHEe6tB9M_kzwryg" targetNode="_9pQ-grVHEe6tB9M_kzwryg">
+      <target xmi:type="expression:Multiplication" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#//@elements.12"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9p87ALVHEe6tB9M_kzwryg" targetArrow="InputFillClosedArrow" size="2" centered="Target" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9p87AbVHEe6tB9M_kzwryg" labelSize="12" showIcon="false">
+          <labelFormat>italic</labelFormat>
+        </centerLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ExprElementEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_9nk8cbVHEe6tB9M_kzwryg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/expression.design/description/expression.odesign#//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer"/>
+    <target xmi:type="expression:Expression" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/RapportRecettesSurDepenses.xmi#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

@@ -36,7 +36,7 @@
         <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']"/>
         <target xmi:type="schemaTable:Tableau" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/SchemaTable/model/Dépenses.xmi#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ma_eD7VDEe6tB9M_kzwryg" name="new SchemaTableTable" repPath="#_mX7i0LVDEe6tB9M_kzwryg" changeId="8a81058e-8b45-43f2-9716-9340490a253b">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ma_eD7VDEe6tB9M_kzwryg" name="new SchemaTableTable" repPath="#_mX7i0LVDEe6tB9M_kzwryg" changeId="490d8c76-b5d1-44e8-b370-75f769a10e77">
         <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']"/>
         <target xmi:type="schemaTable:Tableau" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/SchemaTable/model/Détail.xmi#/"/>
       </ownedRepresentationDescriptors>
@@ -1032,6 +1032,7 @@
           <target xmi:type="schemaTable:ImportTable" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/SchemaTable/model/Détail.xmi#//@colonnes.2/@contenu"/>
           <semanticElements xmi:type="schemaTable:ImportTable" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/SchemaTable/model/Détail.xmi#//@colonnes.2/@contenu"/>
         </cells>
+        <currentStyle xmi:type="table:DTableElementStyle" uid="_4M-8ALVHEe6tB9M_kzwryg"/>
       </lines>
       <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/SchemaTable/model/Détail.xmi#//@colonnes.2"/>
       <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']"/>
@@ -1051,6 +1052,7 @@
         <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/SchemaTable/model/Détail.xmi#//@colonnes.2"/>
         <semanticElements xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/SchemaTable/model/Détail.xmi#//@colonnes.2"/>
       </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_4M1LAbVHEe6tB9M_kzwryg"/>
     </lines>
     <lines xmi:type="table:DLine" uid="_mY5zMbVDEe6tB9M_kzwryg" label="Colonne 4">
       <target xmi:type="schemaTable:Colonne" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/SchemaTable/model/Détail.xmi#//@colonnes.3"/>
