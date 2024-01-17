@@ -21,7 +21,7 @@ chargement_effectue = False
 
 verif_effectue = False
 
-liste_dialog = [] #liste des documents chargés dans l'interface
+liste_dialog = []
 
 nombre_instances = len(liste_instances)
 
