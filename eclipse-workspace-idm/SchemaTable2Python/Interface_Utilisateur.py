@@ -34,7 +34,7 @@ def Charger_csv():
     #dans un document .txt choisis au préalable par l'utilisateur sur son 
     #disque dur et renvoie en sortie un enchainement de mot avec des passages  
     #à la ligne (type str) contenant tout les mots du fichier .txt
-    path=tkinter.filedialog.askopenfilename(title='Séléctionner le fichier .csv')
+    path=tkinter.filedialog.askopenfilename(title='Séléctionner le fichier .csv', filetypes=[('CSV', '*.csv',)])
     global numero_instances
     numero_instances += 1
     global liste_instances
@@ -101,9 +101,15 @@ def Calculer_csv():
         Button_Calculer.config(text="Veuillez vérifier le fichier", fg="crimson")
         
 def Exporter_csv():
-    path = tkinter.filedialog.askdirectory()
-    liste_instances[numero_instances-1].export(path + "/fichierExport.csv")
-    Button_Exporter.config(text="Fichier exporté", fg="chartreuse4")
+    nomFichier = Entry_Export.get()
+    if nomFichier == "":
+        global liste_dialog
+        liste_dialog.append("Veuillez mettre un nom de fichier dans la case Export (ex : fichierExport)")
+        UpdateScroll()
+    else:
+        path = tkinter.filedialog.askdirectory()
+        liste_instances[numero_instances-1].export(path + "/" + nomFichier + ".csv")
+        Button_Exporter.config(text="Fichier exporté", fg="chartreuse4")
 
 
 def ListeDocs2String() :
@@ -134,9 +140,11 @@ def ResetAll():
     verif_effectue = False
     global liste_dialog
     liste_dialog = []
+    global numero_instances
+    numero_instances -= 1
     Button_Verifier.config(text="Vérifier", fg="black")
-    Button_Calculer.config(text="Calculer", fg="black")
-    Button_Selectionner.config(text='Séléctionner Fichier...', fg="black")
+    Button_Calculer.config(text="Calculer", fg="black", state=tkinter.NORMAL)
+    Button_Selectionner.config(text='Séléctionner Fichier...', fg="black", state=tkinter.NORMAL)
     Button_Exporter.config(text='Exporter', fg="black", state=tkinter.ENABLE)
     Label_Dialog.config(text='')
     Frame_Dialog.update()
@@ -154,7 +162,7 @@ for instance in liste_instances :
     
     fenetre.title("Calculateur sur csv")
     
-    fenetre.geometry("550x700")
+    fenetre.geometry("550x750")
     
     #Création de la barre de menu
     menubar=Menu(fenetre)
@@ -202,6 +210,14 @@ for instance in liste_instances :
     #Bouton Exporter : Exporter le csv précédemment calculé
     Button_Exporter=Button(Sous_Frame_Droite_Operation, text='Exporter',font='Arial 12',command=Exporter_csv, fg='black',bg='white', relief='raised')
     Button_Exporter.pack(side=RIGHT, padx=10)
+
+    #Label Export
+    Label_Export=Label(Frame_Main, text='Export', font='Arial 12 bold', fg='black',bg='grey')
+    Label_Export.pack(padx=10)
+
+    #Entry Export : Entry le nom du fichier a exporter
+    Entry_Export=Entry(Frame_Main, width=30)
+    Entry_Export.pack(padx=10)
     
     #Frame ZoneDialog : Frame on se trouvera le canvas
     Frame_ZoneDialog = Frame(Frame_Main, bg='grey')
