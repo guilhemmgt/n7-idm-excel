@@ -2,23 +2,26 @@
 import pandas as pd
 import importlib
 from Config import Config
+import matlab.engine
 
-from Coeff import Coeff
+from detail import detail
 
 
-class Resultats:
+class resume:
 
 	_instance = None
 
 	# Assure qu'il y a une seule instance par classe
 	def __new__(cls):
 		if not cls._instance:
-			cls._instance = super(Resultats, cls).__new__(cls)
+			cls._instance = super(resume, cls).__new__(cls)
+			cls._instance.eng = matlab.engine.start_matlab()
 			# Récupére la liste de noms des colonnes
-			noms_colonnes = ["Examen", "Matiere", "NotePonderee", "Notes", "CoeffDansMat"]
+			noms_colonnes = ["Annee", "Bilan de l'année", "Meilleur trimestre", "Rentrées/sorties en %"]
 
 	        # Initialisation du DataFrame avec les noms de colonnes
 			cls._instance.table = pd.DataFrame(columns=noms_colonnes)
+			cls._instance.eng = matlab.engine.start_matlab()
 		return cls._instance
 
 	@classmethod
@@ -42,6 +45,16 @@ class Resultats:
 		spec.loader.exec_module(module)
 		return getattr(module, function_name)
 
+	def load_matlab_fct(self, path):
+		split = (Config.PATH + path).rsplit('/', 1)
+		repoName = split[0]
+		fileName = split[1].rsplit('.',1)[0]
+        # Ajouter le chemin vers le dossier contenant la fonction MATLAB
+		self.eng.addpath(repoName, nargout=0)
+        # Appeler la fonction MATLAB
+		matlab_function = getattr(self.eng, fileName)
+		return matlab_function
+
 
 	def load_functions_from_paths(self, matrix_of_paths, function_name):
 		functions_matrix = []
@@ -49,17 +62,20 @@ class Resultats:
 			functions = []
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
+				if path[-3:] == ".py":
 					functions.append(self.load_fct(function_name, path))
+				elif path[-2:] == ".m":
+					functions.append(self.load_matlab_fct(path))
 			functions_matrix.append(functions)
 		return functions_matrix
 
 	def checkAll(self):
 		erreurs = []
-		colonneLigne = "Examen"
+		colonneLigne = "Annee"
 		if self.table[colonneLigne].nunique() != len(self.table[colonneLigne]) :
 			erreurs.append(["il faut des données unique dans "+colonneLigne])
         # Matrice des chemins vers les fichiers contenant les fonctions
-		chemins_conditions = [[], [], [], [], []]
+		chemins_conditions = [[], [], [], ["Algo/positif.py"]]
 
         # Initialiser la liste des colonnes non satisfaites
 		
@@ -84,18 +100,15 @@ class Resultats:
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-			self.fusionner_colonnes(Coeff.get_instance().table, "Examen", "Examen", "Matiere", "Matiere")
-			self.fusionner_colonnes(Coeff.get_instance().table, "Examen", "Examen", "CoeffDansMat", "CoeffDansMat")
+			self.fusionner_colonnes(detail.get_instance().table, "Annee", "Annee", "Bilan", "Bilan de l'année")
+			self.fusionner_colonnes(detail.get_instance().table, "Annee", "Annee", "Meilleur trimestre", "Meilleur trimestre")
+			self.fusionner_colonnes(detail.get_instance().table, "Annee", "Annee", "Rapport recettes/dépenses (%)", "Rentrées/sorties en %")
 
 
 	def calcAll(self):
 		self.insertFromTable()
 		# Recuperer la matrice des paths
-		colonne_provisoire = []
-		# Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-		for j,element in enumerate(self.table["NotePonderee"]):
-				colonne_provisoire.append(self.load_fct("calcul", "eclipse-workspace-idm/Algo/NotePonderee.py")(self.table.at[j,'Notes'], self.table.at[j,'CoeffDansMat']))
-		self.table["NotePonderee"] = colonne_provisoire
+		pass
 
 
 	def export(self, csv_file):

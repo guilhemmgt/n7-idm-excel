@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<algo:Algo xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:algo="http://www.example.org/algo"
-    name="SoustractionBinaire">
-  <ressource
-      path="Expression/model/SoustractionBinaire.xmi"/>
-  <output value="Sortie"
-      type="float"/>
-  <input value="A"
-      type="float"/>
-  <input value="B"
-      type="float"/>
-  <documentations
-      commentaire="A-B"
-      linkToElement="//@output"/>
+<algo:Algo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:algo="http://www.example.org/algo" name="SoustractionBinaire">
+  <ressource path="Expression2Python/SoustractionBinaire.py"/>
+  <output value="Sortie" type="float"/>
+  <input value="A" type="float"/>
+  <input value="B" type="float"/>
+  <documentations commentaire="A-B" linkToElement="//@output"/>
 </algo:Algo>

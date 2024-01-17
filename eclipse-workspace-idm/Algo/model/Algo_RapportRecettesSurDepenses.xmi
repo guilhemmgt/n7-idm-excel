@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<algo:Algo xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:algo="http://www.example.org/algo"
-    name="RapportRecettesSurDepenses">
-  <ressource
-      path="Expression/model/RapportRecettesSurDepenses.xmi"/>
-  <output value="rapport"
-      type="float"/>
-  <input value="d1"
-      type="float"/>
-  <input value="d2"
-      type="float"/>
-  <input value="d3"
-      type="float"/>
-  <input value="r1"
-      type="float"/>
-  <input value="r2"
-      type="float"/>
-  <input value="r3"
-      type="float"/>
-  <documentations
-      commentaire="En pourcents"
-      linkToElement="//@output"/>
+<algo:Algo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:algo="http://www.example.org/algo" name="RapportRecettesSurDepenses">
+  <ressource path="Expression2Python/RapportRecettesSurDepenses.py"/>
+  <output value="rapport" type="float"/>
+  <input value="d1" type="float"/>
+  <input value="d2" type="float"/>
+  <input value="d3" type="float"/>
+  <input value="r1" type="float"/>
+  <input value="r2" type="float"/>
+  <input value="r3" type="float"/>
+  <documentations commentaire="En pourcents" linkToElement="//@output"/>
 </algo:Algo>

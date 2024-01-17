@@ -6,17 +6,17 @@ import matlab.engine
 
 
 
-class Coeff:
+class depenses:
 
 	_instance = None
 
 	# Assure qu'il y a une seule instance par classe
 	def __new__(cls):
 		if not cls._instance:
-			cls._instance = super(Coeff, cls).__new__(cls)
+			cls._instance = super(depenses, cls).__new__(cls)
 			cls._instance.eng = matlab.engine.start_matlab()
 			# Récupére la liste de noms des colonnes
-			noms_colonnes = ["Examen", "Matiere", "CoeffDansMat"]
+			noms_colonnes = ["Année", "T1", "T2", "T3"]
 
 	        # Initialisation du DataFrame avec les noms de colonnes
 			cls._instance.table = pd.DataFrame(columns=noms_colonnes)
@@ -45,7 +45,7 @@ class Coeff:
 		return getattr(module, function_name)
 
 	def load_matlab_fct(self, path):
-		split = path.rsplit('/', 1)
+		split = (Config.PATH + path).rsplit('/', 1)
 		repoName = split[0]
 		fileName = split[1].rsplit('.',1)[0]
         # Ajouter le chemin vers le dossier contenant la fonction MATLAB
@@ -61,20 +61,20 @@ class Coeff:
 			functions = []
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				if path[-3:-1] == ".py":
+				if path[-3:] == ".py":
 					functions.append(self.load_fct(function_name, path))
-				elif path[-2:-1] == ".m":
+				elif path[-2:] == ".m":
 					functions.append(self.load_matlab_fct(path))
 			functions_matrix.append(functions)
 		return functions_matrix
 
 	def checkAll(self):
 		erreurs = []
-		colonneLigne = "Examen"
+		colonneLigne = "Année"
 		if self.table[colonneLigne].nunique() != len(self.table[colonneLigne]) :
 			erreurs.append(["il faut des données unique dans "+colonneLigne])
         # Matrice des chemins vers les fichiers contenant les fonctions
-		chemins_conditions = [[], [], ["eclipse-workspace-idm/Algo/positif.py"]]
+		chemins_conditions = [[], ["Algo/positif.py"], ["Algo/positif.py"], ["Algo/positif.py"]]
 
         # Initialiser la liste des colonnes non satisfaites
 		

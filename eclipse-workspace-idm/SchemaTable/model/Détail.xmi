@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemaTable:Tableau xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaTable="http://www.example.org/schemaTable" name="detail" colonneLignes="//@colonnes.0">
-  <colonnes name="Annee" id="detail.annee" dataType="int">
-    <contenu xsi:type="schemaTable:ImportTable" idColumn="recettes.annee">
-      <table href="Recettes.xmi#/"/>
-    </contenu>
-  </colonnes>
+  <colonnes name="Annee" id="detail.annee" dataType="int"/>
   <colonnes name="Recettes T1" id="detail.recettes-t1" dataType="float">
     <contenu xsi:type="schemaTable:ImportTable" idColumn="recettes.t1">
       <table href="Recettes.xmi#/"/>

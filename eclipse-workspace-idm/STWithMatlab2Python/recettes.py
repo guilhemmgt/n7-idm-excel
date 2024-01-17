@@ -4,20 +4,19 @@ import importlib
 from Config import Config
 import matlab.engine
 
-from Coeff import Coeff
 
 
-class Resultats:
+class recettes:
 
 	_instance = None
 
 	# Assure qu'il y a une seule instance par classe
 	def __new__(cls):
 		if not cls._instance:
-			cls._instance = super(Resultats, cls).__new__(cls)
+			cls._instance = super(recettes, cls).__new__(cls)
 			cls._instance.eng = matlab.engine.start_matlab()
 			# Récupére la liste de noms des colonnes
-			noms_colonnes = ["Examen", "Matiere", "NotePonderee", "Notes", "CoeffDansMat"]
+			noms_colonnes = ["Année", "T1", "T2", "T3"]
 
 	        # Initialisation du DataFrame avec les noms de colonnes
 			cls._instance.table = pd.DataFrame(columns=noms_colonnes)
@@ -71,11 +70,11 @@ class Resultats:
 
 	def checkAll(self):
 		erreurs = []
-		colonneLigne = "Examen"
+		colonneLigne = "Année"
 		if self.table[colonneLigne].nunique() != len(self.table[colonneLigne]) :
 			erreurs.append(["il faut des données unique dans "+colonneLigne])
         # Matrice des chemins vers les fichiers contenant les fonctions
-		chemins_conditions = [[], [], [], [], []]
+		chemins_conditions = [[], ["Algo/positif.py"], ["Algo/positif.py"], ["Algo/positif.py"]]
 
         # Initialiser la liste des colonnes non satisfaites
 		
@@ -100,23 +99,13 @@ class Resultats:
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-			self.fusionner_colonnes(Coeff.get_instance().table, "Examen", "Examen", "Matiere", "Matiere")
-			self.fusionner_colonnes(Coeff.get_instance().table, "Examen", "Examen", "CoeffDansMat", "CoeffDansMat")
+			pass
 
 
 	def calcAll(self):
 		self.insertFromTable()
 		# Recuperer la matrice des paths
-		colonne_provisoire = []
-		path = "Algo/notePonderee.m"
-		# Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-		if path[-3:] == ".py":
-			for j,element in enumerate(self.table["NotePonderee"]):
-				colonne_provisoire.append(self.load_fct("calcul", "Algo/notePonderee.m")(self.table.at[j,'Notes'], self.table.at[j,'CoeffDansMat']))
-		elif path[-2:] == ".m":
-			for j,element in enumerate(self.table["NotePonderee"]):
-				colonne_provisoire.append(self.load_matlab_fct(path)(self.table.at[j,'Notes'], self.table.at[j,'CoeffDansMat']))
-		self.table["NotePonderee"] = colonne_provisoire
+		pass
 
 
 	def export(self, csv_file):
