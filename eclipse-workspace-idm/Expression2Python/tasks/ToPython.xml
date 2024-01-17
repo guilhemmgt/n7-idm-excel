@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="ToPython" name="Expression2Python">
-    <property name="ECLIPSE_HOME" value="../../../../../../../modeling-2023-09/eclipse"/>
+    <property name="ECLIPSE_HOME" value="../../../../../../../../Logiciels/modeling-2023-09/eclipse"/>
     <property name="ECLIPSE_WORKSPACE" value="../.."/>
 
     <!-- The classpath with only the dependencies used by the project -->

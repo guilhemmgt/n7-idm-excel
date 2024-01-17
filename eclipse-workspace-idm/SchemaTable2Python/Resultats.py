@@ -93,7 +93,7 @@ class Resultats:
 		# Recuperer la matrice des paths
 		colonne_provisoire = []
 		# Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-			for j,element in enumerate(self.table["NotePonderee"]):
+		for j,element in enumerate(self.table["NotePonderee"]):
 				colonne_provisoire.append(self.load_fct("calcul", "eclipse-workspace-idm/Algo/NotePonderee.py")(self.table.at[j,'Notes'], self.table.at[j,'CoeffDansMat']))
 		self.table["NotePonderee"] = colonne_provisoire
 

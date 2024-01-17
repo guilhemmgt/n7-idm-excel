@@ -4,19 +4,20 @@ import importlib
 from Config import Config
 import matlab.engine
 
+from Coeff import Coeff
 
 
-class Coeff:
+class Resultats:
 
 	_instance = None
 
 	# Assure qu'il y a une seule instance par classe
 	def __new__(cls):
 		if not cls._instance:
-			cls._instance = super(Coeff, cls).__new__(cls)
+			cls._instance = super(Resultats, cls).__new__(cls)
 			cls._instance.eng = matlab.engine.start_matlab()
 			# Récupére la liste de noms des colonnes
-			noms_colonnes = ["Examen", "Matiere", "CoeffDansMat"]
+			noms_colonnes = ["Examen", "Matiere", "NotePonderee", "Notes", "CoeffDansMat"]
 
 	        # Initialisation du DataFrame avec les noms de colonnes
 			cls._instance.table = pd.DataFrame(columns=noms_colonnes)
@@ -45,7 +46,7 @@ class Coeff:
 		return getattr(module, function_name)
 
 	def load_matlab_fct(self, path):
-		split = path.rsplit('/', 1)
+		split = (Config.PATH + path).rsplit('/', 1)
 		repoName = split[0]
 		fileName = split[1].rsplit('.',1)[0]
         # Ajouter le chemin vers le dossier contenant la fonction MATLAB
@@ -61,9 +62,9 @@ class Coeff:
 			functions = []
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				if path[-3:-1] == ".py":
+				if path[-3:] == ".py":
 					functions.append(self.load_fct(function_name, path))
-				elif path[-2:-1] == ".m":
+				elif path[-2:] == ".m":
 					functions.append(self.load_matlab_fct(path))
 			functions_matrix.append(functions)
 		return functions_matrix
@@ -74,7 +75,7 @@ class Coeff:
 		if self.table[colonneLigne].nunique() != len(self.table[colonneLigne]) :
 			erreurs.append(["il faut des données unique dans "+colonneLigne])
         # Matrice des chemins vers les fichiers contenant les fonctions
-		chemins_conditions = [[], [], ["eclipse-workspace-idm/Algo/positif.py"]]
+		chemins_conditions = [[], [], [], [], []]
 
         # Initialiser la liste des colonnes non satisfaites
 		
@@ -99,13 +100,23 @@ class Coeff:
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-			pass
+			self.fusionner_colonnes(Coeff.get_instance().table, "Examen", "Examen", "Matiere", "Matiere")
+			self.fusionner_colonnes(Coeff.get_instance().table, "Examen", "Examen", "CoeffDansMat", "CoeffDansMat")
 
 
 	def calcAll(self):
 		self.insertFromTable()
 		# Recuperer la matrice des paths
-		pass
+		colonne_provisoire = []
+		path = "Algo/notePonderee.m"
+		# Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
+		if path[-3:] == ".py":
+			for j,element in enumerate(self.table["NotePonderee"]):
+				colonne_provisoire.append(self.load_fct("calcul", "Algo/notePonderee.m")(self.table.at[j,'Notes'], self.table.at[j,'CoeffDansMat']))
+		elif path[-2:] == ".m":
+			for j,element in enumerate(self.table["NotePonderee"]):
+				colonne_provisoire.append(self.load_matlab_fct(path)(self.table.at[j,'Notes'], self.table.at[j,'CoeffDansMat']))
+		self.table["NotePonderee"] = colonne_provisoire
 
 
 	def export(self, csv_file):
