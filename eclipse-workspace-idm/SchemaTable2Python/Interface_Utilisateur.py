@@ -1,25 +1,25 @@
 # =============================================================================
-# Ensemble des imports
+# Ensemble des imports et variables globales
 # =============================================================================
 
 from tkinter import *
 import tkinter.filedialog 
+from Config import Config 
+
+################################## Modifications End-user ##################################
 
 from Coeff import Coeff
 from Resultats import Resultats
-from Config import Config 
 
-# =============================================================================
-# Variables globales
-# =============================================================================
+liste_instances = [Coeff(), Resultats()] #liste des instances à créer
+
+############################################################################################
 
 chargement_effectue = False
 
 verif_effectue = False
 
 liste_dialog = [] #liste des documents chargés dans l'interface
-
-liste_instances = [Coeff(), Resultats()] #liste des instances crées
 
 nombre_instances = len(liste_instances)
 
@@ -67,23 +67,24 @@ def Afficher_csv():
 def Verifier_csv():
 
     if chargement_effectue:
-        
+        global liste_dialog
         res = liste_instances[numero_instances-1].checkAll()
         verif_ok = (res == True)
+        global verif_effectue
+        verif_effectue = True
         
         if verif_ok:
             Button_Verifier.config(text="Vérification réussi", fg="chartreuse4")
             Button_Calculer.config(text="Calculer", fg="black")
-            global verif_effectue
-            verif_effectue = True
         else:
             Button_Verifier.config(text="Vérification échoué", fg="crimson")
-            global liste_dialog
             liste_dialog.append(str(res))
             UpdateScroll()
     
     else:
         Button_Verifier.config(text="Veuillez charger le fichier", fg="crimson")
+        liste_dialog.append("Veuillez charger le fichier")
+        UpdateScroll()
         
 
 def Calculer_csv():
@@ -92,11 +93,11 @@ def Calculer_csv():
         
         global liste_instances
         liste_instances[numero_instances-1].calcAll()
-        Button_Calculer.config(text="Calcul efféctué", fg="chartreuse4")
+        Button_Calculer.config(text="Calcul efféctué", fg="chartreuse4", state=tkinter.DISABLED)
         
     else:
         global liste_dialog
-        liste_dialog.append("Veuillez vérifier le ou les fichiers")
+        liste_dialog.append("Veuillez vérifier le fichier")
         UpdateScroll()
         Button_Calculer.config(text="Veuillez vérifier le fichier", fg="crimson")
         
@@ -131,25 +132,21 @@ def UpdateScroll():
     Label_Dialog.config(text=ListeDocs2String())
     Frame_Dialog.update()
     Canvas_Dialog.configure(scrollregion=Canvas_Dialog.bbox('all'))
+    
+    
+def Multi_fun(*functions):
+    def func(*args, **kwargs):
+        val = None
+        for function in functions:
+            val = function(*args, **kwargs)
+        return val
+    return func
 
-
-def ResetAll():
+def Reset_var():
     global chargement_effectue
     chargement_effectue = False
     global verif_effectue
     verif_effectue = False
-    global liste_dialog
-    liste_dialog = []
-    global numero_instances
-    numero_instances -= 1
-    Button_Verifier.config(text="Vérifier", fg="black")
-    Button_Calculer.config(text="Calculer", fg="black", state=tkinter.NORMAL)
-    Button_Selectionner.config(text='Séléctionner Fichier...', fg="black", state=tkinter.NORMAL)
-    Button_Exporter.config(text='Exporter', fg="black", state=tkinter.ENABLE)
-    Label_Dialog.config(text='')
-    Frame_Dialog.update()
-    Canvas_Dialog.configure(scrollregion=Canvas_Dialog.bbox('all'))
-
     
 # =============================================================================
 # Interface Graphiques
@@ -175,8 +172,9 @@ for instance in liste_instances :
     Label_Titre=Label(Frame_Main,text='Calculateur de csv',font='Arial 20 bold', fg='black',bg='grey') 
     Label_Titre.pack(padx=30, pady=40)
     
+    strFichier = liste_instances[liste_instances.index(instance)].toString()
     #Bouton Button_Selectionner : Séléction du dictionnaire
-    Button_Selectionner=Button(Frame_Main,text='Séléctionner Fichier...',font='Arial 12',command=Charger_csv, fg='black',bg='white', relief='raised')
+    Button_Selectionner=Button(Frame_Main,text='Séléctionner fichier "' + strFichier +'"',font='Arial 12',command=Charger_csv, fg='black',bg='white', relief='raised')
     Button_Selectionner.pack(pady=60)
     
     #Label Label_Titre : Nom du logiciel
@@ -242,14 +240,13 @@ for instance in liste_instances :
     Label_Dialog.pack(side= LEFT, fill=BOTH, expand=True)
     
     ##########################################################
-    Frame_Fin = Frame(Frame_Main, bg='grey')
-    Frame_Fin.pack(pady=10)
+    if liste_instances.index(instance) + 1 == nombre_instances:
+        Text_Fin = "Quitter"
+    else:
+        Text_Fin = "Suivant"
     #Bouton de sortie
-    Quitter=Button(Frame_Fin, text='Quitter', font='Arial 10', command=fenetre.destroy)
-    Quitter.pack(side=RIGHT, padx=5)
-    #Bouton pour reset
-    Reset=Button(Frame_Fin, text='Reset', font='Arial 10', command=ResetAll)
-    Reset.pack(side=LEFT, padx=5)
+    Quitter=Button(Frame_Main, text=Text_Fin, font='Arial 10', command=Multi_fun(Reset_var,fenetre.destroy))
+    Quitter.pack(pady=10)
     ##########################################################
     
     ##########################################################
