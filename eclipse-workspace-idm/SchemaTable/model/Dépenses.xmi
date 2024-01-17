@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemaTable:Tableau
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:schemaTable="http://www.example.org/schemaTable"
+    name="depenses"
+    colonneLignes="//@colonnes.0">
+  <colonnes
+      name="Année"
+      id="depenses.annee"
+      dataType="int"/>
+  <colonnes
+      name="T1"
+      id="depenses.t1"
+      dataType="float">
+    <contraintes
+        href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
+  <colonnes
+      name="T2"
+      id="depenses.t2"
+      dataType="float">
+    <contraintes
+        href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
+  <colonnes
+      name="T3"
+      id="depenses.t3"
+      dataType="float">
+    <contraintes
+        href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
+</schemaTable:Tableau>

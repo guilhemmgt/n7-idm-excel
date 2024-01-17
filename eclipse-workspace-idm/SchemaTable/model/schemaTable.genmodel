@@ -14,7 +14,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Tableau/colonneLignes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference schemaTable.ecore#//Tableau/colonnes"/>
     </genClasses>
-    <genClasses ecoreClass="schemaTable.ecore#//Colonne">
+    <genClasses ecoreClass="schemaTable.ecore#//Colonne" labelFeature="#//schemaTable/Colonne/id">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Colonne/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Colonne/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schemaTable.ecore#//Colonne/dataType"/>
@@ -39,6 +39,7 @@
       <genEnumLiterals ecoreEnumLiteral="../../Algo/model/algo.ecore#//DataType/string"/>
       <genEnumLiterals ecoreEnumLiteral="../../Algo/model/algo.ecore#//DataType/int"/>
       <genEnumLiterals ecoreEnumLiteral="../../Algo/model/algo.ecore#//DataType/bool"/>
+      <genEnumLiterals ecoreEnumLiteral="../../Algo/model/algo.ecore#//DataType/float"/>
     </genEnums>
     <genClasses ecoreClass="../../Algo/model/algo.ecore#//Algo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../Algo/model/algo.ecore#//Algo/name"/>

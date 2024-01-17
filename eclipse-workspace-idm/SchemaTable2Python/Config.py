@@ -1,2 +1,2 @@
 class Config :
-    PATH = "/home/claire/Documents/Cours/IDM_propre/IDM/"
+    PATH = "D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/"

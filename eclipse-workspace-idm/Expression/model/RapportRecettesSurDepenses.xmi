@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<expression:Expression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:expression="http://www.example.org/expression" xsi:schemaLocation="http://www.example.org/expression expression.ecore" entree="//@elements.0 //@elements.1 //@elements.2 //@elements.5 //@elements.6 //@elements.7" sortie="//@elements.13">
+  <elements xsi:type="expression:Entree" sortie="//@elements.3" nom="Recettes T1"/>
+  <elements xsi:type="expression:Entree" sortie="//@elements.3" nom="Recettes T2"/>
+  <elements xsi:type="expression:Entree" sortie="//@elements.4" nom="Recettes T3"/>
+  <elements xsi:type="expression:Addition" entree="//@elements.0 //@elements.1" sortie="//@elements.4"/>
+  <elements xsi:type="expression:Addition" entree="//@elements.3 //@elements.2" sortie="//@elements.10"/>
+  <elements xsi:type="expression:Entree" sortie="//@elements.9" nom="Dépenses T1"/>
+  <elements xsi:type="expression:Entree" sortie="//@elements.8" nom="Dépenses T2"/>
+  <elements xsi:type="expression:Entree" sortie="//@elements.8" nom="Dépenses T3"/>
+  <elements xsi:type="expression:Addition" entree="//@elements.7 //@elements.6" sortie="//@elements.9"/>
+  <elements xsi:type="expression:Addition" entree="//@elements.8 //@elements.5" sortie="//@elements.10"/>
+  <elements xsi:type="expression:Division" entree="//@elements.9 //@elements.4" sortie="//@elements.12"/>
+  <elements xsi:type="expression:Constante" sortie="//@elements.12" valeur="100.0"/>
+  <elements xsi:type="expression:Multiplication" entree="//@elements.10 //@elements.11" sortie="//@elements.13"/>
+  <elements xsi:type="expression:Sortie" entree="//@elements.12" nom="RapportEnPourcents"/>
+</expression:Expression>

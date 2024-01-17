@@ -184,7 +184,7 @@ public class ColonneItemProvider extends ItemProviderAdapter implements IEditing
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Colonne) object).getName();
+		String label = ((Colonne) object).getId();
 		return label == null || label.length() == 0 ? getString("_UI_Colonne_type")
 				: getString("_UI_Colonne_type") + " " + label;
 	}

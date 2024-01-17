@@ -2,11 +2,11 @@
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="expression" version="12.0.0.2017041100">
   <ownedViewpoints name="ExpressionViewpoint" modelFileExtension="expression">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ExpressionDiagram" domainClass="expression::Expression" enablePopupBars="true">
-      <metamodel href="http://www.example.org/expression#/"/>
+      <metamodel href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Expression/model/expression.ecore#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="ExprElementNode" domainClass="expression::ExpressionElement">
+        <nodeMappings name="ExprElementNode" semanticCandidatesExpression="[self.elements/]" domainClass="expression::ExpressionElement">
           <conditionnalStyles predicateExpression="[self.oclIsKindOf(Entree)/]">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="['▶ ' + self.nom/]" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:diagram.target.entree->indexOf(self) + ' ▶ ' + self.nom" labelPosition="node" resizeKind="NSEW" width="10" height="5">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
@@ -41,7 +41,7 @@
             </style>
           </conditionnalStyles>
         </nodeMappings>
-        <edgeMappings name="ExprElementEdge" sourceMapping="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']" targetMapping="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']" targetFinderExpression="[self.sortie/]">
+        <edgeMappings name="ExprElementEdge" deletionDescription="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='LinkDeletion']" sourceMapping="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']" targetMapping="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']" targetFinderExpression="[self.sortie/]">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2" centeredTargetMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="[self.sortie.entree->indexOf(self)/]">
@@ -59,6 +59,16 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="sortie" valueExpression="[target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="LinkDeletion" label="Supprimer">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="sortie" valueExpression="[OclUndefined/]"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

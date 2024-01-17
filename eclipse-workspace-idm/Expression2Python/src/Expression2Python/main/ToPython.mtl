@@ -26,7 +26,7 @@ def inverse(a):
     return 1/a
 
 def ma_fonction( [for (entree : Flux | anExpression.entree)] [entree.nom/] [/for] ):
-    return[recursif( anExpression.sortie)/]
+    return[recursif(anExpression.sortie)/]
 [/file]
 [/template]
 
