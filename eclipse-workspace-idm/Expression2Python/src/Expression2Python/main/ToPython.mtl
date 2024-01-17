@@ -15,35 +15,60 @@
 [comment @main/]
 [file (anExpression.nom.concat('.py'), false, 'UTF-8')]
 
-// definition des fonctions en python
+import math
+
 def addition(a, b):
     return a + b
+
+def soustraction(a, b):
+    return a + b
+
 def multiplication(a, b):
     return a * b
+
+def division(a, b):
+    return a / b
+
 def oppose(a):
     return -a
+
 def inverse(a):
     return 1/a
 
-def ma_fonction( [for (entree : Flux | anExpression.entree)] [entree.nom/] [/for] ):
-    return[recursif(anExpression.sortie)/]
+def cosinus(a):
+	return math.cos(a)
+
+def sinus(a):
+	return math.sin(a)
+
+def minimum(a,b):
+	if a < b:
+		return a
+	else:
+		return b
+
+def maximum(a,b):
+	if a > b:
+		return a
+	else:
+		return b
+
+def racine(a):
+	return math.sqrt(a)
+
+
+def expo(a):
+	return math.exp(a)
+
+def calcul([for (entree : Flux | anExpression.entree) separator (',')][entree.nom/] [/for]):
+    return [anExpression.sortie.recursif()/]
+
 [/file]
 [/template]
 
 [template public recursif(anElement : ExpressionElement)]
-    [if (anElement.oclIsTypeOf(Addition))]
-        addition([recursif(anElement.entree->at(1))/], [recursif(anElement.entree->at(2))/])
-
-    [elseif (anElement.oclIsTypeOf(Multiplication))]
-        multiplication([recursif(anElement.entree->at(1))/], [recursif(anElement.entree->at(2))/])
-    [elseif (anElement.oclIsTypeOf(Entree))]
-        [anElement.oclAsType(Entree).nom/]
-    [elseif (anElement.oclIsTypeOf(Constante))]
-        [anElement.oclAsType(Constante).valeur.toString()/]
-    [elseif (anElement.oclIsTypeOf(Oppose))]
-        oppose([recursif(anElement.entree->at(1))/])
-    [elseif (anElement.oclIsTypeOf(Inverse))]
-        inverse([recursif(anElement.entree->at(1))/])
-    [/if]
-    
+[if (anElement.oclIsTypeOf(Addition))]addition([recursif2(anElement.entree->at(1))/],[recursif2(anElement.entree->at(2))/])[elseif (anElement.oclIsTypeOf(Sortie))][recursif2(anElement.entree->at(1))/][elseif (anElement.oclIsTypeOf(Multiplication))]multiplication([recursif2(anElement.entree->at(1))/],[recursif2(anElement.entree->at(2))/])[elseif (anElement.oclIsTypeOf(Entree))][anElement.oclAsType(Entree).nom/][elseif (anElement.oclIsTypeOf(Constante))][anElement.oclAsType(Constante).valeur.toString()/][elseif (anElement.oclIsTypeOf(Oppose))]oppose([recursif2(anElement.entree->at(1))/])[elseif (anElement.oclIsTypeOf(Inverse))]inverse([recursif2(anElement.entree->at(1))/])[elseif (anElement.oclIsTypeOf(Division))]division([recursif2(anElement.entree->at(1))/],[recursif2(anElement.entree->at(2))/])[elseif (anElement.oclIsTypeOf(Cosinus))]cosinus([recursif2(anElement.entree->at(1))/])[elseif (anElement.oclIsTypeOf(Sinus))]sinus([recursif2(anElement.entree->at(1))/])[elseif (anElement.oclIsTypeOf(Racine_carree))]racine([recursif2(anElement.entree->at(1))/])[elseif (anElement.oclIsTypeOf(Exponentielle))]expo([recursif2(anElement.entree->at(1))/])[elseif (anElement.oclIsTypeOf(Maximum))]maximum([recursif2(anElement.entree->at(1))/],[recursif2(anElement.entree->at(2))/])[elseif (anElement.oclIsTypeOf(Minimum))]minimum([recursif2(anElement.entree->at(1))/],[recursif2(anElement.entree->at(2))/])[elseif (anElement.oclIsTypeOf(Soustraction))]soustraction([recursif2(anElement.entree->at(1))/],[recursif2(anElement.entree->at(2))/])[/if]
+[/template]
+[template public recursif2(anElement : ExpressionElement)]
+[if (anElement.oclIsTypeOf(Addition))]addition([recursif(anElement.entree->at(1))/],[recursif(anElement.entree->at(2))/])[elseif (anElement.oclIsTypeOf(Sortie))][recursif(anElement.entree->at(1))/][elseif (anElement.oclIsTypeOf(Multiplication))]multiplication([recursif(anElement.entree->at(1))/],[recursif(anElement.entree->at(2))/])[elseif (anElement.oclIsTypeOf(Entree))][anElement.oclAsType(Entree).nom/][elseif (anElement.oclIsTypeOf(Constante))][anElement.oclAsType(Constante).valeur.toString()/][elseif (anElement.oclIsTypeOf(Oppose))]oppose([recursif(anElement.entree->at(1))/])[elseif (anElement.oclIsTypeOf(Inverse))]inverse([recursif(anElement.entree->at(1))/])[elseif (anElement.oclIsTypeOf(Division))]division([recursif(anElement.entree->at(1))/],[recursif(anElement.entree->at(2))/])[elseif (anElement.oclIsTypeOf(Cosinus))]cosinus([recursif(anElement.entree->at(1))/])[elseif (anElement.oclIsTypeOf(Sinus))]sinus([recursif(anElement.entree->at(1))/])[elseif (anElement.oclIsTypeOf(Racine_carree))]racine([recursif(anElement.entree->at(1))/])[elseif (anElement.oclIsTypeOf(Exponentielle))]expo([recursif(anElement.entree->at(1))/])[elseif (anElement.oclIsTypeOf(Maximum))]maximum([recursif(anElement.entree->at(1))/],[recursif(anElement.entree->at(2))/])[elseif (anElement.oclIsTypeOf(Minimum))]minimum([recursif(anElement.entree->at(1))/],[recursif(anElement.entree->at(2))/])[elseif (anElement.oclIsTypeOf(Soustraction))]soustraction([recursif(anElement.entree->at(1))/],[recursif(anElement.entree->at(2))/])[/if]
 [/template]

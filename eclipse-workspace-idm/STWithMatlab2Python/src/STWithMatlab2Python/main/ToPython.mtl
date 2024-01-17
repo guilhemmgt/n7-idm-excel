@@ -55,11 +55,14 @@ class [aTableau.name /]:
 		spec.loader.exec_module(module)
 		return getattr(module, function_name)
 
-	def load_matlab_fct(self, function_name, path):
+	def load_matlab_fct(self, path):
+		split = (Config.PATH + path).rsplit('/', 1)
+		repoName = split['['/]0[']'/]
+		fileName = split['['/]1[']'/].rsplit('.',1)['['/]0[']'/]
         # Ajouter le chemin vers le dossier contenant la fonction MATLAB
-		self.eng.addpath(path, nargout=0)
+		self.eng.addpath(repoName, nargout=0)
         # Appeler la fonction MATLAB
-		matlab_function = getattr(self.eng, function_name)
+		matlab_function = getattr(self.eng, fileName)
 		return matlab_function
 
 
@@ -69,10 +72,10 @@ class [aTableau.name /]:
 			functions = ['[]'/]
 			for path in paths:
                 # Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-				if path['[-3:-1]'/] == ".py":
+				if path['[-3:]'/] == ".py":
 					functions.append(self.load_fct(function_name, path))
-				elif path['[-2:-1]'/] == ".m":
-					functions.append(self.load_matlab_fct(function_name, path))
+				elif path['[-2:]'/] == ".m":
+					functions.append(self.load_matlab_fct(path))
 			functions_matrix.append(functions)
 		return functions_matrix
 
@@ -128,13 +131,14 @@ class [aTableau.name /]:
 			[let entrees : OrderedSet(Colonne) = c.getEntrees()]
 		colonne_provisoire = ['[]'/]
 		[let path : String = c.contenu.oclAsType(AppelAlgo).algo.ressource.path]
+		path = "[path /]"
 		# Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-		if path['[-3:-1]'/] == ".py":
+		if path['[-3:]'/] == ".py":
 			for j,element in enumerate(self.table['['/]"[c.name/]"[']):'/]
 				colonne_provisoire.append(self.load_fct("calcul", "[path /]")([c.listeEntrees() /]))
-		elif path['[-2:-1]'/] == ".m":
+		elif path['[-2:]'/] == ".m":
 			for j,element in enumerate(self.table['['/]"[c.name/]"[']):'/]
-				colonne_provisoire.append(self.load_matlab_fct("calcul", "[c.contenu.oclAsType(AppelAlgo).algo.ressource.path /]")([c.listeEntrees() /]))
+				colonne_provisoire.append(self.load_matlab_fct(path)([c.listeEntrees() /]))
 		self.table['['/]"[c.name/]"[']'/] = colonne_provisoire
 		[/let]
 			[/let]
