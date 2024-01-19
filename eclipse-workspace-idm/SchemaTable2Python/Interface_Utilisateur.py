@@ -1,25 +1,25 @@
 # =============================================================================
-# Ensemble des imports
+# Ensemble des imports et variables globales
 # =============================================================================
 
 from tkinter import *
 import tkinter.filedialog 
+from Config import Config 
+
+################################## Modifications End-user ##################################
 
 from Coeff import Coeff
 from Resultats import Resultats
-from Config import Config 
 
-# =============================================================================
-# Variables globales
-# =============================================================================
+liste_instances = [Coeff(), Resultats()] #liste des instances à créer
+
+############################################################################################
 
 chargement_effectue = False
 
 verif_effectue = False
 
-liste_dialog = [] #liste des documents chargés dans l'interface
-
-liste_instances = [Coeff(), Resultats()] #liste des instances crées
+liste_dialog = []
 
 nombre_instances = len(liste_instances)
 
@@ -29,11 +29,8 @@ numero_instances = 0
 # Fonctions de l'interface graphique
 # =============================================================================
 
+# Charge un fichier .csv
 def Charger_csv():
-    #ne prend rien en argument (type none), récupère le texte (type string) 
-    #dans un document .txt choisis au préalable par l'utilisateur sur son 
-    #disque dur et renvoie en sortie un enchainement de mot avec des passages  
-    #à la ligne (type str) contenant tout les mots du fichier .txt
     path=tkinter.filedialog.askopenfilename(title='Séléctionner le fichier .csv', filetypes=[('CSV', '*.csv',)])
     global numero_instances
     numero_instances += 1
@@ -51,9 +48,8 @@ def Charger_csv():
     Label_Dialog.config(text=ListeDocs2String())
     UpdateScroll()
 
-
+# Affiche un .csv dans une nouvelle fenetre
 def Afficher_csv():
-    
     fenetre_affichage=Tk()
     fenetre_affichage.title("Affichage du csv")
     Frame_Contenu_affichage=Frame(fenetre_affichage, bg='grey')
@@ -63,43 +59,42 @@ def Afficher_csv():
     Fermer_fenetre=Button(Frame_Contenu_affichage, text='Fermer', font='Arial 10', command=fenetre_affichage.destroy)
     Fermer_fenetre.pack(pady=30)
 
-
+# Vérifie les potentielles contraintes sur le fichier chargé
 def Verifier_csv():
-
     if chargement_effectue:
-        
+        global liste_dialog
         res = liste_instances[numero_instances-1].checkAll()
         verif_ok = (res == True)
+        global verif_effectue
+        verif_effectue = True
         
         if verif_ok:
             Button_Verifier.config(text="Vérification réussi", fg="chartreuse4")
             Button_Calculer.config(text="Calculer", fg="black")
-            global verif_effectue
-            verif_effectue = True
         else:
             Button_Verifier.config(text="Vérification échoué", fg="crimson")
-            global liste_dialog
             liste_dialog.append(str(res))
             UpdateScroll()
     
     else:
         Button_Verifier.config(text="Veuillez charger le fichier", fg="crimson")
+        liste_dialog.append("Veuillez charger le fichier")
+        UpdateScroll()
         
-
+# Effectue les potentiels calculs sur le fichier chargé
 def Calculer_csv():
-    
     if verif_effectue:
-        
         global liste_instances
         liste_instances[numero_instances-1].calcAll()
-        Button_Calculer.config(text="Calcul efféctué", fg="chartreuse4")
+        Button_Calculer.config(text="Calcul efféctué", fg="chartreuse4", state=tkinter.DISABLED)
         
     else:
         global liste_dialog
-        liste_dialog.append("Veuillez vérifier le ou les fichiers")
+        liste_dialog.append("Veuillez vérifier le fichier")
         UpdateScroll()
         Button_Calculer.config(text="Veuillez vérifier le fichier", fg="crimson")
-        
+
+# Permet le fichier csv 
 def Exporter_csv():
     nomFichier = Entry_Export.get()
     if nomFichier == "":
@@ -111,14 +106,14 @@ def Exporter_csv():
         liste_instances[numero_instances-1].export(path + "/" + nomFichier + ".csv")
         Button_Exporter.config(text="Fichier exporté", fg="chartreuse4")
 
-
+# Convertion du liste de string en string
 def ListeDocs2String() :
     filesStr = ""
     for i in liste_dialog:
         filesStr = filesStr + PassageLigne(i) + "\n--------------------------------------------------------------------\n"
     return filesStr
 
-
+# Optimise la longueur du string pour son affichage 
 def PassageLigne(str):
     n = 60
     if len(str) > n and len(str) != 0 :
@@ -126,42 +121,38 @@ def PassageLigne(str):
     elif len(str) != 0:
         return str
     
-
+# Met à jour la boite de dialogue
 def UpdateScroll():
     Label_Dialog.config(text=ListeDocs2String())
     Frame_Dialog.update()
     Canvas_Dialog.configure(scrollregion=Canvas_Dialog.bbox('all'))
+    
+# Appel de multiple fonctions 
+def Multi_fun(*functions):
+    def func(*args, **kwargs):
+        val = None
+        for function in functions:
+            val = function(*args, **kwargs)
+        return val
+    return func
 
-
-def ResetAll():
+# Reset des variables globales booléennes
+def Reset_var():
     global chargement_effectue
     chargement_effectue = False
     global verif_effectue
     verif_effectue = False
-    global liste_dialog
-    liste_dialog = []
-    global numero_instances
-    numero_instances -= 1
-    Button_Verifier.config(text="Vérifier", fg="black")
-    Button_Calculer.config(text="Calculer", fg="black", state=tkinter.NORMAL)
-    Button_Selectionner.config(text='Séléctionner Fichier...', fg="black", state=tkinter.NORMAL)
-    Button_Exporter.config(text='Exporter', fg="black", state=tkinter.ENABLE)
-    Label_Dialog.config(text='')
-    Frame_Dialog.update()
-    Canvas_Dialog.configure(scrollregion=Canvas_Dialog.bbox('all'))
-
     
 # =============================================================================
 # Interface Graphiques
 # =============================================================================
 
+# Boucle for pour charger les n fichiers nécessaires
 for instance in liste_instances :
     
     #Création de la fenetre
     fenetre=Tk()
-    
     fenetre.title("Calculateur sur csv")
-    
     fenetre.geometry("550x750")
     
     #Création de la barre de menu
@@ -175,11 +166,12 @@ for instance in liste_instances :
     Label_Titre=Label(Frame_Main,text='Calculateur de csv',font='Arial 20 bold', fg='black',bg='grey') 
     Label_Titre.pack(padx=30, pady=40)
     
-    #Bouton Button_Selectionner : Séléction du dictionnaire
-    Button_Selectionner=Button(Frame_Main,text='Séléctionner Fichier...',font='Arial 12',command=Charger_csv, fg='black',bg='white', relief='raised')
+    strFichier = liste_instances[liste_instances.index(instance)].toString()
+    #Bouton Button_Selectionner : Séléction du fichier csv
+    Button_Selectionner=Button(Frame_Main,text='Séléctionner fichier "' + strFichier +'"',font='Arial 12',command=Charger_csv, fg='black',bg='white', relief='raised')
     Button_Selectionner.pack(pady=60)
     
-    #Label Label_Titre : Nom du logiciel
+    #Label Opérations
     Label_Operation=Label(Frame_Main,text='Opérations', font='Arial 12 bold', fg='black',bg='grey')
     Label_Operation.pack(padx=30)
     
@@ -195,7 +187,7 @@ for instance in liste_instances :
     Sous_Frame_Droite_Operation=Frame(Frame_Operation, width=400, bg='grey')
     Sous_Frame_Droite_Operation.pack(side=RIGHT)
 
-    #Bouton Button_Afficher : Button_Afficher le contenu du csv
+    #Bouton Button_Afficher : Affiche le contenu du csv dans une nouvelle fenetre
     Button_Afficher=Button(Sous_Frame_Gauche_Operation,text='Afficher csv',font='Arial 12',command=Afficher_csv, fg='black',bg='white', relief='raised')
     Button_Afficher.pack(side=LEFT, padx=10)
     
@@ -215,7 +207,7 @@ for instance in liste_instances :
     Label_Export=Label(Frame_Main, text='Export', font='Arial 12 bold', fg='black',bg='grey')
     Label_Export.pack(padx=10)
 
-    #Entry Export : Entry le nom du fichier a exporter
+    #Entry Export : Entrer le nom du fichier à exporter
     Entry_Export=Entry(Frame_Main, width=30)
     Entry_Export.pack(padx=10)
     
@@ -237,19 +229,18 @@ for instance in liste_instances :
     Frame_Dialog=Frame(Canvas_Dialog)
     Canvas_Dialog.create_window((0,0), window=Frame_Dialog, anchor='nw')
     
-    #Label Dialog : label qui contiendra les nouvelles informations aux fur et à mesure
+    #Label Dialog : label qui contiendra les nouvelles informations aux fur et à mesure de l'éxecution
     Label_Dialog=Label(Frame_Dialog, text=ListeDocs2String(), bg='white', justify="left")
     Label_Dialog.pack(side= LEFT, fill=BOTH, expand=True)
     
     ##########################################################
-    Frame_Fin = Frame(Frame_Main, bg='grey')
-    Frame_Fin.pack(pady=10)
+    if liste_instances.index(instance) + 1 == nombre_instances:
+        Text_Fin = "Quitter"
+    else:
+        Text_Fin = "Suivant"
     #Bouton de sortie
-    Quitter=Button(Frame_Fin, text='Quitter', font='Arial 10', command=fenetre.destroy)
-    Quitter.pack(side=RIGHT, padx=5)
-    #Bouton pour reset
-    Reset=Button(Frame_Fin, text='Reset', font='Arial 10', command=ResetAll)
-    Reset.pack(side=LEFT, padx=5)
+    Quitter=Button(Frame_Main, text=Text_Fin, font='Arial 10', command=Multi_fun(Reset_var,fenetre.destroy))
+    Quitter.pack(pady=10)
     ##########################################################
     
     ##########################################################
