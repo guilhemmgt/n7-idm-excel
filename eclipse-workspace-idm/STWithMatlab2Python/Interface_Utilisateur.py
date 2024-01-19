@@ -72,12 +72,12 @@ def Verifier_csv():
         
         res = liste_instances[numero_instances-1].checkAll()
         verif_ok = (res == True)
+        global verif_effectue
+        verif_effectue = True
         
         if verif_ok:
             Button_Verifier.config(text="Vérification réussi", fg="chartreuse4")
             Button_Calculer.config(text="Calculer", fg="black")
-            global verif_effectue
-            verif_effectue = True
         else:
             Button_Verifier.config(text="Vérification échoué", fg="crimson")
             global liste_dialog

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemaTable:Tableau xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaTable="http://www.example.org/schemaTable" name="resume" colonneLignes="//@colonnes.0">
   <colonnes name="Annee" id="resume.annee" dataType="int"/>
-  <colonnes name="Bilan de l'année" id="resume.bilan" dataType="float">
+  <colonnes name="Bilan de l'anne" id="resume.bilan" dataType="float">
     <contenu xsi:type="schemaTable:ImportTable" idColumn="detail.bilan">
       <table href="Détail.xmi#/"/>
     </contenu>
@@ -11,10 +11,15 @@
       <table href="Détail.xmi#/"/>
     </contenu>
   </colonnes>
-  <colonnes name="Rentrées/sorties en %" id="resume.rapport" dataType="float">
+  <colonnes name="Rentrees/sorties en %" id="resume.rapport" dataType="float">
     <contenu xsi:type="schemaTable:ImportTable" idColumn="detail.rapport">
       <table href="Détail.xmi#/"/>
     </contenu>
     <contraintes href="../../Algo/model/Algo_Positif.xmi#/"/>
+  </colonnes>
+  <colonnes>
+    <contenu xsi:type="schemaTable:ImportTable" idColumn="detail.moy">
+      <table href="Détail.xmi#/"/>
+    </contenu>
   </colonnes>
 </schemaTable:Tableau>

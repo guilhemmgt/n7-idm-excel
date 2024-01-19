@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemaTable:Tableau xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:schemaTable="http://www.example.org/schemaTable" name="recettes" colonneLignes="//@colonnes.0">
-  <colonnes name="Année" id="recettes.annee" dataType="int"/>
+  <colonnes name="Annee" id="recettes.annee" dataType="int"/>
   <colonnes name="T1" id="recettes.t1" dataType="float">
     <contraintes href="../../Algo/model/Algo_Positif.xmi#/"/>
   </colonnes>

@@ -17,7 +17,7 @@ class resume:
 			cls._instance = super(resume, cls).__new__(cls)
 			cls._instance.eng = matlab.engine.start_matlab()
 			# Récupére la liste de noms des colonnes
-			noms_colonnes = ["Annee", "Bilan de l'année", "Meilleur trimestre", "Rentrées/sorties en %"]
+			noms_colonnes = ["Annee", "Bilan de l'anne", "Meilleur trimestre", "Rentrees/sorties en %"]
 
 	        # Initialisation du DataFrame avec les noms de colonnes
 			cls._instance.table = pd.DataFrame(columns=noms_colonnes)
@@ -100,9 +100,9 @@ class resume:
 
 	def insertFromTable(self):
 		# Pour toutes les colonnes de self.table qui ont un attribut contenu de type "ImportTable"
-			self.fusionner_colonnes(detail.get_instance().table, "Annee", "Annee", "Bilan", "Bilan de l'année")
+			self.fusionner_colonnes(detail.get_instance().table, "Annee", "Annee", "Bilan", "Bilan de l'anne")
 			self.fusionner_colonnes(detail.get_instance().table, "Annee", "Annee", "Meilleur trimestre", "Meilleur trimestre")
-			self.fusionner_colonnes(detail.get_instance().table, "Annee", "Annee", "Rapport recettes/dépenses (%)", "Rentrées/sorties en %")
+			self.fusionner_colonnes(detail.get_instance().table, "Annee", "Annee", "Rapport recettes/depenses", "Rentrees/sorties en %")
 
 
 	def calcAll(self):
