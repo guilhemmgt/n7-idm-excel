@@ -60,9 +60,9 @@
       <ownedColumnMappings name="NameColumn" headerLabelExpression="Nom" initialWidth="100" featureName="name"/>
       <ownedColumnMappings name="IdColumn" headerLabelExpression="Identifiant" initialWidth="100" featureName="id"/>
       <ownedColumnMappings name="TypeColumn" headerLabelExpression="Type" initialWidth="100" featureName="dataType"/>
-      <ownedColumnMappings name="ContraintesColumn" headerLabelExpression="Contrainte(s)" initialWidth="100" featureName="contraintes"/>
-      <ownedColumnMappings name="AppelAlgoAlgoColumn" headerLabelExpression="Algorithme: Algorithme" initialWidth="175" featureName="algo"/>
-      <ownedColumnMappings name="AppelAlgoInputColumn" headerLabelExpression="Algorithme: Entrée(s)" initialWidth="175" featureName="input"/>
+      <ownedColumnMappings name="ContraintesColumn" headerLabelExpression="Contrainte(s)" initialWidth="100" featureName="contraintes" labelExpression="[self.contraintes.name/]"/>
+      <ownedColumnMappings name="AppelAlgoAlgoColumn" headerLabelExpression="Algorithme: Algorithme" initialWidth="175" featureName="algo" labelExpression="[self.algo.name/]"/>
+      <ownedColumnMappings name="AppelAlgoInputColumn" headerLabelExpression="Algorithme: Entrée(s)" initialWidth="175" featureName="input" labelExpression="[self.input.name/]"/>
       <ownedColumnMappings name="ImportTableTableColumn" headerLabelExpression="Import: Table" initialWidth="175" featureName="table"/>
       <ownedColumnMappings name="ImportTableIdColumnColumn" headerLabelExpression="Import: Identifiant" initialWidth="175" featureName="idColumn"/>
     </ownedRepresentations>

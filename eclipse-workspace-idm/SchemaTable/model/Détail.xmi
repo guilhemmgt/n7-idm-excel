@@ -68,10 +68,4 @@
     </contenu>
     <contraintes href="../../Algo/model/Algo_Positif.xmi#/"/>
   </colonnes>
-  <colonnes name="Moy" id="detail.moy" dataType="float">
-    <contenu xsi:type="schemaTable:AppelAlgo" input="//@colonnes.1 //@colonnes.2 //@colonnes.3">
-      <algo href="../../Algo/model/Algo_MoyenneTernaire.xmi#/"/>
-    </contenu>
-    <contraintes href="../../Algo/model/Algo_Positif.xmi#/"/>
-  </colonnes>
 </schemaTable:Tableau>
