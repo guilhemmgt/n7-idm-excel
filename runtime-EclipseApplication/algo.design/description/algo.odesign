@@ -41,7 +41,7 @@
           </style>
         </edgeMappings>
         <toolSections name="Noeuds">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="RessourceCreation" label="Ressource" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='RessourceNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="RessourceCreation" label="Créer ressource" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='RessourceNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -52,7 +52,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="InputCreation" label="Entrée" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="InputCreation" label="Créer entrée" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -63,7 +63,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="OutputCreation" label="Sortie" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='OutputNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="OutputCreation" label="Créer sortie" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='OutputNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -76,7 +76,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Types">
-          <ownedTools xsi:type="tool_1:ToolDescription" name="SetString" label="string">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="SetString" label="Spécifier un string">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -85,7 +85,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ToolDescription" name="SetInt" label="int">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="SetInt" label="Spécifier un int">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -94,7 +94,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ToolDescription" name="SetBool" label="bool">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="SetBool" label="Spécifier un bool">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -103,7 +103,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ToolDescription" name="SetFloat" label="float">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="SetFloat" label="Spécifier un float">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -131,7 +131,7 @@
           </style>
         </edgeMappings>
         <toolSections name="Documentation">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="DocCreation" label="Documentation" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@additionalLayers[name='Documentation']/@nodeMappings[name='DocumentationNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="DocCreation" label="Créer une documentation" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@additionalLayers[name='Documentation']/@nodeMappings[name='DocumentationNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -142,7 +142,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DocLinkCreation" edgeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@additionalLayers[name='Documentation']/@edgeMappings[name='DocumentationEdge']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DocLinkCreation" label="Lier une documentation" edgeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@additionalLayers[name='Documentation']/@edgeMappings[name='DocumentationEdge']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>

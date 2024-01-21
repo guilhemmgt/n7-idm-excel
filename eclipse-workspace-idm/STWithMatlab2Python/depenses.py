@@ -16,7 +16,7 @@ class depenses:
 			cls._instance = super(depenses, cls).__new__(cls)
 			cls._instance.eng = matlab.engine.start_matlab()
 			# Récupére la liste de noms des colonnes
-			noms_colonnes = ["Année", "T1", "T2", "T3"]
+			noms_colonnes = ["Annee", "T1", "T2", "T3"]
 
 	        # Initialisation du DataFrame avec les noms de colonnes
 			cls._instance.table = pd.DataFrame(columns=noms_colonnes)
@@ -70,7 +70,7 @@ class depenses:
 
 	def checkAll(self):
 		erreurs = []
-		colonneLigne = "Année"
+		colonneLigne = "Annee"
 		if self.table[colonneLigne].nunique() != len(self.table[colonneLigne]) :
 			erreurs.append(["il faut des données unique dans "+colonneLigne])
         # Matrice des chemins vers les fichiers contenant les fonctions

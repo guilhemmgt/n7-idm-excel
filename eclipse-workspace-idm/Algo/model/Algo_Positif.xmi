@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<algo:Algo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:algo="http://www.example.org/algo" name="positif">
+<algo:Algo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:algo="http://www.example.org/algo" name="Positif">
   <ressource path="Algo/positif.py"/>
   <output value="sortie" type="bool"/>
   <input value="entree" type="int"/>

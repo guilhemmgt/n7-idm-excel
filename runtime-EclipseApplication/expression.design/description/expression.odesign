@@ -139,17 +139,44 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-        </toolSections>
-        <toolSections name="Binaire" label="Opérations binaires">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="SoustractionCreation" label="Créer soustraction" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="SinusCreation" label="Créer sinus" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Soustraction" referenceName="elements"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Sinus" referenceName="elements"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CosinusCreation" label="Créer cosinus" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Cosinus" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="RacineCreation" label="Créer racine carrée" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Racine_carree" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ExpoCreation" label="Créer exponentielle" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Exponentielle" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Binaire" label="Opérations binaires">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="AdditionCreation" label="Créer addition" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -159,12 +186,12 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="DivisionCreation" label="Créer division" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="SoustractionCreation" label="Créer soustraction" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Division" referenceName="elements"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Soustraction" referenceName="elements"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -174,6 +201,15 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Multiplication" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="DivisionCreation" label="Créer division" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='ExprElementNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Division" referenceName="elements"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
