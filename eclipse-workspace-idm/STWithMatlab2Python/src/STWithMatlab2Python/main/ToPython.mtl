@@ -150,6 +150,9 @@ class [aTableau.name /]:
 	def export(self, csv_file):
         # Exporter le DataFrame en tant que fichier CSV
 		self.table.to_csv(csv_file, index=False)
+
+	def toString(self):
+		return "[aTableau.name /]"
 		
 
 [/file]
