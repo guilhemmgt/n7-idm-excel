@@ -12,7 +12,7 @@ inv formatCommentaire('Il manque un commentaire'):
 	
 context Ressource
 inv formatChemin('Le chemin d\'accés à la ressource n\'est pas conforme'):
-	self.path.matches('^(../|./|/)(([A-Za-z0-9_]|-)+/)*([A-Za-z0-9_]|-)+.(xmi|py|m)$')
+	self.path.matches('^(../|./|/)(([A-Za-z0-9_]|-)+/)*([A-Za-z0-9_]|-)+.(py|m)$')
 	
 context Flux
 inv formatValue('Le format de la value "' + self.value + '" n\'est pas correct'):
