@@ -32,7 +32,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Sinus" eSuperTypes="#//OperationUnaire"/>
   <eClassifiers xsi:type="ecore:EClass" name="Cosinus" eSuperTypes="#//OperationUnaire"/>
   <eClassifiers xsi:type="ecore:EClass" name="Racine_carree" eSuperTypes="#//OperationUnaire"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Exponentielle" eSuperTypes="#//Racine_carree"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Exponentielle" eSuperTypes="#//OperationUnaire"/>
   <eClassifiers xsi:type="ecore:EClass" name="OperationBinaire" abstract="true" eSuperTypes="#//ExpressionElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Soustraction" eSuperTypes="#//OperationBinaire"/>
   <eClassifiers xsi:type="ecore:EClass" name="Addition" eSuperTypes="#//OperationBinaire"/>
