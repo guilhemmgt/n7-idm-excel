@@ -117,8 +117,8 @@ class [aTableau.name /]:
 		colonne_provisoire = ['[]'/]
 		[let path : String = c.contenu.oclAsType(AppelAlgo).algo.ressource.path]
 		# Charger dynamiquement la fonction à partir du fichier spécifié par le chemin
-			for j,element in enumerate(self.table['['/]"[c.name/]"[']):'/]
-				colonne_provisoire.append(self.load_fct("calcul", "[path /]")([c.listeEntrees() /]))
+		for j,element in enumerate(self.table['['/]"[c.name/]"[']):'/]
+			colonne_provisoire.append(self.load_fct("calcul", "[path /]")([c.listeEntrees() /]))
 		self.table['['/]"[c.name/]"[']'/] = colonne_provisoire
 		[/let]
 			[/let]
