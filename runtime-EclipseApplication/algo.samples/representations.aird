@@ -7,11 +7,20 @@
     <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_SommeTernaire_m.xmi</semanticResources>
     <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_SoustractionBinaire.xmi</semanticResources>
     <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_MoyenneTernaire.xmi</semanticResources>
+    <semanticResources>file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_pikPALMjEe62CNnX-1XLCg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_p3JQILVNEe6tB9M_kzwryg" name="new AlgoDiagram" repPath="#_p3IpELVNEe6tB9M_kzwryg" changeId="c8946dfe-5dbe-4e31-b730-ebf5fa1dcd67">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']"/>
         <target xmi:type="algo:Algo" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_MoyenneTernaire.xmi#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_0-hSsLi6Ee6uwZaZs8egWw" name="new AlgoDiagram" repPath="#_09pwALi6Ee6uwZaZs8egWw" changeId="09cb17e1-1cf5-4eaf-81a8-c064b127ef4d">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']"/>
+        <target xmi:type="algo:Algo" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_H32JILi7Ee6uwZaZs8egWw" name="new AlgoDiagram" repPath="#_H3yewLi7Ee6uwZaZs8egWw" changeId="e751d90e-6eca-4291-b987-9e471f1483e0">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']"/>
+        <target xmi:type="algo:Algo" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
@@ -219,5 +228,501 @@
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_p3IpEbVNEe6tB9M_kzwryg"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer"/>
     <target xmi:type="algo:Algo" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_MoyenneTernaire.xmi#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_09pwALi6Ee6uwZaZs8egWw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_0_jNcLi6Ee6uwZaZs8egWw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_0_jNcbi6Ee6uwZaZs8egWw" type="Sirius" element="_09pwALi6Ee6uwZaZs8egWw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_3A9EgLi6Ee6uwZaZs8egWw" type="2001" element="_2-8SULi6Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_3BFAULi6Ee6uwZaZs8egWw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_3BFAUbi6Ee6uwZaZs8egWw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3BMVELi6Ee6uwZaZs8egWw" type="3003" element="_2_RpgLi6Ee6uwZaZs8egWw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3BMVEbi6Ee6uwZaZs8egWw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3BMVEri6Ee6uwZaZs8egWw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_3A9rkLi6Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3A9rkbi6Ee6uwZaZs8egWw" x="350" y="205" width="400" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3VcGwLi6Ee6uwZaZs8egWw" type="2001" element="_3UlLILi6Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_3VdU4Li6Ee6uwZaZs8egWw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_3VdU4bi6Ee6uwZaZs8egWw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3Vd78Li6Ee6uwZaZs8egWw" type="3003" element="_3UqDoLi6Ee6uwZaZs8egWw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3Vd78bi6Ee6uwZaZs8egWw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3Vd78ri6Ee6uwZaZs8egWw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_3VcGwbi6Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3VcGwri6Ee6uwZaZs8egWw" x="150" y="365" width="200" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3t8GULi6Ee6uwZaZs8egWw" type="2001" element="_3trAkLi6Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_3t8tYLi6Ee6uwZaZs8egWw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_3t8tYbi6Ee6uwZaZs8egWw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3t97gLi6Ee6uwZaZs8egWw" type="3003" element="_3trnoLi6Ee6uwZaZs8egWw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3t97gbi6Ee6uwZaZs8egWw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3t97gri6Ee6uwZaZs8egWw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_3t8GUbi6Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3t8GUri6Ee6uwZaZs8egWw" x="475" y="380" width="200" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_37NGQLi6Ee6uwZaZs8egWw" type="2001" element="_368nkLi6Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_37NtULi6Ee6uwZaZs8egWw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_37NtUbi6Ee6uwZaZs8egWw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_37OUYLi6Ee6uwZaZs8egWw" type="3003" element="_369OoLi6Ee6uwZaZs8egWw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_37OUYbi6Ee6uwZaZs8egWw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_37OUYri6Ee6uwZaZs8egWw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_37NGQbi6Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_37NGQri6Ee6uwZaZs8egWw" x="775" y="390" width="200" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_4M-LsLi6Ee6uwZaZs8egWw" type="2001" element="_4MuUELi6Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_4M_Z0Li6Ee6uwZaZs8egWw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_4M_Z0bi6Ee6uwZaZs8egWw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4NAA4Li6Ee6uwZaZs8egWw" type="3003" element="_4MuUEbi6Ee6uwZaZs8egWw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_4NAA4bi6Ee6uwZaZs8egWw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4NAA4ri6Ee6uwZaZs8egWw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_4M-Lsbi6Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4M-Lsri6Ee6uwZaZs8egWw" x="625" y="480" width="200" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_6y0MkLi6Ee6uwZaZs8egWw" type="2001" element="_6yWSgLi6Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_6y0zoLi6Ee6uwZaZs8egWw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_6y0zobi6Ee6uwZaZs8egWw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_6y1asLi6Ee6uwZaZs8egWw" type="3003" element="_6yk8ALi6Ee6uwZaZs8egWw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_6y1asbi6Ee6uwZaZs8egWw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6y1asri6Ee6uwZaZs8egWw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_6y0Mkbi6Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6y0Mkri6Ee6uwZaZs8egWw" x="545" y="40" width="200" height="30"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_0_jNcri6Ee6uwZaZs8egWw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_3Vi0cLi6Ee6uwZaZs8egWw" type="4001" element="_3VPScLi6Ee6uwZaZs8egWw" source="_3VcGwLi6Ee6uwZaZs8egWw" target="_3A9EgLi6Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_3VlQsLi6Ee6uwZaZs8egWw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3VlQsbi6Ee6uwZaZs8egWw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3Vo7ELi6Ee6uwZaZs8egWw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3Vo7Ebi6Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3VqJMLi6Ee6uwZaZs8egWw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3VqJMbi6Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_3Vi0cbi6Ee6uwZaZs8egWw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_3Vi0cri6Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3Vi0c7i6Ee6uwZaZs8egWw" points="[28, -15, -272, 145]$[271, -145, -29, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3V72ALi6Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3V72Abi6Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_3t-ikLi6Ee6uwZaZs8egWw" type="4001" element="_3t5DAri6Ee6uwZaZs8egWw" source="_3t8GULi6Ee6uwZaZs8egWw" target="_3A9EgLi6Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_3t-ilLi6Ee6uwZaZs8egWw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3t-ilbi6Ee6uwZaZs8egWw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3t_JoLi6Ee6uwZaZs8egWw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3t_Jobi6Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3t_Jori6Ee6uwZaZs8egWw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3t_Jo7i6Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_3t-ikbi6Ee6uwZaZs8egWw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_3t-ikri6Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3t-ik7i6Ee6uwZaZs8egWw" points="[-3, -15, 22, 160]$[-23, -160, 2, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3t_wsLi6Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3t_wsbi6Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_37PigLi6Ee6uwZaZs8egWw" type="4001" element="_37KC8Li6Ee6uwZaZs8egWw" source="_37NGQLi6Ee6uwZaZs8egWw" target="_3A9EgLi6Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_37QJkLi6Ee6uwZaZs8egWw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_37QJkbi6Ee6uwZaZs8egWw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_37QJkri6Ee6uwZaZs8egWw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_37QJk7i6Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_37QJlLi6Ee6uwZaZs8egWw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_37QJlbi6Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_37Pigbi6Ee6uwZaZs8egWw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_37Pigri6Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_37Pig7i6Ee6uwZaZs8egWw" points="[-27, -15, 298, 170]$[-299, -170, 26, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_37RXsLi6Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_37RXsbi6Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_4NBPALi6Ee6uwZaZs8egWw" type="4001" element="_4M7IYLi6Ee6uwZaZs8egWw" source="_4M-LsLi6Ee6uwZaZs8egWw" target="_3A9EgLi6Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_4NB2ELi6Ee6uwZaZs8egWw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4NB2Ebi6Ee6uwZaZs8egWw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4NB2Eri6Ee6uwZaZs8egWw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4NB2E7i6Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4NB2FLi6Ee6uwZaZs8egWw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4NB2Fbi6Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_4NBPAbi6Ee6uwZaZs8egWw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_4NBPAri6Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4NBPA7i6Ee6uwZaZs8egWw" points="[-10, -15, 165, 260]$[-166, -260, 9, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4NCdILi6Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4NCdIbi6Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_6y2o0Li6Ee6uwZaZs8egWw" type="4001" element="_6yxwULi6Ee6uwZaZs8egWw" source="_3A9EgLi6Ee6uwZaZs8egWw" target="_6y0MkLi6Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_6y3P4Li6Ee6uwZaZs8egWw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6y3P4bi6Ee6uwZaZs8egWw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_6y3P4ri6Ee6uwZaZs8egWw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6y3P47i6Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_6y3P5Li6Ee6uwZaZs8egWw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6y3P5bi6Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_6y2o0bi6Ee6uwZaZs8egWw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_6y2o0ri6Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6y2o07i6Ee6uwZaZs8egWw" points="[8, -15, -87, 150]$[86, -150, -9, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6y328Li6Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6y328bi6Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_1JqywLi6Ee6uwZaZs8egWw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_1JrZ0Li6Ee6uwZaZs8egWw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_2-8SULi6Ee6uwZaZs8egWw" name="Algo/benjamin.py" outgoingEdges="_6yxwULi6Ee6uwZaZs8egWw" incomingEdges="_3VPScLi6Ee6uwZaZs8egWw _3t5DAri6Ee6uwZaZs8egWw _37KC8Li6Ee6uwZaZs8egWw _4M7IYLi6Ee6uwZaZs8egWw" width="40" height="3" resizeKind="NSEW">
+      <target xmi:type="algo:Ressource" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@ressource"/>
+      <semanticElements xmi:type="algo:Ressource" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@ressource"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_2_RpgLi6Ee6uwZaZs8egWw" labelSize="12" showIcon="false" labelPosition="node" width="40" height="3" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='RessourceNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='RessourceNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_3UlLILi6Ee6uwZaZs8egWw" name="1 ▶ entree_string (string)" outgoingEdges="_3VPScLi6Ee6uwZaZs8egWw" width="20" height="3" resizeKind="NSEW">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.0"/>
+      <semanticElements xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_3UqDoLi6Ee6uwZaZs8egWw" labelSize="12" showIcon="false" labelPosition="node" width="20" height="3" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_3trAkLi6Ee6uwZaZs8egWw" name="2 ▶ entree_int (int)" outgoingEdges="_3t5DAri6Ee6uwZaZs8egWw" width="20" height="3" resizeKind="NSEW">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.1"/>
+      <semanticElements xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.1"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_3trnoLi6Ee6uwZaZs8egWw" labelSize="12" showIcon="false" labelPosition="node" width="20" height="3" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_368nkLi6Ee6uwZaZs8egWw" name="3 ▶ entree_bool (bool)" outgoingEdges="_37KC8Li6Ee6uwZaZs8egWw" width="20" height="3" resizeKind="NSEW">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.2"/>
+      <semanticElements xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.2"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_369OoLi6Ee6uwZaZs8egWw" labelSize="12" showIcon="false" labelPosition="node" width="20" height="3" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_4MuUELi6Ee6uwZaZs8egWw" name="4 ▶ entree_float (float)" outgoingEdges="_4M7IYLi6Ee6uwZaZs8egWw" width="20" height="3" resizeKind="NSEW">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.3"/>
+      <semanticElements xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.3"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_4MuUEbi6Ee6uwZaZs8egWw" labelSize="12" showIcon="false" labelPosition="node" width="20" height="3" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3VPScLi6Ee6uwZaZs8egWw" sourceNode="_3UlLILi6Ee6uwZaZs8egWw" targetNode="_2-8SULi6Ee6uwZaZs8egWw">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3VQgkLi6Ee6uwZaZs8egWw" size="2" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_3VQgkbi6Ee6uwZaZs8egWw" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3t5DAri6Ee6uwZaZs8egWw" sourceNode="_3trAkLi6Ee6uwZaZs8egWw" targetNode="_2-8SULi6Ee6uwZaZs8egWw">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3t5qELi6Ee6uwZaZs8egWw" size="2" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_3t5qEbi6Ee6uwZaZs8egWw" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_37KC8Li6Ee6uwZaZs8egWw" sourceNode="_368nkLi6Ee6uwZaZs8egWw" targetNode="_2-8SULi6Ee6uwZaZs8egWw">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_37KC8bi6Ee6uwZaZs8egWw" size="2" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_37KC8ri6Ee6uwZaZs8egWw" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_4M7IYLi6Ee6uwZaZs8egWw" sourceNode="_4MuUELi6Ee6uwZaZs8egWw" targetNode="_2-8SULi6Ee6uwZaZs8egWw">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_4M7IYbi6Ee6uwZaZs8egWw" size="2" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_4M7IYri6Ee6uwZaZs8egWw" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_6yWSgLi6Ee6uwZaZs8egWw" name="sortie (string) ▶" incomingEdges="_6yxwULi6Ee6uwZaZs8egWw" width="20" height="3" resizeKind="NSEW">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@output"/>
+      <semanticElements xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@output"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_6yk8ALi6Ee6uwZaZs8egWw" labelSize="12" showIcon="false" labelPosition="node" width="20" height="3" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='OutputNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='OutputNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_6yxwULi6Ee6uwZaZs8egWw" sourceNode="_2-8SULi6Ee6uwZaZs8egWw" targetNode="_6yWSgLi6Ee6uwZaZs8egWw">
+      <target xmi:type="algo:Ressource" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@ressource"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_6yyXYLi6Ee6uwZaZs8egWw" size="2" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='OutputEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_6yyXYbi6Ee6uwZaZs8egWw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='OutputEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_0-F04Li6Ee6uwZaZs8egWw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer"/>
+    <target xmi:type="algo:Algo" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_H3yewLi7Ee6uwZaZs8egWw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_H33XQLi7Ee6uwZaZs8egWw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_H33-ULi7Ee6uwZaZs8egWw" type="Sirius" element="_H3yewLi7Ee6uwZaZs8egWw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_H4_YoLi7Ee6uwZaZs8egWw" type="2001" element="_H4cmELi7Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_H4__sLi7Ee6uwZaZs8egWw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_H4__sbi7Ee6uwZaZs8egWw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5E4Mbi7Ee6uwZaZs8egWw" type="3003" element="_H4jTwLi7Ee6uwZaZs8egWw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_H5E4Mri7Ee6uwZaZs8egWw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5E4M7i7Ee6uwZaZs8egWw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_H4_Yobi7Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H4_Yori7Ee6uwZaZs8egWw" x="290" y="90" width="400" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_H5AmwLi7Ee6uwZaZs8egWw" type="2001" element="_H4kh4Li7Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_H5BN0Li7Ee6uwZaZs8egWw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_H5BN0bi7Ee6uwZaZs8egWw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5FfQLi7Ee6uwZaZs8egWw" type="3003" element="_H4lI8Li7Ee6uwZaZs8egWw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_H5FfQbi7Ee6uwZaZs8egWw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5FfQri7Ee6uwZaZs8egWw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_H5Amwbi7Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5Amwri7Ee6uwZaZs8egWw" x="520" y="180" width="200" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_H5BN0ri7Ee6uwZaZs8egWw" type="2001" element="_H4lwAbi7Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_H5B04Li7Ee6uwZaZs8egWw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_H5B04bi7Ee6uwZaZs8egWw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5FfQ7i7Ee6uwZaZs8egWw" type="3003" element="_H4mXELi7Ee6uwZaZs8egWw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_H5FfRLi7Ee6uwZaZs8egWw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5FfRbi7Ee6uwZaZs8egWw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_H5BN07i7Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5BN1Li7Ee6uwZaZs8egWw" y="180" width="200" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_H5Cb8Li7Ee6uwZaZs8egWw" type="2001" element="_H4mXEri7Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_H5DDALi7Ee6uwZaZs8egWw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_H5DDAbi7Ee6uwZaZs8egWw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5GGULi7Ee6uwZaZs8egWw" type="3003" element="_H4m-ILi7Ee6uwZaZs8egWw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_H5GGUbi7Ee6uwZaZs8egWw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5GGUri7Ee6uwZaZs8egWw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_H5Cb8bi7Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5Cb8ri7Ee6uwZaZs8egWw" x="260" y="180" width="200" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_H5DDAri7Ee6uwZaZs8egWw" type="2001" element="_H4m-Iri7Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_H5DqELi7Ee6uwZaZs8egWw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_H5DqEbi7Ee6uwZaZs8egWw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5GtYLi7Ee6uwZaZs8egWw" type="3003" element="_H4nlMLi7Ee6uwZaZs8egWw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_H5GtYbi7Ee6uwZaZs8egWw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5GtYri7Ee6uwZaZs8egWw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_H5DDA7i7Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5DDBLi7Ee6uwZaZs8egWw" x="780" y="180" width="200" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_H5ERILi7Ee6uwZaZs8egWw" type="2001" element="_H4oMQLi7Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_H5ERI7i7Ee6uwZaZs8egWw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_H5E4MLi7Ee6uwZaZs8egWw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5GtY7i7Ee6uwZaZs8egWw" type="3003" element="_H4xWMLi7Ee6uwZaZs8egWw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_H5GtZLi7Ee6uwZaZs8egWw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5GtZbi7Ee6uwZaZs8egWw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_H5ERIbi7Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5ERIri7Ee6uwZaZs8egWw" x="390" width="200" height="30"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_H33-Ubi7Ee6uwZaZs8egWw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_H5HUcLi7Ee6uwZaZs8egWw" type="4001" element="_H4x9QLi7Ee6uwZaZs8egWw" source="_H5AmwLi7Ee6uwZaZs8egWw" target="_H4_YoLi7Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_H5H7gLi7Ee6uwZaZs8egWw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5H7gbi7Ee6uwZaZs8egWw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5H7gri7Ee6uwZaZs8egWw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5H7g7i7Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5H7hLi7Ee6uwZaZs8egWw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5H7hbi7Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_H5HUcbi7Ee6uwZaZs8egWw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_H5HUcri7Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H5HUc7i7Ee6uwZaZs8egWw" points="[-22, -15, 108, 75]$[-109, -75, 21, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H5IikLi7Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H5Iikbi7Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_H5Iikri7Ee6uwZaZs8egWw" type="4001" element="_H4ykUri7Ee6uwZaZs8egWw" source="_H5BN0ri7Ee6uwZaZs8egWw" target="_H4_YoLi7Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_H5Iilri7Ee6uwZaZs8egWw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5Iil7i7Ee6uwZaZs8egWw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5IimLi7Ee6uwZaZs8egWw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5Iimbi7Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5JJoLi7Ee6uwZaZs8egWw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5JJobi7Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_H5Iik7i7Ee6uwZaZs8egWw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_H5IilLi7Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H5Iilbi7Ee6uwZaZs8egWw" points="[65, -15, -325, 75]$[325, -75, -65, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H5JJori7Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H5JJo7i7Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_H5JJpLi7Ee6uwZaZs8egWw" type="4001" element="_H4zLYri7Ee6uwZaZs8egWw" source="_H5Cb8Li7Ee6uwZaZs8egWw" target="_H4_YoLi7Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_H5JwsLi7Ee6uwZaZs8egWw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5Jwsbi7Ee6uwZaZs8egWw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5Jwsri7Ee6uwZaZs8egWw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5Jws7i7Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5JwtLi7Ee6uwZaZs8egWw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5K-0Li7Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_H5JJpbi7Ee6uwZaZs8egWw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_H5JJpri7Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H5JJp7i7Ee6uwZaZs8egWw" points="[21, -15, -109, 75]$[108, -75, -22, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H5K-0bi7Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H5K-0ri7Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_H5K-07i7Ee6uwZaZs8egWw" type="4001" element="_H4zLZ7i7Ee6uwZaZs8egWw" source="_H5DDAri7Ee6uwZaZs8egWw" target="_H4_YoLi7Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_H5K-17i7Ee6uwZaZs8egWw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5K-2Li7Ee6uwZaZs8egWw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5K-2bi7Ee6uwZaZs8egWw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5K-2ri7Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5K-27i7Ee6uwZaZs8egWw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5K-3Li7Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_H5K-1Li7Ee6uwZaZs8egWw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_H5K-1bi7Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H5K-1ri7Ee6uwZaZs8egWw" points="[-65, -15, 325, 75]$[-325, -75, 65, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H5Ll4Li7Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H5Ll4bi7Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_H5Ll4ri7Ee6uwZaZs8egWw" type="4001" element="_H488YLi7Ee6uwZaZs8egWw" source="_H4_YoLi7Ee6uwZaZs8egWw" target="_H5ERILi7Ee6uwZaZs8egWw">
+          <children xmi:type="notation:Node" xmi:id="_H5MM8Li7Ee6uwZaZs8egWw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5MM8bi7Ee6uwZaZs8egWw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5MM8ri7Ee6uwZaZs8egWw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5MM87i7Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_H5MM9Li7Ee6uwZaZs8egWw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H5MM9bi7Ee6uwZaZs8egWw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_H5Ll47i7Ee6uwZaZs8egWw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_H5Ll5Li7Ee6uwZaZs8egWw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H5Ll5bi7Ee6uwZaZs8egWw" points="[0, -15, 0, 75]$[0, -75, 0, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H5MM9ri7Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H5M0ALi7Ee6uwZaZs8egWw" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_H4-Kgri7Ee6uwZaZs8egWw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_H4-Kg7i7Ee6uwZaZs8egWw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_H4cmELi7Ee6uwZaZs8egWw" name="Algo/benjamin.py" outgoingEdges="_H488YLi7Ee6uwZaZs8egWw" incomingEdges="_H4x9QLi7Ee6uwZaZs8egWw _H4ykUri7Ee6uwZaZs8egWw _H4zLYri7Ee6uwZaZs8egWw _H4zLZ7i7Ee6uwZaZs8egWw" width="40" height="3" resizeKind="NSEW">
+      <target xmi:type="algo:Ressource" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@ressource"/>
+      <semanticElements xmi:type="algo:Ressource" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@ressource"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_H4jTwLi7Ee6uwZaZs8egWw" labelSize="12" showIcon="false" labelPosition="node" width="40" height="3" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='RessourceNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='RessourceNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_H4kh4Li7Ee6uwZaZs8egWw" name="1 ▶ entree_string (string)" outgoingEdges="_H4x9QLi7Ee6uwZaZs8egWw" width="20" height="3" resizeKind="NSEW">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.0"/>
+      <semanticElements xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_H4lI8Li7Ee6uwZaZs8egWw" labelSize="12" showIcon="false" labelPosition="node" width="20" height="3" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_H4lwAbi7Ee6uwZaZs8egWw" name="2 ▶ entree_int (int)" outgoingEdges="_H4ykUri7Ee6uwZaZs8egWw" width="20" height="3" resizeKind="NSEW">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.1"/>
+      <semanticElements xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.1"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_H4mXELi7Ee6uwZaZs8egWw" labelSize="12" showIcon="false" labelPosition="node" width="20" height="3" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_H4mXEri7Ee6uwZaZs8egWw" name="3 ▶ entree_bool (bool)" outgoingEdges="_H4zLYri7Ee6uwZaZs8egWw" width="20" height="3" resizeKind="NSEW">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.2"/>
+      <semanticElements xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.2"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_H4m-ILi7Ee6uwZaZs8egWw" labelSize="12" showIcon="false" labelPosition="node" width="20" height="3" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_H4m-Iri7Ee6uwZaZs8egWw" name="4 ▶ entree_float (float)" outgoingEdges="_H4zLZ7i7Ee6uwZaZs8egWw" width="20" height="3" resizeKind="NSEW">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.3"/>
+      <semanticElements xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.3"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_H4nlMLi7Ee6uwZaZs8egWw" labelSize="12" showIcon="false" labelPosition="node" width="20" height="3" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='InputNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_H4oMQLi7Ee6uwZaZs8egWw" name="sortie (string) ▶" incomingEdges="_H488YLi7Ee6uwZaZs8egWw" width="20" height="3" resizeKind="NSEW">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@output"/>
+      <semanticElements xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@output"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_H4xWMLi7Ee6uwZaZs8egWw" labelSize="12" showIcon="false" labelPosition="node" width="20" height="3" color="209,209,209">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='OutputNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='OutputNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_H4x9QLi7Ee6uwZaZs8egWw" sourceNode="_H4kh4Li7Ee6uwZaZs8egWw" targetNode="_H4cmELi7Ee6uwZaZs8egWw">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_H4x9Qbi7Ee6uwZaZs8egWw" size="2" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_H4x9Qri7Ee6uwZaZs8egWw" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_H4ykUri7Ee6uwZaZs8egWw" sourceNode="_H4lwAbi7Ee6uwZaZs8egWw" targetNode="_H4cmELi7Ee6uwZaZs8egWw">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_H4ykU7i7Ee6uwZaZs8egWw" size="2" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_H4ykVLi7Ee6uwZaZs8egWw" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_H4zLYri7Ee6uwZaZs8egWw" sourceNode="_H4mXEri7Ee6uwZaZs8egWw" targetNode="_H4cmELi7Ee6uwZaZs8egWw">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_H4zLY7i7Ee6uwZaZs8egWw" size="2" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_H4zLZLi7Ee6uwZaZs8egWw" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_H4zLZ7i7Ee6uwZaZs8egWw" sourceNode="_H4m-Iri7Ee6uwZaZs8egWw" targetNode="_H4cmELi7Ee6uwZaZs8egWw">
+      <target xmi:type="algo:Flux" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@input.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_H4zycLi7Ee6uwZaZs8egWw" size="2" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_H4zycbi7Ee6uwZaZs8egWw" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='InputEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_H488YLi7Ee6uwZaZs8egWw" sourceNode="_H4cmELi7Ee6uwZaZs8egWw" targetNode="_H4oMQLi7Ee6uwZaZs8egWw">
+      <target xmi:type="algo:Ressource" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#//@ressource"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_H49jcLi7Ee6uwZaZs8egWw" size="2" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='OutputEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_H49jcbi7Ee6uwZaZs8egWw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='OutputEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_H3yewbi7Ee6uwZaZs8egWw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer"/>
+    <target xmi:type="algo:Algo" href="file:/D:/Mon_Dossier/Cours/2A/S7_IDM/IDM/eclipse-workspace-idm/Algo/model/Algo_Benjamin.xmi#/"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>

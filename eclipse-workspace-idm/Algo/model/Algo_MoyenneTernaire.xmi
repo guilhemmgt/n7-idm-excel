@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<algo:Algo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:algo="http://www.example.org/algo">
-  <ressource path="Expression2Python/MoyenneTernaire.py"/>
-  <output value="nouvelle sortie" type="float"/>
-  <input value="A" type="float"/>
-  <input value="B" type="float"/>
-  <input value="C" type="float"/>
-</algo:Algo>
