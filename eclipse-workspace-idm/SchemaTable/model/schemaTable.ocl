@@ -42,6 +42,10 @@ inv coherenceDataTypeColonneInput('Les colonnes en input doivent être toutes du
 	->forAll(t|t=self.input -> collect(dataType) ->first())
 inv nombreAlgoInput('L\'algorithme d\'AppelAlgo doit avoir le même nombre d\'entrée que le nombre de colonne dans input'):
 	self.input ->size() = self.algo ->collect(input) ->size()
+inv coherenceDataTypeOutPut('La colonne sur laquelle est assigné l\'algorithme doit être du même type que l\'output de l\'algorithme'):
+	self.algo.output
+	->collect(type)
+	->exists(t | t = self.colonne.dataType) 
 	
 context ImportTable
 inv isIdColumnInTableau('L\'idColumn spécifié dans ImportTable est introuvable dans table'):
